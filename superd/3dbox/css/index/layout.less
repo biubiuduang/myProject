@@ -1,0 +1,87 @@
+@charset "utf-8";
+@import url("../common/commonParameter");
+
+/********* 以下是响应式布局 **********/
+.layout(){
+  /********* 1200px以上 *********/
+  @media all and (min-width: 1200px) {
+    #index-banner{
+      .swiper-wrapper{
+        .swiper-slide{
+          .mobile{
+            display: none;
+            width: 100%;
+          }
+          .pc{
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .model-block{
+      li{
+        width: 25%;
+        a{
+          font-size: 1.5em;
+          padding:20% 0;
+        }
+      }
+    }
+  }
+
+  /********* 1200px -- 768px *********/
+  @media (max-width: 1200px) and (min-width: 768px){
+    #index-banner{
+      .swiper-wrapper{
+        .swiper-slide{
+          .mobile{
+            display: none;
+            width: 100%;
+          }
+          .pc{
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .model-block{
+      li{
+        width: 25%;
+        a{
+          font-size: 1.2em;
+          padding:20% 0;
+        }
+      }
+    }
+  }
+
+  /********* 768px以下 *********/
+  @media (max-width: 768px) {
+    #index-banner{
+      .swiper-wrapper{
+        .swiper-slide{
+          .mobile{
+            display: block;
+            width: 100%;
+          }
+          .pc{
+            display: none;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .model-block{
+      li{
+        width:100%;
+        padding:4px 2px;
+        a{
+          font-size: 1.5em;
+          padding:20% 0;
+        }
+      }
+    }
+  }
+}

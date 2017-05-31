@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件有属性</title>
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+
+    <script type="text/jsx">
+        class Comp extends React.Component{
+            render(){
+                return <span>{ this.props.name },我今年{ this.props.age }岁</span>
+            }
+        }
+
+        $(function(){
+            ReactDOM.render(
+                    <Comp name="lalalala" age="18" />,
+                    document.getElementById("div1")
+            )
+        })
+
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

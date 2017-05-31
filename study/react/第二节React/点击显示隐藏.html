@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点击显示隐藏</title>
+    <style type="text/css">
+        .box{
+            width: 500px;
+            height: 500px;
+            background-color: red;
+        }
+    </style>
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+
+    <script type="text/jsx">
+        class ShowHide extends React.Component{
+            constructor(...args){
+                super(...args);
+                this.state = {
+                    display : "block"
+                }
+            }
+
+            fn(){
+                this.setState({
+                    display : this.state.display == "block" ? "none" : "block"
+                })
+            }
+
+            render(){
+                return <div>
+                    <input type="button" value="显示隐藏" onClick = {this.fn.bind(this)} />
+                    <div className="box" style={{ display : this.state.display }}></div>
+                </div>
+            }
+        }
+
+        $(function(){
+            ReactDOM.render(
+                    <ShowHide />,
+                    document.getElementById("div1")
+            )
+        })
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

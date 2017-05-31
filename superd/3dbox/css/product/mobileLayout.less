@@ -1,0 +1,100 @@
+@import url("../common/commonFunction");
+@charset "utf-8";
+
+
+.mobile-layout(){
+  @media all and (max-width: 768px){
+    #goBuy{
+      top:60px;
+      .goBuy{
+        width: 100%;
+      }
+    }
+    .swiper-slide{
+      background-size: auto;
+      overflow: hidden;
+      .boxCenter();
+      div{
+        width: 100%;
+        &.pc{
+          display: none;
+        }
+        &.mobile{
+          display: block;
+        }
+        &.pc-slide-2-box{
+          display: none;
+        }
+        h1{
+          font-size:2.4em;
+          line-height: 1.4em;
+        }
+        p{
+          font-size:1em;
+          line-height:1.5em;
+        }
+        img{
+          width: 80%;
+        }
+      }
+      &.slide-0{
+        div{
+          background:url("../../img/bg-0.jpg") center center no-repeat #000000;
+        }
+      }
+      &.slide-1{
+          background:url("../../img/bg-1.jpg") center center no-repeat #000000;
+          background-size: cover;
+      }
+      &.slide-2{
+        background:url("../../img/bg-2.jpg") center center no-repeat #000000;
+        background-size: cover;
+      }
+      &.slide-3{
+        background:url("../../img/bg-3.jpg") center center no-repeat #000000;
+        background-size: cover;
+      }
+      &.slide-4{
+        background:url("../../img/bg-4.jpg") top right no-repeat #000000;
+      }
+      &.slide-5{
+        background:url("../../img/bg-5.jpg") center center no-repeat #000000;
+      }
+    }
+
+    .android{
+      &.android-mobile{
+        width: 100%;
+      }
+      .android-pc-box{
+        display: none;
+      }
+      .android-mobile-box{
+        padding-top: 96px;
+        display: block;
+        img{
+          float: left;
+          width: 100%;
+          overflow: hidden;
+        }
+        div.gif{
+          width: 100%;
+          float: left;
+          background-color: #161516;
+          padding: 20px 0;
+          img{
+            float: none;
+            display: block;
+            margin:20px auto 0 auto;
+            width: auto;
+          }
+          &.gif-3{
+            img{
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+@charset "utf-8";
+/*********** 分页 ***********/
+/********* 以下是响应式布局 **********/
+#index-banner {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 3px solid #ffffff;
+}
+#index-banner .swiper-wrapper .swiper-slide {
+  overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+#index-banner .swiper-wrapper .swiper-slide img {
+  width: 100%;
+}
+body.index {
+  background-color: #99a1a3;
+}
+.model-block {
+  margin-top: -3px;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+.model-block li {
+  float: left;
+  padding: 4px 2px;
+  background-color: #99a1a3;
+}
+.model-block li img {
+  margin: 0 5px 0 10%;
+  vertical-align: middle;
+}
+.model-block li:nth-child(1) a {
+  background-image: url("../../img/block-bg-1.jpg");
+}
+.model-block li:nth-child(2) a {
+  background-image: url("../../img/block-bg-2.jpg");
+}
+.model-block li:nth-child(3) a {
+  background-image: url("../../img/block-bg-3.jpg");
+}
+.model-block li:nth-child(4) a {
+  background-image: url("../../img/block-bg-4.jpg");
+}
+.model-block li a {
+  display: inline-block;
+  width: 100%;
+  color: #333333;
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  background-color: #ffffff;
+}
+.model-block li a :hover {
+  color: #ffffff;
+}
+/********* 1200px以上 *********/
+@media all and (min-width: 1200px) {
+  #index-banner .swiper-wrapper .swiper-slide .mobile {
+    display: none;
+    width: 100%;
+  }
+  #index-banner .swiper-wrapper .swiper-slide .pc {
+    display: block;
+    width: 100%;
+  }
+  .model-block li {
+    width: 25%;
+  }
+  .model-block li a {
+    font-size: 1.5em;
+    padding: 20% 0;
+  }
+}
+/********* 1200px -- 768px *********/
+@media (max-width: 1200px) and (min-width: 768px) {
+  #index-banner .swiper-wrapper .swiper-slide .mobile {
+    display: none;
+    width: 100%;
+  }
+  #index-banner .swiper-wrapper .swiper-slide .pc {
+    display: block;
+    width: 100%;
+  }
+  .model-block li {
+    width: 25%;
+  }
+  .model-block li a {
+    font-size: 1.2em;
+    padding: 20% 0;
+  }
+}
+/********* 768px以下 *********/
+@media (max-width: 768px) {
+  #index-banner .swiper-wrapper .swiper-slide .mobile {
+    display: block;
+    width: 100%;
+  }
+  #index-banner .swiper-wrapper .swiper-slide .pc {
+    display: none;
+    width: 100%;
+  }
+  .model-block li {
+    width: 100%;
+    padding: 4px 2px;
+  }
+  .model-block li a {
+    font-size: 1.5em;
+    padding: 20% 0;
+  }
+}

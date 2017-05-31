@@ -1,0 +1,8 @@
+{
+  "type":"30007",
+  "data": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true
+  }
+}

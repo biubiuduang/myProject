@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>礼物列表</title>
+
+    <meta name="renderer" content="webkit">
+    <link href='themes/img/logo.png' rel='icon'>
+    <link href='themes/img/logo.png' rel='shortcut icon'>
+
+    <!-- build:css themes/css/main.css -->
+    <link rel="stylesheet" href="themes/css/base.css" />
+    <!-- /build-->
+    <link rel="stylesheet" href="themes/css/giftsList.css" />
+</head>
+<body>
+<div class="gifts-list container">
+    <div class="row">
+    </div>
+</div>
+<!-- JS libs -->
+<script type="text/javascript" src="themes/js/libs/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $.ajax({
+            url: "https://stage-api.meidou.tv/api/v1/pub/gifts",    //测试环境
+            //url: "https://marmot.d3dstore.com/api/v1/pub/gifts",    //正式环境
+            type: "get",
+            xhrFields: { withCredentials: true },
+            crossDomain: true,
+            success: function (data) {
+                var len = data.data.length;
+                var giftsListHtml = "";
+                for (var i = 0; i < len; i++) {
+                     giftsListHtml +=
+                            '<div class="col-xs-3" data-gift-id=' + data.data[i]._id + '>'+
+                                '<img class="img-gifts" src=' + data.data[i].iconUrl + ' alt="">'+
+                                '<p class="gifts-name">' + data.data[i].label + '</p>'+
+                                '<p class="gifts-price">' + data.data[i].price + '星</p>'+
+                            '</div>'
+                }
+                $(".gifts-list .row").html(giftsListHtml);
+            }
+        });
+    })
+</script>
+</body>
+</html>

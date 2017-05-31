@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>美豆直播</title>
+    <meta name="renderer" content="webkit">
+    <link href='themes/img/logo.png' rel='icon'>
+    <link href='themes/img/logo.png' rel='shortcut icon'>
+    <!-- swiper -->
+    <link rel="stylesheet" href="themes/css/libs/swiper.min.css" />
+
+    <!-- build:css themes/css/main.css -->
+    <link rel="stylesheet" href="themes/css/base.css" />
+    <!-- /build-->
+
+</head>
+<body class="index">
+<div class="header">
+    <div class="container">
+        <img class="logo" src="themes/img/index-logo.png" alt="">
+        <div class="login-box">
+            <div class="un-login" id="btnlogin">登录</div>
+            <div class="login">
+                <p class="logout">退出</p>
+                <p>|</p>
+                <p class="user-name">用户名</p>
+                <img src="themes/img/md.png" alt="用户名">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="anchor-list container">
+    <!-- banner -->
+    <div class="row ad">
+        <div class="col-xs-9 swiper-banner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="liveRoom.html?performerId=413689&roomType=3" ><img src="themes/img/banner-1.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="liveRoom.html?performerId=381762&roomType=3" ><img src="themes/img/banner-2.jpg" alt=""></a></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="col-xs-3 ad-app">
+            <img src="themes/img/erweima.jpg" alt="">
+        </div>
+    </div>
+    <ul class="row" id="anchorList">
+        <!--<li class="col-xs-3" onclick="window.location.href = 'liveRoom.html?id=1213212313'">-->
+            <!--<div class="list">-->
+                <!--<img class="anchor-poster" src="http://meidou-10028005.image.myqcloud.com/1488867285140" alt="" />-->
+                <!--<p class="anchor-cond">直播</p>-->
+                <!--<div class="anchor-info">-->
+                    <!--<p class="anchor-name">主播昵称主播昵称主播昵称主播昵称</p>-->
+                    <!--<p class="iconfont anchor-ppv">22222人</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</li>-->
+    </ul>
+</div>
+<div class="popup">
+    <div class="popup-login alert">
+        <a href="javascript:void(0)" class="popup-close iconfont">&#xe605;</a>
+        <h2>社交账户登录</h2>
+        <ul>
+            <li class="iconfont weixin" data-login-type="weixin">&#xe621;</li>
+            <li class="iconfont weibo" data-login-type="weibo">&#xe615;</li>
+            <li class="iconfont qq" data-login-type="qq">&#xe648;</li>
+        </ul>
+        <p class="txt">登录美豆直播，观看精彩直播</p>
+    </div>
+    <div class="popup-loading alert">
+        <img src="themes/img/loading.gif" alt="">
+    </div>
+
+    <div class="popup-error alert">
+        <p id="errMsg">错误提示信息</p>
+        <a href="javascript:void(0)" class="popup-close">确定</a>
+    </div>
+</div>
+
+
+
+<!-- JS libs -->
+<script type="text/javascript" src="themes/js/libs/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="themes/js/libs/jquery.qrcode.js"></script>
+<script type="text/javascript" src="themes/js/libs/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="themes/js/libs/qrcode.js"></script>
+<script type="text/javascript" src="themes/js/libs/rc4.js"></script>
+<!--<script type="text/javascript" src="http://www.ijquery.cn/js/qrcode/jquery.qrcode.js"></script>-->
+<!--<script type="text/javascript" src="http://www.ijquery.cn/js/qrcode/qrcode.js"></script>-->
+
+<script type="text/javascript" src="themes/js/sdk/webim.min.js"></script>
+<script type="text/javascript" src="themes/js/sdk/json2.js"></script>
+<script type="text/javascript" src="themes/js/sdk/im.js"></script>
+<!-- 腾讯统计 -->
+<script src="https://pingjs.qq.com/h5/stats.js?v2.0.2" name="MTAH5" sid="500452773" cid="500452792"></script>
+
+<script type="text/javascript" src="themes/js/index.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        fun_index.init();
+    });
+</script>
+</body>
+</html>

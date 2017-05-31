@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React 有事件</title>
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+
+    <script type="text/jsx">
+        class Comp extends React.Component{
+            //构造函数
+            //...args 参数数组
+            constructor(...args){
+                super(...args);    //超类 . 父类
+                this.state = {value : ""};
+            }
+            //事件
+            fn(ev){
+                var hint = "";
+                //
+                var evVal = ev.target.value;
+                if(evVal.length < 6){
+                    hint = "请输入6位以上";
+                }
+                this.setState({
+                    value : hint
+                });
+            }
+
+            render(){
+                return <div>
+                    <input type="text" onChange = { this.fn.bind(this) } />
+                    <span>{this.state.value}</span>
+                </div>
+            }
+        }
+
+        $(function(){
+            ReactDOM.render(
+                    <Comp />,
+                    document.getElementById("div1")
+            )
+        })
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

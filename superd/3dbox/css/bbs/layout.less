@@ -1,0 +1,401 @@
+@charset "utf-8";
+@import url("../common/common");
+
+/********* 以下是响应式布局 **********/
+.layout(){
+  /********* 1200px以上 *********/
+  @media all and (min-width: 1200px) {
+    #bbs{
+      width: 1200px;
+      margin:100px auto 0 auto;
+      .bbs-right{
+        display: block;
+      }
+      .bbs-left{
+        width: 880px;
+        .bbs-list{
+          padding:0 30px;
+          .bbs-type {
+            a {
+              float: left;
+            }
+          }
+          .all-list{
+            li{
+              .user-portrait{
+                margin-right: 25px;
+                width: 50px;
+              }
+              .bbs-info{
+                width: 740px;
+              }
+            }
+          }
+        }
+      }
+
+      /*** 发帖页样式 ***/
+      .new-post {
+        width: 880px;
+        padding: 40px 30px;
+        h2{
+          font-size: 2.875em;
+        }
+        form{
+          label{
+            font-size: 1.125em;
+            input{
+              width:740px;
+            }
+          }
+        }
+      }
+
+      /**** 详情页样式 ****/
+      .bbs-content-left{
+        width: 880px;
+        /******** 回复样式 *********/
+        .bbs-comment{
+          input{
+            &[type=image]{
+              width: 6%;
+              margin-right: 25px;
+            }
+            &[type=text]{
+              width: 64%;
+            }
+            &[type=submit]{
+              width: 19%;
+            }
+          }
+        }
+
+        .bbs-content{
+          padding: 0 30px;
+          .bbs-info{
+            h1{
+              padding: 20px 0;
+              font-size: 1.5em;
+              line-height:44px;
+            }
+          }
+
+          .bbs-body{
+            .content{
+              p{
+                line-height: 25px;
+                margin-top: 30px;
+              }
+              img{
+                margin-top: 30px;
+              }
+            }
+
+
+          }
+        }
+        .bbs-comment-list{
+          padding: 0 30px;
+          li{
+            img{
+              &.user-portrait{
+                width:6%;
+                margin-right:3%;
+              }
+            }
+            .bbs-info {
+              float: right;
+              width:90%;
+              p{
+                &.info{
+                  span{
+                    &.comment-time{
+                      &:before{
+                        content: "发表于";
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /********* 1200px -- 768px *********/
+  @media (max-width: 1200px) and (min-width: 768px){
+    #bbs{
+      width: 100%;
+      background-size: contain;
+      margin:100px auto 0 auto;
+      .bbs-right{
+        display: none;
+      }
+      .bbs-left{
+        width: 100%;
+        .bbs-list{
+          padding:0 30px;
+          .bbs-type {
+            a {
+              float: left;
+            }
+          }
+          .all-list{
+            li{
+              .user-portrait{
+                display: none;
+              }
+              .bbs-info{
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+      /*** 发帖页样式 ***/
+      .new-post {
+        width: 100%;
+        padding:30px 10px;
+        h2{
+          font-size: 2.875em;
+        }
+        form{
+          label{
+            font-size: 1.125em;
+            input{
+              width: 60%;
+            }
+          }
+        }
+      }
+
+      /**** 详情页样式 ****/
+      .bbs-content-left{
+        width:100%;
+        /******** 回复样式 *********/
+        .bbs-comment{
+          input{
+            &[type=image]{
+              width: 6%;
+              margin-right: 25px;
+            }
+            &[type=text]{
+              width: 64%;
+            }
+            &[type=submit]{
+              width: 19%;
+            }
+          }
+        }
+        .bbs-content{
+          padding: 0 20px;
+          .bbs-info{
+            h1{
+              padding: 10px 0;
+              font-size: 1.5em;
+              line-height:44px;
+            }
+          }
+          .bbs-body{
+             .content{
+               p{
+                 line-height: 20px;
+                 margin-top: 20px;
+               }
+               img{
+                 margin-top: 20px;
+               }
+             }
+
+
+           }
+        }
+        .bbs-comment-list{
+          padding: 0 30px;
+          li{
+            img{
+              &.comment-count{
+                width:6%;
+                margin-right:3%;
+              }
+            }
+            .bbs-info {
+              float: right;
+              width:90%;
+              p{
+                &.info{
+                  span{
+                    &.comment-time{
+                      &:before{
+                        content: "发表于";
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /********* 768px以下 *********/
+  @media (max-width: 768px) {
+    #bbs{
+      margin:60px auto 0 auto;
+      .bbs-right{
+        display: none;
+      }
+      .bbs-left{
+        width: 100%;
+        .bbs-list{
+          .bbs-type{
+            a{
+              float: right;
+              &.create{
+                margin-top: 30px;
+              }
+            }
+          }
+          .all-list{
+            li{
+              .user-portrait{
+                display: none;
+              }
+              .bbs-info{
+                width: 100%;
+                p{
+                  width: 100%;
+                  &.info{
+                    margin-bottom: 14px;
+                  }
+                  &.praise{
+                    text-align: right;
+                    span{
+                      float: right;
+                      &.replay-count{
+                        margin-right: 20px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      /*** 发帖页样式 ***/
+      .new-post {
+        width: 100%;
+        padding:30px 10px;
+        h2{
+          font-size: 2em;
+        }
+        form{
+          label{
+            font-size: 1em;
+            input{
+              width: 80%;
+            }
+          }
+        }
+      }
+      /**** 详情页样式 ****/
+      .bbs-content-left{
+        width:100%;
+        padding: 0 10px;
+        /******** 回复样式 *********/
+        .bbs-comment{
+          input{
+            &[type=image]{
+              display: none;
+            }
+            &[type=text]{
+              width: 70%;
+            }
+            &[type=submit]{
+              width: 25%;
+              height: 30px;
+              line-height: 30px;
+              margin-top: 5px;
+              font-size: 0.875em;
+            }
+          }
+        }
+        .bbs-content{
+          padding: 0 10px;
+          .bbs-info{
+            h1{
+              padding: 10px 0;
+              font-size: 1.25em;
+              line-height:24px;
+            }
+            p{
+              width: 100%;
+              span{
+                &.bbs-time{
+                  display:block;
+                  width: 100%;
+                }
+              }
+            }
+            div{
+               &.bdsharebuttonbox{
+                 float: left;
+                 height: 28px;
+                 margin-left: 0;
+               }
+             }
+          }
+          .bbs-body{
+            .content{
+              p{
+                line-height: 18px;
+                margin-top: 10px;
+              }
+              img{
+                margin-top: 10px;
+              }
+            }
+
+
+          }
+        }
+        .bbs-comment-list{
+          padding: 0 15px;
+          li{
+            img{
+              &.user-portrait{
+                display: none;
+                margin:0;              }
+            }
+            .bbs-info {
+              float: right;
+              width:100%;
+              p{
+                &.info{
+                  span{
+                    &.user-name{
+                      display:block;
+                      width: 100%;
+                    }
+                    &.bbs-this-type{
+                      display: none;
+                    }
+                  }
+                }
+                &.comment-content{
+                  font-size: 0.875em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

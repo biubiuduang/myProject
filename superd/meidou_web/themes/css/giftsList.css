@@ -1,0 +1,14 @@
+@charset "utf-8";
+.gifts-list .col-xs-3 {
+  text-align: center;
+}
+.gifts-list .col-xs-3 img {
+  height: 120px;
+  width: auto;
+}
+.gifts-list .col-xs-3 p {
+  font-size: 16px;
+}
+.gifts-list .col-xs-3 p.gifts-price {
+  color: #9c63ef;
+}

@@ -1,0 +1,223 @@
+@charset "utf-8";
+@import url("../common/commonFunction");
+@import url("../common/commonParameter");
+
+body{
+  &.login{
+    width: 100%;
+    background: url(../../img/login-bg.jpg);
+    background-size:cover;
+    text-align: center;
+  }
+  #login{
+    margin: 0 auto;
+    overflow: hidden;
+    .logo{
+      width:100%;
+      float: left;
+      img{
+        width: 80px;
+      }
+    }
+    form{
+      padding: 0 50px;
+      float: left;
+      &.register{
+        border-left: 1px solid #e8e8e8;
+        div.input-box{
+          position: relative;
+          z-index: 5;
+          p.error-box{
+            display: none;
+            text-align: center;
+            width: 80%;
+            height: 45px;
+            border-radius: 5px;
+            position: absolute;
+            top:-30px;
+            left: 50%;
+            margin-left:-40%;
+            background-color: #ffffff;
+            z-index: 9;
+            color: #ff3838;
+            font-weight: 900;
+            padding: 0;
+            font-size: 0.875em;
+            &:after{
+              content:"◆";
+              position:absolute;
+              left: 50%;
+              top:50%;
+              color:#ffffff;
+              height: 40px;
+            }
+          }
+        }
+        input{
+          &[type=submit]{
+            color:#ffffff;
+            background:none;
+            border: 2px solid #ffffff;
+            font-size: 1.3em;
+            cursor: pointer;
+            &:hover{
+              background-color: #0070b8;
+              border:none;
+            }
+          }
+        }
+      }
+      &.login{
+        input{
+          &[type=submit]{
+            color:#ffffff;
+            background-color: #0070b8;
+            font-size: 1.3em;
+            cursor: pointer;
+            margin-top:40px;
+          }
+        }
+      }
+      input{
+        width: 100%;
+        height: 50px;
+        border-radius: 25px;
+        border:none;
+        padding: 0 25px;
+        color:#CCCCCC;
+        font-size:1em;
+        margin: 10px 0;
+        background-color: rgba(255,255,255,0.3);
+        outline: none;
+        position: relative;
+        z-index: 2;
+        &[type=submit]{
+          color:#ffffff;
+          background-color: #0070b8;
+          font-size: 1.3em;
+          cursor: pointer;
+        }
+        &[type=text]{
+          &.focus{
+            color:#ffffff;
+          }
+        }
+      }
+      p{
+        color:#ffffff;
+        text-align: left;
+        padding:0 25px;
+        font-size: 1em;
+        line-height: 40px;
+        &.error{
+          visibility: hidden;
+          color:#ff3838;
+        }
+        &.checkbox{
+          padding: 0;
+          input{
+            width: 22px;
+            height: 22px;
+            vertical-align: middle;
+          }
+          a{
+            display: inline;
+            margin:0;
+            padding: 0;
+            font-size: 1em;
+            color:#0070b8;
+            float: none;
+            width: auto;
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      a{
+        display: inline-block;
+        padding: 0 25px;
+        color:#ffffff;
+        font-size: 0.875em;
+        text-align: left;
+        cursor: pointer;
+      }
+    }
+  }
+  /********* 以下是响应式布局 **********/
+
+    /********* 1200px以上 *********/
+    @media all and (min-width: 1200px) {
+      #login{
+        width: 50%;
+        .logo{
+          margin-bottom:50px;
+        }
+        form{
+          width: 50%;
+          a{
+            width: 100%;
+            &.go-register{
+              display: none;
+            }
+            &.go-login{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    /********* 1200px -- 768px *********/
+    @media (max-width: 1200px) and (min-width: 768px){
+      #login{
+        width: 100%;
+        .logo{
+          margin-bottom:50px;
+        }
+        form{
+          width: 50%;
+          a{
+            width: 100%;
+            &.go-register{
+              display: none;
+            }
+            &.go-login{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    /********* 768px以下 *********/
+    @media (max-width: 768px) {
+      #login{
+        width: 100%;
+        .logo{
+          margin-bottom:10px;
+        }
+        form{
+          width: 100%;
+          &.login{
+            display: block;
+          }
+          &.register{
+            display: none;
+            border-left: none;
+          }
+          a{
+            width: 50%;
+            float: left;
+            &.go-register{
+              display: block;
+              text-align: right;
+            }
+            &.go-login{
+              display: block;
+            }
+          }
+        }
+      }
+    }
+}

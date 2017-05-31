@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>美豆直播</title>
+    <meta name="renderer" content="webkit">
+    <link href='themes/img/logo.png' rel='icon'>
+    <link href='themes/img/logo.png' rel='shortcut icon'>
+    <!-- swiper -->
+    <link rel="stylesheet" href="themes/css/libs/swiper.min.css" />
+
+    <!-- build:css themes/css/main.css -->
+    <link rel="stylesheet" href="themes/css/base.css" />
+    <!-- /build-->
+</head>
+<body class="live-room">
+<div class="anchor-list-left">
+    <div class="left-logo">
+        <a href="index.html" target="_self">
+            <img class="logo" src="themes/img/logo.png" alt="美豆" />
+            <img class="logo-font" src="themes/img/mdzb.png" alt="美豆直播" />
+        </a>
+    </div>
+    <div class="left-login">
+        <div class="un-login" id="btnlogin" >登录</div>
+        <div class="login">
+            <img src="themes/img/md.png" alt="">
+            <p class="user-name">用户名</p>
+            <p class="logout">退出</p>
+        </div>
+    </div>
+    <div class="left-live">
+        <p class="live-being">正在直播</p>
+        <ul class="live-list" id="onAir">
+            <!--<li>-->
+                <!--<a href="javascript:void(0);"><img src="http://meidou-10028005.image.myqcloud.com/1488640556336" alt=""></a>-->
+                <!--<p class="alt"><span>nickName</span></p>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="javascript:void(0);"><img src="http://meidou-10028005.image.myqcloud.com/1488640556336" alt=""></a>-->
+                <!--<p class="alt"><span>nickName</span></p>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="javascript:void(0);"><img src="http://meidou-10028005.image.myqcloud.com/1488640556336" alt=""></a>-->
+                <!--<p class="alt"><span>nickName</span></p>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="javascript:void(0);"><img src="http://meidou-10028005.image.myqcloud.com/1488640556336" alt=""></a>-->
+                <!--<p class="alt"><span>nickName</span></p>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="javascript:void(0);"><img src="http://meidou-10028005.image.myqcloud.com/1488640556336" alt=""></a>-->
+                <!--<p class="alt"><span>nickName</span></p>-->
+            <!--</li>-->
+
+        </ul>
+    </div>
+</div>
+<div class="anchor-container">
+    <div class="left contri">
+        <h2 class="title">贡献榜</h2>
+        <ul class="contri-list">
+            <!-- <li>
+                <div class="level-icon">1</div>
+                <img src="http://meidou-10028005.image.myqcloud.com/1488640556336" alt="用户名" />
+                <p class="iconfont nick-name" data-gender="female" title="用户名">用户名用户名</p>
+                <p class="contri-val">魅力值 <span>888888</span></p>
+            </li>
+            <li>
+                <div class="level-icon">2</div>
+                <img src="http://meidou-10028005.image.myqcloud.com/1488640556336" alt="用户名" />
+                <p class="iconfont nick-name" data-gender="female">用户名用户名</p>
+                <p class="contri-val">魅力值 <span>888888</span></p>
+            </li>
+            <li>
+                <div class="level-icon">3</div>
+                <img src="http://meidou-10028005.image.myqcloud.com/1488640556336" alt="用户名" />
+                <p class="iconfont nick-name" data-gender="female">用户名用户名</p>
+                <p class="contri-val">魅力值 <span>888888</span></p>
+            </li>
+            <li>
+                <div class="level-icon">4</div>
+                <img src="http://meidou-10028005.image.myqcloud.com/1488640556336" alt="用户名" />
+                <p class="iconfont nick-name" data-gender="female">用户名用户名</p>
+                <p class="contri-val">魅力值 <span>888888</span></p>
+            </li>
+            <li>
+                <div class="level-icon">5</div>
+                <img src="http://meidou-10028005.image.myqcloud.com/1488640556336" alt="用户名" />
+                <p class="iconfont nick-name" data-gender="female">用户名用户名</p>
+                <p class="contri-val">魅力值 <span>888888</span></p>
+            </li>
+            <li>
+                <div class="level-icon">6</div>
+                <img src="http://meidou-10028005.image.myqcloud.com/1488640556336" alt="用户名" />
+                <p class="iconfont nick-name" data-gender="female">用户名用户名</p>
+                <p class="contri-val">魅力值 <span>888888</span></p>
+            </li>
+            <li>
+                <div class="level-icon">7</div>
+                <img src="http://meidou-10028005.image.myqcloud.com/1488640556336" alt="用户名" />
+                <p class="iconfont nick-name" data-gender="male" title="用户名">用户名用户名</p>
+                <p class="contri-val">魅力值 <span>888888</span></p>
+            </li>
+            <li>
+                <div class="level-icon">8</div>
+                <img src="http://meidou-10028005.image.myqcloud.com/1488640556336" alt="用户名" />
+                <p class="iconfont nick-name" data-gender="female">用户名用户名</p>
+                <p class="contri-val">魅力值 <span>888888</span></p>
+            </li> -->
+        </ul>
+    </div>
+    <div class="center anchor-video">
+        <div id="mdVideo"></div>
+        <div class="counter" id="memberCountOffset">
+
+        </div>
+        <div class="video-widget">
+            <!-- 弹幕 -->
+            <div class="bullet-screen">
+                <!--<div class="bullet-screen-list">-->
+                    <!--<div class="bullet-head">-->
+                        <!--<img src="http://meidou-10028005.image.myqcloud.com/1488640556336" alt="">-->
+                    <!--</div>-->
+                    <!--<div>-->
+                        <!--<h3 class="user-name">用户名</h3>-->
+                        <!--<h3 class="bullet-screen-content">弹幕内容弹幕弹幕内容弹幕弹幕内容弹幕弹幕内容弹幕</h3>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!-- 全栈弹幕 -->
+                <!--<div class="bullet-screen-list" style="top:0;" data-bullet-type="siteMsg">-->
+                    <!--<div class="bullet-head">-->
+                        <!--<img src= "themes/img/zzl/zzl-icon.png" />-->
+                    <!--</div>-->
+                    <!--<div>-->
+                        <!--<h3 class="bullet-screen-content">恭喜你中了恭喜你中了恭喜你中了恭喜你中了恭喜你中了恭喜你中了恭喜你中了恭喜你中了</h3>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+            <!-- 礼物 -->
+            <div class="bullet-gifts">
+                <!--<div class="gift-list" data-num="99">-->
+                    <!--<div class="gift-host-head">-->
+                        <!--<img src="http://meidou-10028005.image.myqcloud.com/1488640556336" alt="" />-->
+                    <!--</div>-->
+                    <!--<h2 class="gift-username">李祥祥</h2>-->
+                    <!--<h2 class="gift-type">送出<span>玫瑰</span></h2>-->
+                    <!--<div class="gift-info">-->
+                        <!--<img class="gift-pic" src="http://mediastorage-10028005.file.myqcloud.com/Pictures/1/ic_liwu_hua%403x.png" alt="">-->
+                        <!--<span class="iconfont">&#xe605;</span>-->
+                        <!--<span class="gift-count">99</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="gift-list" data-num="1">-->
+                    <!--<div class="gift-host-head">-->
+                        <!--<img src="http://meidou-10028005.image.myqcloud.com/1488640556336" alt="" />-->
+                    <!--</div>-->
+                    <!--<h2 class="gift-username">李祥祥</h2>-->
+                    <!--<h2 class="gift-type">送出<span>玫瑰</span></h2>-->
+                    <!--<div class="gift-info">-->
+                        <!--<img class="gift-pic" src="http://mediastorage-10028005.file.myqcloud.com/Pictures/1/ic_liwu_hua%403x.png" alt="">-->
+                        <!--<span class="iconfont">&#xe605;</span>-->
+                        <!--<span class="gift-count">99</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+            <!-- 转转乐 -->
+            <div class="zzl-icon">
+                <img src="themes/img/zzl/zzl-icon.png" alt="" />
+                <p class="count-down"><span class="minute-show">03</span>:<span class="second-show">00</span></p>
+            </div>
+            <div class="zhuanzhuanle">
+                <div class="zzl-container zzl-ele">
+
+                </div>
+                <div class="zzl-container zzl-state">
+                    <a class="iconfont state-close" href="javascript:void(0);">&#xe725;</a>
+                    <div class="state-box">
+                        <h2>奖品说明</h2>
+                        <ul>
+                            <li>转转乐100%中奖；</li>
+                            <li>奖品包含1荧光棒、10荧光棒、1美豆、6美豆、100美豆；</li>
+                            <li>每次出现3个奖品，您可以全部获得。</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="zzl-container winning-info-double">
+                    <a class="iconfont double-close" href="javascript:void(0);">&#xe725;</a>
+                    <div class="info-double">
+                        <img class="double-blink" src="themes/img/zzl/double-blink.png" alt="" />
+                        <img class="gifts-double" src="themes/img/zzl/md-double.png" alt="" />
+                        <img class="double" src="themes/img/zzl/double.png" alt="" />
+                    </div>
+                    <p class="double-info">恭喜您获得600美豆</p>
+                </div>
+                <div class="zzl-container winning-md">
+                    <a class="iconfont md-close" href="javascript:void(0);">&#xe725;</a>
+                    <div class="info-gifts">
+                        <p class="md-count"><img src="themes/img/zzl/md.png" alt=""><span id="winCount">106</span>美豆</p>
+                        <ul class="gifts-list row">
+                            <!--<li class="col-xs-4 active" data-gifts-id="">-->
+                                <!--<div>-->
+                                    <!--<img src="http://meidou-10028005.image.myqcloud.com/1483667958899" alt="">-->
+                                    <!--<p class="price">66美豆</p>-->
+                                <!--</div>-->
+                            <!--</li>-->
+                            <!--<li class="col-xs-4">-->
+                                <!--<div>-->
+                                    <!--<img src="http://meidou-10028005.image.myqcloud.com/1483667958899" alt="">-->
+                                    <!--<p class="price">66美豆</p>-->
+                                <!--</div>-->
+                            <!--</li>-->
+                            <!--<li class="col-xs-4">-->
+                                <!--<div>-->
+                                    <!--<img src="http://meidou-10028005.image.myqcloud.com/1483667958899" alt="">-->
+                                    <!--<p class="price">66美豆</p>-->
+                                <!--</div>-->
+                            <!--</li>-->
+                        </ul>
+
+                        <a class="reward"  href="javascript:void(0);">打赏主播</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right anchor-widget">
+        <!-- 主播信息 -->
+        <div class="anchor-info">
+            <div class="left">
+                <h2 class="nick-name"><span id="nickName"></span><span id="anchorLv" class="anchor-level" style="background-position: 0 0; background-size: 22px 132px;"></span></h2>
+                <p id="anchorId" class="anchor-id"></p>
+                <p id="anchorSl" class="anchor-slogon"></p>
+            </div>
+            <img id="anchorCover" class="right" src="" alt="" />
+        </div>
+        <!-- 聊天框 -->
+        <div class="chatting">
+            <div class="chatting-box">
+                <div class="send">
+                   <!--<div class="send-list" data-type="0">-->
+                        <!--<span class="level" data-level="0">1</span>-->
+                        <!--欢迎:-->
+                        <!--<span class="user-name">林大双</span>-->
+                        <!--进入房间~-->
+                    <!--</div>-->
+                    <!--<div class="send-list" data-type="1">-->
+                        <!--<span class="level" data-level="1">11</span>-->
+                        <!--<span class="user-name">林大双</span>-->
+                        <!--离开房间~-->
+                    <!--</div>-->
+                    <!--<div class="send-list" data-type="2">-->
+                        <!--<span class="level" data-level="2">25</span>-->
+                        <!--<span class="user-name">徐小小小娘</span>:-->
+                        <!--<span class="send-content">好漂亮好漂亮好漂亮</span>-->
+                    <!--</div>-->
+                    <!--<div class="send-list" data-type="3">-->
+                        <!--<span class="level" data-level="3">31</span>-->
+                        <!--<span class="user-name">金啊毛</span>:-->
+                        <!--<span class="send-content">我送了 <span class="gift-sum">一</span>个</span>-->
+                        <!--<img class="gift-type" src="http://mediastorage-10028005.file.myqcloud.com/Pictures/1/ic_liwu_hua%403x.png" alt="礼物名称">-->
+                    <!--</div>-->
+                </div>
+            </div>
+            <div class="send-message">
+                <div class="htmleaf-content">
+                    <section class="model-1">
+                        <div class="checkbox">
+                            <input type="checkbox" checked="checked" />
+                            <label>弹幕</label>
+                        </div>
+                    </section>
+                </div>
+                <input id="sendTxt" class="talking-txt"  type="text" value="" />
+                <input id="sendMsg" class="talking-btn" type="button" maxlength="40" value="发送" />
+            </div>
+        </div>
+        <!-- 礼物列表 -->
+        <div class="gifts">
+            <div class="pay">
+                <p class="sum">余额：<span id="userMoney">0</span>豆</p>
+                <a id="recharge" class="recharge" href="javascript:void(0);" onclick="MtaH5.clickStat('recharge');">充值</a>
+            </div>
+            <!-- Swiper -->
+            <div class="swiper-container gifts-container">
+                <div class="swiper-wrapper">
+
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-button-prev swiper-button-white"></div>
+            </div>
+
+            <div class="gifts-num">
+                <ul class="focus">
+                    <li class="active" data-num="1">×1</li>
+                    <li data-num="10">×10</li>
+                    <li data-num="99">×99</li>
+                    <li data-num="520">×520</li>
+                </ul>
+                <a id="givinggift" href="javascript:void(0);">送礼</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup">
+    <div class="popup-login alert">
+        <a href="javascript:void(0)" class="popup-close iconfont">&#xe605;</a>
+        <h2>社交账户登录</h2>
+        <ul>
+            <li class="iconfont weixin" data-login-type="weixin">&#xe621;</li>
+            <li class="iconfont weibo" data-login-type="weibo">&#xe615;</li>
+            <li class="iconfont qq" data-login-type="qq">&#xe648;</li>
+        </ul>
+        <p class="txt">登录美豆直播，观看精彩直播</p>
+    </div>
+
+    <div class="popup-loading alert">
+        <img src="themes/img/loading.gif" alt="">
+    </div>
+
+    <div class="popup-error alert">
+        <p id="errMsg">错误提示信息</p>
+        <a href="javascript:void(0)" class="popup-close">确定</a>
+    </div>
+
+    <div class="live-finish alert">
+        <img src="themes/img/live-finish.png" alt="">
+        <h2>直播结束</h2>
+        <!--<p class="num">观看人次：3231人</p>-->
+        <!--<p class="time">直播时长：01:20:38</p>-->
+        <p class="num"></p>
+        <p class="time"></p>
+        <div class="bottom">
+            <a class="random" href="">随机主播</a>
+            <a class="return" href="index.html">回到首页</a>
+        </div>
+    </div>
+    <div class="popup-recharge-type alert">
+        <a href="javascript:void(0)" class="popup-close iconfont">&#xe605;</a>
+        <h2>美豆充值</h2>
+        <div class="top">
+            <p class="user-name">充值账户: <span class="recharge-name"></span></p>
+            <ul class="recharge-list">
+                <!--<li class="active" data-cost="1">-->
+                    <!--<p class="money">1元</p>-->
+                    <!--<p class="meidou">10美豆</p>-->
+                <!--</li>-->
+                <!--<li data-cost="5">-->
+                    <!--<p class="money">5元</p>-->
+                    <!--<p class="meidou">50美豆</p>-->
+                <!--</li>-->
+                <!--<li data-cost="10">-->
+                    <!--<p class="money">10元</p>-->
+                    <!--<p class="meidou">100美豆</p>-->
+                <!--</li>-->
+                <!--<li data-cost="50">-->
+                    <!--<p class="money">50元</p>-->
+                    <!--<p class="meidou">500美豆</p>-->
+                <!--</li>-->
+                <!--<li data-cost="100">-->
+                    <!--<p class="money">100元</p>-->
+                    <!--<p class="meidou">1000美豆</p>-->
+                <!--</li>-->
+                <!--<li data-cost="500">-->
+                    <!--<p class="money">500元</p>-->
+                    <!--<p class="meidou">5000美豆</p>-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <div class="bottom">
+            <h3>支付方式：</h3>
+            <ul id="payTypeChoice">
+                <li class="active" id="payWX" data-type="weixin">微信支付</li>
+                <li id="payZFB" data-type="zhifubao">支付宝支付</li>
+            </ul>
+        </div>
+        <input id="rechargeTypeBtn" type="button" value="确定支付" />
+    </div>
+    <div class="popup-recharge-weixin alert">
+        <a href="javascript:void(0)" class="popup-close iconfont money-callback">&#xe605;</a>
+        <h2>美豆充值</h2>
+        <div class="left">
+            <p class="user-name">充值账户: <span class="recharge-name"></span></p>
+            <ul class="recharge-list">
+                <!--<li class="active" data-cost="1">-->
+                    <!--<p class="money">1元</p>-->
+                    <!--<p class="meidou">10美豆</p>-->
+                <!--</li>-->
+                <!--<li data-cost="5">-->
+                    <!--<p class="money">5元</p>-->
+                    <!--<p class="meidou">50美豆</p>-->
+                <!--</li>-->
+                <!--<li data-cost="10">-->
+                    <!--<p class="money">10元</p>-->
+                    <!--<p class="meidou">100美豆</p>-->
+                <!--</li>-->
+                <!--<li data-cost="50">-->
+                    <!--<p class="money">50元</p>-->
+                    <!--<p class="meidou">500美豆</p>-->
+                <!--</li>-->
+                <!--<li data-cost="100">-->
+                    <!--<p class="money">100元</p>-->
+                    <!--<p class="meidou">1000美豆</p>-->
+                <!--</li>-->
+                <!--<li data-cost="500">-->
+                    <!--<p class="money">500元</p>-->
+                    <!--<p class="meidou">5000美豆</p>-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <div class="right">
+            <h3>扫描支付：</h3>
+            <!--<img id="barcode" class="barcode" src="themes/img/barcode.jpg" alt="">-->
+            <div id="barcode" class="barcode"></div>
+            <p>打开手机微信</p>
+            <p>扫一扫支付</p>
+            <input id="payWxBtn" type="button" value="支付完成" />
+        </div>
+    </div>
+    <div class="popup-recharge-zhifubao alert">
+        <a href="javascript:void(0)" class="popup-close iconfont money-callback">&#xe605;</a>
+        <h2>美豆充值提示</h2>
+        <p class="user-name">充值账户: <span class="recharge-name"></span></p>
+        <p>支付完成前，请不要关闭此支付验证窗口。</p>
+        <p>支付完成后，请根据您支付的情况点击下面按钮。</p>
+        <ul>
+            <li id="payZfbErr">支付遇到问题</li>
+            <li id="payZfbSuc">支付完成</li>
+        </ul>
+    </div>
+    <div class="recharge-success alert">
+        <a href="javascript:void(0)" class="popup-close iconfont">&#xe605;</a>
+        <img src="themes/img/success.png" alt="">
+        <h2>充值成功</h2>
+        <!--<p>已成功充值<span class="success-count">500</span>美豆</p>-->
+        <a class="btn success" href="javascript:void(0);">完成</a>
+    </div>
+    <div class="recharge-error alert">
+        <a href="javascript:void(0)" class="popup-close iconfont">&#xe605;</a>
+        <img src="themes/img/error.png" alt="">
+        <h2>充值失败</h2>
+        <p> </p>
+        <a class="btn error" href="javascript:void(0);">重新充值</a>
+    </div>
+</div>
+<div id="payForm" style="display: none;"></div>
+
+<!-- JS libs -->
+<script type="text/javascript" src="themes/js/libs/jquery-1.7.2.min.js"></script>
+<!--<script src="//imgcache.qq.com/open/qcloud/video/vcplayer/TcPlayer.js" charset="utf-8"></script>-->
+<script type="text/javascript" src="themes/js/libs/TcPlayer.js"></script>
+<script type="text/javascript" src="themes/js/libs/swiper.jquery.min.js"></script>
+<script type="text/javascript" src="themes/js/libs/jquery.qrcode.js"></script>
+<script type="text/javascript" src="themes/js/libs/qrcode.js"></script>
+<script type="text/javascript" src="themes/js/libs/rc4.js"></script>
+
+<script type="text/javascript" src="themes/js/sdk/webim.min.js"></script>
+<script type="text/javascript" src="themes/js/sdk/json2.js"></script>
+<script type="text/javascript" src="themes/js/sdk/im.js"></script>
+<!-- 腾讯统计 -->
+<script src="https://pingjs.qq.com/h5/stats.js?v2.0.2" name="MTAH5" sid="500452773" cid="500452792"></script>
+
+<script type="text/javascript" src="themes/js/index.js"></script>
+<script type="text/javascript" src="themes/js/liveRoom.js"></script>
+</body>
+</html>

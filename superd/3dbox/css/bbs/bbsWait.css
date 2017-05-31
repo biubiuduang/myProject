@@ -1,0 +1,492 @@
+@charset "utf-8";
+/*********** 分页 ***********/
+body {
+  font-family: '华文细黑', '微软雅黑', 'calibri', sans-serif;
+  font-size: 16px;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  cursor: default;
+}
+body.full {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+img {
+  border: none;
+}
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+form,
+input,
+th,
+td {
+  margin: 0px;
+  padding: 0px;
+}
+ol,
+ul {
+  list-style: none;
+}
+video {
+  width: 100%;
+}
+input {
+  outline: none;
+}
+select {
+  outline: none;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 0 5px #e6e6e6 inset;
+}
+input[type='text'] {
+  color: #CCCCCC;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 0 5px #e6e6e6 inset;
+}
+input[type='text']:focus {
+  color: #333333;
+}
+/***  公共的头部   ***/
+#header {
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 12;
+}
+#header .shoppingCart {
+  float: right;
+  display: inline-block;
+  text-indent: 99999px;
+  overflow: hidden;
+  background: url("../../img/shop/cart.png") center center no-repeat;
+  width: 20px;
+  height: 16px;
+  margin: 22px 0 0 20px;
+}
+#header .shoppingCart:hover {
+  background: url("../../img/shop/cart-null.png") center center no-repeat;
+}
+#header .shoppingCart.cartFull {
+  background: url("../../img/shop/cart-full.png") center center no-repeat;
+}
+#header .shoppingCart.cartFull:hover {
+  background: url("../../img/shop/cart-full-hover.png") center center no-repeat;
+}
+#header .header {
+  margin: 0 auto;
+  position: relative;
+}
+#header .header .cart_show {
+  width: 288px;
+  max-height: 500px;
+  position: absolute;
+  right: 0;
+  top: 60px;
+  z-index: 6;
+  background-color: #ffffff;
+  border: 2px solid #f3f3f3;
+  border-top: none;
+  box-shadow: 2px 2px 4px #eeeeee;
+  display: none;
+}
+#header .header .cart_show .triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 10px solid #ffffff;
+  position: absolute;
+  top: -10px;
+  right: -4px;
+  z-index: 7;
+}
+#header .header .cart_show p.null {
+  line-height: 80px;
+}
+#header .header .cart_show #J_showcart td {
+  padding: 0 5px;
+}
+#header .header .cart_show #J_showcart td img {
+  width: 70px;
+}
+#header .header .cart_show #J_showcart td p {
+  color: #333333;
+  font-size: 0.75em;
+  text-align: left;
+  line-height: 20px;
+}
+#header .header .cart_show #J_showcart td p.color {
+  color: #666666;
+}
+#header .header .cart_show a.goBuy {
+  display: inline-block;
+  width: 80px;
+  height: 20px;
+  line-height: 20px;
+  background: url("../../img/shop/btn-bg-blue.jpg") repeat-x;
+  background-size: 1px 20px;
+  color: #ffffff;
+  font-size: 0.75em;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+#header .header .mobile {
+  display: none;
+}
+#header .header form {
+  display: none;
+  width: 100%;
+  line-height: 60px;
+  z-index: 2;
+}
+#header .header form a {
+  float: left;
+}
+#header .header form input {
+  vertical-align: middle;
+}
+#header .header form input[type=button] {
+  width: 30px;
+  height: 30px;
+  background: url("../../img/search.png") center center no-repeat;
+  border: none;
+  cursor: pointer;
+}
+#header .header form input[type=text] {
+  padding: 5px;
+  font-size: 1em;
+  border: none;
+  background: none;
+  color: #ffffff;
+  outline: none;
+}
+#header .header form input[type=text].focus {
+  border: none;
+  box-shadow: none;
+}
+#header .header .global-link {
+  float: left;
+}
+#header .header .global-link a {
+  display: inline-block;
+  float: left;
+  line-height: 60px;
+  color: #EEEEEE;
+  font-size: 1em;
+  cursor: pointer;
+}
+#header .header .global-link a img {
+  vertical-align: middle;
+  cursor: pointer;
+}
+#header .header .global-link a:hover {
+  color: #888888;
+}
+#header .header .global-link a.link {
+  color: #888888;
+}
+#header .header .global-login {
+  float: right;
+  color: #eeeeee;
+  text-align: right;
+  height: 60px;
+  line-height: 60px;
+}
+#header .header .global-login.un-login {
+  display: none;
+}
+#header .header .global-login.login {
+  display: block;
+  width: 88px;
+  text-align: center;
+  z-index: 5;
+}
+#header .header .global-login.login .user_box {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: -16px;
+  width: 120px;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 10px 0;
+  z-index: 6;
+  border: 2px solid #f3f3f3;
+  border-top: none;
+  box-shadow: 2px 2px 4px #eeeeee;
+}
+#header .header .global-login.login .user_box .triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 10px solid #ffffff;
+  position: absolute;
+  top: -10px;
+  left: 40px;
+  z-index: 7;
+}
+#header .header .global-login.login .user_box a {
+  line-height: 30px;
+  width: 100%;
+  color: #666666;
+  display: inline-block;
+  float: left;
+}
+#header .header .global-login.login .user_box a:hover {
+  color: #0b83ca;
+}
+#header .header .global-login a {
+  color: #eeeeee;
+  display: inline-block;
+  font-size: 0.875em;
+  cursor: pointer;
+}
+#header .header .global-login a:hover {
+  color: #888888;
+}
+#header .header .global-login a.user-name {
+  display: block;
+  float: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 5px;
+  width: 80px;
+  position: relative;
+  height: 60px;
+}
+/********* 以下是响应式布局 **********/
+/********* 1200px以上 *********/
+@media all and (min-width: 1000px) {
+  #header .header {
+    width: 1000px;
+    height: 60px;
+  }
+  #header .header form {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  #header .header form a {
+    float: left;
+  }
+  #header .header form input[type=text] {
+    width: 320px;
+  }
+  #header .header .global-link a {
+    margin-right: 65px;
+  }
+  #header .header .global-login {
+    position: relative;
+  }
+}
+/********* 1200px -- 768px *********/
+@media (max-width: 1000px) and (min-width: 768px) {
+  #header .header {
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+  }
+  #header .header form {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  #header .header .global-link {
+    width: 80%;
+  }
+  #header .header .global-link a {
+    width: 16.5%;
+    text-align: center;
+  }
+  #header .header .global-login {
+    position: relative;
+  }
+}
+/********* 768px以下 *********/
+@media (max-width: 768px) {
+  #header {
+    width: 100%;
+    height: 60px;
+  }
+  #header .shoppingCart {
+    width: 0;
+    height: 0;
+  }
+  #header.show-full {
+    height: 100%;
+    overflow: hidden;
+    background-color: #000000;
+  }
+  #header .header {
+    width: 100%;
+    height: 60px;
+  }
+  #header .header .mobile {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: url(../../img/show-1.png) center center no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+  }
+  #header .header .global-link {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  #header .header .global-link a {
+    width: 100%;
+    float: left;
+    line-height: 60px;
+    display: none;
+    text-align: center;
+  }
+  #header .header .global-link a:nth-child(1) {
+    display: block;
+    line-height: 60px;
+  }
+  #header .header .global-link a:nth-child(6) {
+    display: none;
+  }
+  #header .header .global-link form {
+    display: none;
+    width: 100%;
+    float: left;
+    text-align: right;
+  }
+  #header .header .global-link form a {
+    width: 20%;
+    background: none;
+    visibility: hidden;
+  }
+  #header .header .global-link form input[type=text] {
+    width: 55%;
+  }
+  #header .header .global-login {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+  }
+}
+#footer {
+  float: left;
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  background-color: #000000;
+  padding: 15px 0;
+  font-size: 0.875em;
+}
+#footer p {
+  line-height: 24px;
+}
+#footer a {
+  color: #ffffff;
+}
+#footer a:hover {
+  text-decoration: underline;
+}
+#footer.onBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@media all and (max-width: 1200px) {
+  #footer p.pc {
+    display: none;
+  }
+  #footer p.mobile {
+    display: block;
+  }
+}
+@media all and (min-width: 1200px) {
+  #footer p.pc {
+    display: block;
+  }
+  #footer p.mobile {
+    display: none;
+  }
+}
+.video-more {
+  width: 100%;
+  text-align: center;
+  color: #333333;
+  font-size: 2.2em;
+  margin-top: 1.875em;
+  font-weight: 400;
+}
+.paging {
+  padding: 40px 0px;
+  text-align: center;
+}
+.paging a {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #e8e8e8;
+  color: #666666;
+  font-size: 0.875em;
+  margin: 0 2px;
+}
+.paging a.link {
+  background-color: #0070b8;
+  color: #ffffff;
+}
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+#J_header #global-nav .swiper-wrapper a:nth-child(4) {
+  color: #ffffff;
+}
+#bbs {
+  height: 100%;
+  margin: 0 auto;
+  background: url("../../img/loading.jpg") center center no-repeat #ffffff;
+}
+@media all and (min-width: 1200px) {
+  #bbs {
+    width: 1200px;
+  }
+}
+@media all and (max-width: 1200px) {
+  #bbs {
+    width: 100%;
+    background-size: contain;
+  }
+}

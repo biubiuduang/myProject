@@ -1,0 +1,350 @@
+@import url("./common");
+
+
+.header(){
+  /***  公共的头部   ***/
+  #header{
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    .shoppingCart{
+      float: right;
+      display: inline-block;
+      text-indent: 99999px;
+      overflow: hidden;
+      background: url("../../img/shop/cart.png") center center no-repeat;
+      width: 20px;
+      height: 16px;
+      margin:22px 0 0 20px;
+      &:hover{
+        background: url("../../img/shop/cart-null.png") center center no-repeat;
+      }
+      &.cartFull{
+        background: url("../../img/shop/cart-full.png") center center no-repeat;
+        &:hover{
+          background: url("../../img/shop/cart-full-hover.png") center center no-repeat;
+        }
+      }
+    }
+    .header{
+      margin:0 auto;
+      position: relative;
+      .cart_show{
+        width: 288px;
+        max-height: 500px;
+        position: absolute;
+        right: 0;
+        top:60px;
+        z-index: 6;
+        background-color: #ffffff;
+        border:2px solid #f3f3f3;
+        border-top: none;
+        box-shadow: 2px 2px 4px #eeeeee;
+        display: none;
+        .triangle-up{
+          width: 0;
+          height: 0;
+          border-left: 20px solid transparent;
+          border-right: 20px solid transparent;
+          border-bottom: 10px solid #ffffff;
+          position: absolute;
+          top:-10px;
+          right:-4px;
+          z-index: 7;
+        }
+        p.null{
+          line-height: 80px;
+        }
+        #J_showcart{
+          td{
+            padding: 0 5px;
+            img{
+              width: 70px;
+            }
+            p{
+              color:#333333;
+              font-size: 0.75em;
+              text-align: left;
+              line-height: 20px;
+              &.color{
+                color:#666666;
+              }
+            }
+          }
+        }
+        a.goBuy{
+          display:inline-block;
+          width: 80px;
+          height: 20px;
+          line-height: 20px;
+          background:url("../../img/shop/btn-bg-blue.jpg") repeat-x;
+          background-size: 1px 20px;
+          color:#ffffff;
+          font-size: 0.75em;
+          border-radius: 20px;
+          margin-bottom: 30px;
+        }
+      }
+      .mobile{
+        display: none;
+      }
+      form{
+        display: none;
+        width: 100%;
+        line-height:60px;
+        z-index: 2;
+        a{
+          float: left;
+        }
+        input{
+          vertical-align: middle;
+          &[type=button]{
+            width:30px;
+            height: 30px;
+            background: url("../../img/search.png") center center no-repeat;
+            border: none;
+            cursor: pointer;
+          }
+          &[type=text]{
+            padding:5px;
+            font-size: 1em;
+            border: none;
+            background: none;
+            color:#ffffff;
+            outline: none;
+            &.focus{
+              border:none;
+              box-shadow: none;
+            }
+          }
+        }
+      }
+      .global-link{
+        float:left;
+        a{
+          display: inline-block;
+          float: left;
+          line-height: 60px;
+          color:#EEEEEE;
+          font-size: 1em;
+          cursor: pointer;
+          img{
+            vertical-align: middle;
+            cursor:pointer;
+          }
+          &:hover{
+            color:#888888;
+          }
+          &.link{
+            color:#888888;
+          }
+        }
+      }
+      .global-login{
+        float: right;
+        color:#eeeeee;
+        text-align: right;
+        height: 60px;
+        line-height: 60px;
+        &.un-login{
+          display: none;
+        }
+        &.login{
+          display: block;
+          width: 88px;
+          text-align: center;
+          z-index: 5;
+          .user_box{
+            display: none;
+            position: absolute;
+            top:60px;
+            left:-16px;
+            width: 120px;
+            text-align: center;
+            background-color: #ffffff;
+            padding: 10px 0;
+            z-index: 6;
+            border:2px solid #f3f3f3;
+            border-top: none;
+            box-shadow:2px 2px 4px #eeeeee;
+            .triangle-up{
+              width: 0;
+              height: 0;
+              border-left: 20px solid transparent;
+              border-right: 20px solid transparent;
+              border-bottom: 10px solid #ffffff;
+              position: absolute;
+              top:-10px;
+              left: 40px;
+              z-index: 7;
+            }
+            a{
+              line-height: 30px;
+              width: 100%;
+              color:#666666;
+              display: inline-block;
+              float: left;
+              &:hover{
+                color:#0b83ca;
+              }
+            }
+          }
+        }
+        a{
+          color:#eeeeee;
+          display: inline-block;
+          font-size: 0.875em;
+          cursor: pointer;
+          &:hover{
+            color:#888888;
+          }
+          &.user-name{
+            display: block;
+            float: left;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-right: 5px;
+            width: 80px;
+            position: relative;
+            height: 60px;
+          }
+        }
+      }
+    }
+  }
+  /********* 以下是响应式布局 **********/
+
+  /********* 1200px以上 *********/
+  @media all and (min-width: 1000px) {
+    #header{
+      .header{
+        width:1000px;
+        height: 60px;
+        form{
+          position: absolute;
+          right: 0;
+          top:0;
+          a{
+            float: left;
+          }
+          input{
+            &[type=text]{
+              width: 320px;
+            }
+          }
+        }
+        .global-link{
+          a{
+            margin-right:65px;
+          }
+        }
+        .global-login{
+          position: relative;
+        }
+      }
+    }
+  }
+  /********* 1200px -- 768px *********/
+  @media (max-width: 1000px) and (min-width: 768px){
+    #header{
+      .header{
+        width:100%;
+        height: 60px;
+        overflow: hidden;
+        form{
+          display: none;
+          position: absolute;
+          right: 0;
+          top:0;
+        }
+        .global-link{
+          width: 80%;
+          a{
+            width: 16.5%;
+            text-align: center;
+          }
+         }
+        .global-login{
+          position: relative;
+        }
+        }
+      }
+    }
+  /********* 768px以下 *********/
+  @media (max-width: 768px) {
+    #header{
+      width: 100%;
+      height: 60px;
+      .shoppingCart{
+        width: 0;
+        height: 0;
+      }
+      &.show-full{
+        height: 100%;
+        overflow: hidden;
+        background-color: #000000;
+      }
+      .header{
+        width:100%;
+        height: 60px;
+        .mobile{
+          display:inline-block;
+          width: 60px;
+          height: 60px;
+          background: url(../../img/show-1.png) center center no-repeat;
+          position:  absolute;
+          top:0;
+          left:0;
+          z-index: 4;
+        }
+        .global-link{
+          width:100%;
+          height: 100%;
+          position: relative;
+          z-index: 2;
+          a{
+            width: 100%;
+            float: left;
+            line-height: 60px;
+            display: none;
+            text-align: center;
+            &:nth-child(1){
+              display: block;
+              line-height: 60px;
+            }
+            &:nth-child(6){
+              display: none;
+            }
+          }
+          form{
+            display: none;
+            width: 100%;
+            float: left;
+            text-align: right;
+            a{
+              width: 20%;
+              background: none;
+              visibility: hidden;
+            }
+            input{
+              &[type=text]{
+                width: 55%;
+              }
+            }
+          }
+        }
+        .global-login{
+          position: absolute;
+          right: 0;
+          top:0;
+          z-index: 3;
+        }
+      }
+    }
+  }
+
+}

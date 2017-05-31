@@ -1,0 +1,517 @@
+@charset "utf-8";
+@import url("../../css/common/common");
+@import url("layout");
+
+body{
+  background-color: #eeeeee;
+  .post-succeed{
+    width: 100%;
+    height: 100%;
+    background: url("../../img/bbs-succeed.jpg") center center no-repeat rgba(0,0,0,0.5);
+    position: fixed;
+    top:0;
+    left: 0;
+    display: none;
+  }
+}
+#bbs{
+  padding:50px 0;
+  overflow: hidden;
+  /***************** 列表页样式 *******************/
+  .bbs-left{
+    float: left;
+    border:2px solid #e8e8e8;
+    background-color: #ffffff;
+    .bbs-link{
+      background-color: #f2f2f2;
+      border-bottom: 2px solid #e8e8e8;
+      width: 100%;
+      overflow: hidden;
+      a{
+        display:inline-block;
+        height: 78px;
+        line-height: 78px;
+        padding: 0 16px 0 30px;
+        font-size: 1em;
+        color:#333333;
+        float: left;
+        cursor: pointer;
+        &.link{
+          color:#0070b8;
+        }
+      }
+    }
+    .bbs-list{
+      width:100%;
+      .bbs-type{
+        margin:30px 0;
+        overflow: hidden;
+        a{
+          display: inline-block;
+          height: 40px;
+          line-height: 40px;
+          padding: 0 26px;
+          font-size: 1em;
+          color:#333333;
+          &.link{
+            background-color:#f9f9f9;
+          }
+          span{
+            color:#888888;
+          }
+          &.create{
+            float: right;
+            width: 160px;
+            text-align: center;
+            border-radius: 20px;
+            background-color: #0070b8;
+            color:#ffffff;
+          }
+        }
+      }
+      .all-list{
+        li{
+          width: 100%;
+          overflow: hidden;
+          margin-bottom: 28px;
+          .user-portrait{
+            height:50px;
+            float: left;
+          }
+          .bbs-info{
+            float: right;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e8e8e8;
+            p{
+              &.title{
+                margin-bottom: 14px;
+                line-height: 1.25em;
+                a{
+                  overflow: hidden;
+                  word-break: break-all;
+                  font-size: 1.25em;
+                  color:#666666;
+                  &:hover{
+                    color:#0070b8;
+                  }
+                }
+                span{
+                  display: inline-block;
+                  font-size: 12px;
+                  line-height: 12px;
+                  color:#ffffff;
+                  padding:5px 10px;
+                  border-radius: 3px;
+                  margin: 0 8px;
+                  &.bbs-hot{
+                    background-color: #932273;
+                  }
+                  &.bbs-recommend{
+                    background-color: #0070b8;
+                  }
+                  &.bbs-official{
+                    background-color: #FF0000;
+                  }
+                }
+              }
+              &.info{
+                float: left;
+                height: 0.875em;
+                line-height: 0.875em;
+                color:#999999;
+                word-spacing: 20px;
+                font-size: 0.875em;
+              }
+              &.praise{
+                float: right;
+                text-align: right;
+                height: 0.875em;
+                line-height: 0.875em;
+                color:#999999;
+                font-size: 0.875em;
+                span{
+                  display: block;
+                  float: left;
+                  height: 1em;
+                  text-indent: 20px;
+                  &.praise-count{
+                    background: url("../../img/praise.png") left center no-repeat;
+                    margin-right: 20px;
+                  }
+                  &.replay-count{
+                    background: url("../../img/reply.png") left center no-repeat;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /********** 发帖页样式 ***********/
+  .new-post{
+    h2{
+      color:#333333;
+      font-weight: 400;
+      margin-bottom: 40px;
+    }
+    form{
+      padding: 40px 0;
+      border-top:2px solid #e8e8e8;
+      label{
+        line-height: 70px;
+        select{
+          font-size: 0.78em;
+          vertical-align: middle;
+          width: 160px;
+          height: 40px;
+          line-height: 40px;
+          border:2px solid #e8e8e8;
+          padding: 0 10px;
+          background: none;
+          margin-left: 10px;
+          option{
+            padding: 5px 10px;
+          }
+        }
+        input{
+          font-size: 0.78em;
+          vertical-align: middle;
+          height: 40px;
+          line-height: 40px;
+          border:2px solid #e8e8e8;
+          padding: 0 10px;
+          margin-left: 10px;
+        }
+      }
+    }
+    p{
+      &.checkbox{
+        padding: 0;
+        color:#ffffff;
+        text-align: left;
+        font-size: 1em;
+        line-height: 40px;
+        input{
+          width: 22px;
+          height: 22px;
+          vertical-align: middle;
+        }
+        a{
+          display: inline;
+          margin:0;
+          padding: 0;
+          font-size: 1em;
+          color:#0070b8;
+          float: none;
+          width: auto;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  /**************** 详情页样式 ******************/
+  .bbs-content-left{
+    float: left;
+
+    /**** 分页样式 ****/
+    .paging{
+      width:100%;
+      background-color: #ffffff;
+      border: 2px solid #e8e8e8;
+      border-top: none;
+    }
+
+    .bbs-content{
+      width:100%;
+      background-color: #ffffff;
+      border:2px solid #e8e8e8;
+      .bbs-info{
+        width: 100%;
+        border-bottom: 2px solid #e8e8e8;
+        overflow: hidden;
+        padding-bottom: 20px;
+        h1{
+          font-weight: 400;
+          width: 100%;
+          word-break: break-all;
+          margin-top: 10px;
+          color:#0070b8;
+          a{
+            &.edit{
+              display: inline-block;
+              float: right;
+              width: 100px;
+              line-height: 38px;
+              margin:3px 5px;
+              border-radius: 38px;
+              font-size:0.67em;
+              text-align: center;
+              background-color:#0070b8;
+              color:#FFFFFF;
+              cursor: pointer;
+            }
+          }
+        }
+        p{
+          line-height: 28px;
+          &.info{
+            float: left;
+            word-spacing: 4px;
+            font-size:0.875em;
+            span{
+              &.bbs-hot{
+                color:#932273;
+              }
+              &.bbs-recommend{
+                color:#0070b8;
+              }
+              &.bbs-type{
+                color:#333333;
+                &:before{
+                  content: "发表在:";
+                  color:#999999;
+                  font-size: 1em;
+                }
+              }
+              &.bbs-time{
+                color:#999999;
+                word-spacing: 2px;
+              }
+            }
+          }
+          &.praise{
+            float: right;
+            text-align: right;
+            color:#999999;
+            font-size:0.875em;
+            span{
+              display: block;
+              float: left;
+              text-indent: 20px;
+              &.praise-count{
+                background: url("../../img/praise.png") left center no-repeat;
+                margin-right: 20px;
+                cursor: pointer;
+              }
+              &.replay-count{
+                background: url("../../img/reply.png") left center no-repeat;
+              }
+            }
+          }
+        }
+        div{
+          &.bdsharebuttonbox{
+            float: left;
+            height: 16px;
+            margin-left: 30px;
+          }
+        }
+      }
+      .bbs-body{
+        .content{
+          p{
+            font-size: 0.875em;
+            color:#555555;
+            width: 100%;
+            word-break: break-all;
+            &:first-child{
+              margin-top: 20px;
+            }
+          }
+          img{
+            width: 100%;
+          }
+        }
+
+      }
+    }
+    /******** 回复样式 *********/
+    .bbs-comment{
+      width: 100%;
+      margin:20px 0;
+      overflow: hidden;
+      input{
+        vertical-align: middle;
+        float: left;
+        &[type=text]{
+          padding: 0 14px;
+          height: 38px;
+          line-height: 38px;
+          border:2px solid #e8e8e8;
+          border-radius: 2px;
+        }
+        &[type=submit]{
+          float: right;
+          height: 40px;
+          line-height: 40px;
+          font-size: 1em;
+          color:#ffffff;
+          background-color: #0070b8;
+          border-radius: 20px;
+          border:none;
+        }
+      }
+    }
+
+    .bbs-comment-list{
+      width:100%;
+      background-color: #ffffff;
+      border:2px solid #e8e8e8;
+      border-bottom: none;
+      margin-top:8px;
+      .bbs-comment-list{
+        border:none;
+      }
+      h2{
+        font-size: 1.5em;
+        font-weight: 400;
+        height: 40px;
+        line-height: 40px;
+        margin-top: 28px;
+        overflow: hidden;
+        span{
+          font-size: 0.6em;
+          color:#888888;
+          margin-left: 10px;
+        }
+        a{
+          float: right;
+          font-size: 0.6em;
+          color:#888888;
+          cursor: pointer;
+        }
+      }
+      li{
+        margin-top: 30px;
+        overflow: hidden;
+        border-bottom: 2px solid #e8e8e8;
+        padding-bottom: 30px;
+        &:last-child{
+          border-bottom: none;
+          padding-bottom: 0px;
+        }
+        .bbs-info{
+          p{
+            &.info{
+              width: 100%;
+              word-spacing: 10px;
+              overflow: hidden;
+              color:#999999;
+              span{
+                word-spacing: 2px;
+                font-size: 0.875em;
+                color:#999999;
+                &.user-name{
+                  font-size: 1.125em;
+                  color:#932273;
+                }
+                &.bbs-this-type{
+                  cursor: pointer;
+                }
+                &.landlord{
+                  height: 24px;
+                  line-height: 24px;
+                  color:#ffffff;
+                  padding:0 10px;
+                  background-color: #932273;
+                  border-radius:2px;
+                  font-size: 0.75em;
+                }
+              }
+              .floor{
+                float: right;
+                font-size: 0.875em;
+                color:#999999;
+              }
+            }
+            &.comment-content{
+              font-size: 1em;
+              color:#333333;
+              margin-top: 10px;
+            }
+          }
+          a{
+            &.reply{
+              width: 100%;
+              display: inline-block;
+              text-align: right;
+              color:#999999;
+              font-size: 0.875em;
+              cursor: pointer;
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+
+  /*********** 右侧样式 ***********/
+  .bbs-right{
+    float: right;
+    div{
+      width: 296px;
+      padding:0px 23px 24px 23px;
+      background-color: #ffffff;
+      border:2px solid #e8e8e8;
+      margin-bottom: 12px;
+      h2{
+        font-size: 1.25em;
+        height: 64px;
+        line-height: 64px;
+        font-weight: 400;
+      }
+      &.right-one{
+        border-top:5px solid #932273;
+        li{
+          border-top:2px solid #e8e8e8;
+          padding-top: 23px;
+          &:first-child{
+            border: none;
+            padding-top: 0;
+          }
+          p{
+            &.news-time{
+              font-size: 0.75em;
+              color:#999999;
+              margin-bottom: 10px;
+            }
+          }
+          a{
+            &.news-title{
+              display: inline-block;
+              font-size: 0.875em;
+              color:#000000;
+              margin-bottom: 18px;
+              &:hover{
+                color:#0070b8;
+              }
+            }
+          }
+        }
+      }
+      &.right-two{
+        border-top:5px solid #0070b8;
+        .two-dimension-code{
+          width: 100%;
+        }
+      }
+      &.right-three{
+        border-top:5px solid #999999;
+        p{
+          width: 208px;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+.layout();

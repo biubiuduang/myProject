@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第一个React组件</title>
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+
+    <script type="text/jsx">
+        class Comp extends React.Component{
+            render(){
+                return <span>1526172712172712</span>
+            }
+        }
+        class Comp_2 extends React.Component{
+            render(){
+                return <span>我是class = div2</span>
+            }
+        }
+
+        $(function(){
+            ReactDOM.render(
+                    <Comp name="" />,
+                    document.getElementById("div1")
+            );
+
+            ReactDOM.render(
+                    <Comp_2 />,
+                    document.getElementsByClassName("div2")[0]
+            )
+
+        })
+
+
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+<div class="div2"></div>
+</body>
+</html>

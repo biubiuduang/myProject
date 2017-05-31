@@ -1,0 +1,53 @@
+//引入公共的参数
+@import url("./commonParameter");
+
+//盒子内容居中
+
+.boxCenter(){
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.boxBothCenter(){
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content:  space-between;
+  justify-content:  space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/*********** 分页 ***********/
+.paging(){
+  .paging{
+    padding:40px 0px;
+    text-align: center;
+    a{
+      display: inline-block;
+      padding: 5px 10px;
+      border:1px solid #e8e8e8;
+      color:#666666;
+      font-size: 0.875em;
+      margin: 0 2px;
+      &.link{
+        background-color: #0070b8;
+        color:#ffffff;
+      }
+    }
+  }
+}

@@ -1,0 +1,735 @@
+@charset "utf-8";
+
+/********* 以下是响应式布局 **********/
+.layout(){
+  /********* 1000px以上 *********/
+  @media all and (min-width: 1000px) {
+    .news-banner{
+      p{
+        width: 1000px;
+      }
+      img{
+        &.pc{
+          display: block;
+        }
+        &.mobile{
+          display: none;
+        }
+      }
+    }
+    .news{
+      width: 1000px;
+      margin:0px auto 50px auto;
+      .news-left{
+        width:263px;
+        .news-link{
+          a{
+            width: 100%;
+            text-indent: 15px;
+            &.link{
+              background-color: #f1f3f3;
+            }
+          }
+        }
+      }
+
+      .news-right{
+        width: 733px;
+        min-height: 580px;
+        padding: 0 20px;
+        border-left:2px solid #e8e8e8;
+
+        .news-list{
+          li{
+            padding-bottom: 40px;
+            margin-bottom: 50px;
+            p{
+              font-size: 1.125em;
+              &.news-info{
+                margin-bottom: 40px;
+              }
+              &.news-summary{
+                line-height: 28px;
+                margin-bottom: 30px;
+                max-height: 140px;
+              }
+            }
+            a{
+              &.news-title{
+                font-size: 2.875em;
+                line-height: 52px;
+                margin-bottom: 20px;
+              }
+              &.news-read{
+                font-size: 1.125em;
+              }
+            }
+          }
+        }
+        /****** 服务政策页面的列表 ******/
+        .tac-list{
+          li{
+            p{
+              line-height: 28px;
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
+
+      /****** 售后服务 *******/
+      .service-right{
+        width: 730px;
+        min-height: 600px;
+        padding: 0 10px 50px 10px;
+        border-left: 2px solid #e8e8e8;
+        h2{
+          font-size: 2.875em;
+          margin-bottom: 30px;
+        }
+        input{
+          &[type=text]{
+            width: 302px;
+            text-indent: 15px;
+            font-size: 0.875em;
+          }
+        }
+        a{
+          &.new-order{
+            width: 160px;
+            font-size: 1em;
+          }
+        }
+      }
+      /****** 我的订单 ******/
+      .news-order-right{
+         .order-list{
+           .order-info{
+             line-height: 50px;
+             p{
+               &.order-time{
+                 width: 196px;
+               }
+               &.order-id{
+                 margin-right: 30px;
+               }
+               &.order-state{
+                 width: 200px;
+               }
+             }
+           }
+         }
+      }
+    }
+
+    #J_newAddress{
+      .item{
+        .left_label{
+          margin-right: 15px;
+        }
+        .right_input{
+          input[type = 'text'],select{
+            width: 120px;
+            padding: 0 10px;
+          }
+          input[type='text']{
+            &.len_text{
+              width: 180px;
+            }
+            &.definite_addr{
+              width: 400px;
+            }
+          }
+        }
+      }
+    }
+
+    #popup{
+      box-sizing: border-box;
+      .popup{
+        width: 600px;
+        height: 300px;
+        left:50%;
+        top:50%;
+        margin-left:-300px;
+        margin-top:-150px;
+      }
+      input[type = 'button']{
+        width: 192px;
+        &.pay_succeed{
+          margin:0 40px 0 88px;
+        }
+      }
+    }
+  }
+
+  /********* 1000px -- 768px *********/
+  @media (max-width: 1000px) and (min-width: 768px){
+     .news-banner{
+       p{
+         width: 100%;
+       }
+        img{
+          &.pc{
+            display: block;
+          }
+          &.mobile{
+            display: none;
+          }
+        }
+      }
+     .news{
+       width: 100%;
+       margin:0px auto 20px auto;
+       .news-left{
+         width: 100%;
+         margin-bottom: 10px;
+         .news-link{
+           width:100%;
+           line-height: 50px;
+           border:1px solid #e8e8e8;
+           background-color: #f1f3f3;
+           overflow: hidden;
+           margin-bottom: 10px;
+           a{
+             display: inline-block;
+             float: left;
+             padding: 0 10px;
+             &.link{
+                color: #0070b8;
+             }
+           }
+         }
+         .news-contact{
+           display: none;
+         }
+       }
+       .news-right{
+         width: 100%;
+         padding: 0 10px;
+
+         .news-list{
+           li{
+             padding-bottom: 20px;
+             margin-bottom: 20px;
+             p{
+               font-size: 1em;
+               &.news-info{
+                 margin-bottom: 10px;
+               }
+               &.news-summary{
+                 line-height: 24px;
+                 margin-bottom: 20px;
+                 max-height: 96px;
+               }
+             }
+             a{
+               &.news-title{
+                 font-size: 2.5em;
+                 line-height: 46px;
+                 margin-bottom: 20px;
+               }
+               &.news-read{
+                 font-size: 1em;
+               }
+             }
+           }
+         }
+         /****** 服务政策页面的列表 ******/
+         .tac-list{
+           li{
+             h2{
+               font-size: 1.875em;
+               margin-bottom: 20px;
+             }
+             p{
+               line-height: 28px;
+               margin-bottom: 20px;
+             }
+           }
+         }
+       }
+
+       /****** 售后服务 *******/
+       .service-right{
+         width: 100%;
+         min-height: 600px;
+         padding: 0 10px 30px 10px;
+         h2{
+           font-size: 2.5em;
+           margin-bottom: 10px;
+         }
+         input{
+           &[type=text]{
+             width: 302px;
+             text-indent: 15px;
+             font-size: 0.875em;
+           }
+         }
+         a{
+           &.new-order{
+             width: 160px;
+             font-size: 1em;
+           }
+         }
+       }
+       /****** 我的订单 ******/
+       .news-order-right{
+         .order-list{
+           .order-info{
+             line-height: 50px;
+             p{
+               &.order-time{
+                 width: 196px;
+               }
+               &.order-id{
+                 margin-right: 30px;
+               }
+               &.order-state{
+                 width: 200px;
+               }
+             }
+           }
+         }
+       }
+     }
+    #J_newAddress{
+      padding-left:50px;
+      .item{
+        .left_label{
+          margin-right: 15px;
+        }
+        .right_input{
+          input[type = 'text'],select{
+            width: 120px;
+            padding: 0 10px;
+          }
+          input[type='text']{
+            &.len_text{
+              width: 180px;
+            }
+            &.definite_addr{
+              width: 400px;
+            }
+          }
+        }
+      }
+    }
+
+    #popup{
+      box-sizing: border-box;
+      .popup{
+        width: 600px;
+        height: 300px;
+        left:50%;
+        top:50%;
+        margin-left:-300px;
+        margin-top:-150px;
+      }
+      input[type = 'button']{
+        width: 192px;
+        &.pay_succeed{
+          margin:0 40px 0 88px;
+        }
+      }
+    }
+  }
+
+  /********* 768px以下 *********/
+  @media (max-width: 768px) {
+    .news-banner{
+      p{
+        width: 100%;
+      }
+      img{
+        &.pc{
+          display: none;
+        }
+        &.mobile{
+          display: block;
+        }
+      }
+    }
+    .news{
+      width: 100%;
+      margin:10px auto 10px auto;
+      .news-left{
+        width: 100%;
+        margin-bottom: 10px;
+        .news-link{
+          width:100%;
+          line-height: 50px;
+          border:1px solid #e8e8e8;
+          background-color: #f1f3f3;
+          overflow: hidden;
+          margin-bottom: 10px;
+          a{
+            display: inline-block;
+            float: left;
+            padding: 0 10px;
+            &.link{
+              color: #0070b8;
+            }
+          }
+        }
+        .news-contact{
+          display: none;
+        }
+      }
+      .news-right{
+        width: 100%;
+        padding: 0 5px;
+        h2{
+          font-size: 2em;
+          margin-bottom: 10px;
+        }
+        .news-list{
+          li{
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            p{
+              font-size: 1em;
+              &.news-info{
+                margin-bottom: 10px;
+              }
+              &.news-summary{
+                line-height: 24px;
+                margin-bottom: 10px;
+                max-height: 96px;
+              }
+            }
+            a{
+              &.news-title{
+                font-size: 2em;
+                line-height: 36px;
+                margin-bottom: 10px;
+              }
+              &.news-read{
+                font-size: 1em;
+              }
+            }
+          }
+        }
+        .news-details{
+          li{
+            .news-content{
+              p{
+                margin-bottom: 10px;
+              }
+              img{
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+        .gallery-list{
+          li{
+            p{
+              &.news-info{
+                font-size: 1.2em;
+              }
+            }
+          }
+        }
+        /****** 服务政策页面的列表 ******/
+        .tac-list{
+          li{
+            h2{
+              font-size: 1.5em;
+            }
+            p{
+              line-height: 26px;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+
+      /****** 售后服务 *******/
+      .service-right{
+        width: 100%;
+        min-height: 600px;
+        padding: 0 0 20px 0;
+        h2{
+          font-size: 2em;
+          margin-bottom: 10px;
+        }
+        input{
+          &[type=text]{
+            width:80%;
+            margin:0 10%;
+            padding:5px 10px;
+            font-size: 0.875em;
+          }
+        }
+        a{
+          &.new-order{
+            width: 160px;
+            margin:10px 10% 10px 0;
+            font-size: 1em;
+          }
+        }
+        table{
+          thead{
+            th{
+              display: none;
+              line-height: 50px;
+              &:nth-child(1){
+                display:inline-table;
+                width: 65%;
+              }
+              &:nth-child(6){
+                display: inline-table;
+                width: 30%;
+              }
+            }
+          }
+          tbody{
+            tr{
+              td{
+                display: none;
+                line-height: 80px;
+                &:nth-child(1){
+                  display: inline-table;
+                  width: 65%;
+                }
+                &:nth-child(6){
+                  display:inline-table;
+                  width: 30%;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      /****** 我的订单 ******/
+      .news-order-right{
+        .order-list{
+          .order-info{
+            line-height: 0px;
+            p{
+              line-height: 30px;
+              width: 100%;
+            }
+          }
+          table{
+            td{
+              &:nth-child(1),&:nth-child(3){
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      /****** 订单详情 *****/
+      .news-order-info{
+        p.order_flow{
+          display: none;
+        }
+      }
+      #J_orderList{
+        table{
+          padding: 0;
+          td{
+            &:nth-child(1),&:nth-child(3){
+              display: none;
+            }
+          }
+        }
+      }
+      #J_addressList{
+        table{
+          padding: 0;
+          td{
+            &:nth-child(1),&:nth-child(6){
+              display: none;
+            }
+          }
+        }
+      }
+
+      /***** 创建工单 *****/
+      .order-right{
+        form{
+          ul{
+            li{
+              padding: 10px 0;
+              label{
+                display: block;
+                width: 100%;
+                line-height:40px;
+                font-size: 1em;
+                overflow: hidden;
+                text-align: right;
+                input{
+                  float: right;
+                  vertical-align: middle;
+                }
+                select{
+                  float: right;
+                  vertical-align: middle;
+                  &:focus{
+                    border:2px solid #0070b8;
+                  }
+                  option{
+                    padding:5px 10px;
+                    font-size:1em;
+                  }
+                }
+                div{
+                  float: left;
+                  line-height: 20px;
+                  font-size:0.875em;
+                }
+                textarea{
+                  width:200px;
+                  &:focus{
+                    border:2px solid #0070b8;
+                  }
+                }
+              }
+              &:nth-child(1){
+                text-align: left;
+                label{
+                  text-align: left;
+                  input{
+                    &[type=text]{
+                      border:none;
+                      background: none;
+                      font-size: 1.125em;
+                      color:#0070b8;
+                      padding: 0;
+                    }
+                  }
+                }
+                span{
+                  &.order-time{
+                    color:#666666;
+                    font-size: 1em;
+                  }
+                }
+              }
+              &:nth-child(2){
+                text-align: left;
+              }
+              &:nth-child(3){
+                label{
+                  line-height: 40px;
+                  &.address{
+                    input{
+                      &[type=text]{
+                        width: 200px;
+                      }
+                    }
+                  }
+                }
+                br{
+                  display: none;
+                }
+              }
+              &:nth-child(4){
+                br{
+                  display: none;
+                }
+                label{
+                  &:nth-child(2){
+                    input{
+                      &[type=text]{
+                        margin-right: 10px;
+                      }
+                    }
+                  }
+                }
+                a{
+                  display: inline-block;
+                  width: 160px;
+                  height: 40px;
+                  border:2px solid #0070b8;
+                  color:#0070b8;
+                  border-radius: 20px;
+                  position: relative;
+                  z-index: 1;
+                  text-align: center;
+                  line-height: 36px;
+                  input{
+                    &[type=file]{
+                      width: 100%;
+                      height: 100%;
+                      position: absolute;
+                      top:0;
+                      left:0;
+                      z-index: 2;
+                      .opacity(0);
+                    }
+                  }
+                }
+              }
+              &:nth-child(5){
+                label{
+                  select{
+                    margin-right:0;
+                  }
+                }
+              }
+            }
+          }
+        }
+        input{
+          &[type=submit]{
+            float: right;
+            width: 160px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: #0070b8;
+            color:#ffffff;
+            border:none;
+            font-size: 1em;
+          }
+        }
+      }
+    }
+    #J_newAddress{
+      padding-left:0px;
+      .item{
+        .left_label{
+          margin-right:5px;
+        }
+        .right_input{
+          input[type = 'text']{
+            width: 140px;
+            padding:0 2px;
+          }
+          select{
+            width: 70px;
+          }
+          input[type='text']{
+            &.area_code{
+              width: 50px;
+            }
+            &.definite_addr{
+              width: 200px;
+            }
+          }
+        }
+      }
+    }
+
+    #popup{
+      box-sizing: border-box;
+      .popup{
+        width: 100%;
+        height: 300px;
+        left:0;
+        top:50%;
+        margin-top:-150px;
+      }
+      input[type = 'button']{
+        width:37.5%;
+        &.pay_succeed{
+          margin:0 10% 0 7.5%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax请求列表</title>
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+    <script type="text/jsx">
+
+        //获取列表项
+        class Item extends React.Component{
+            constructor(...args){
+                super(...args);
+            }
+
+            render(){
+                return <li>
+                    <p>{this.props.userId}</p>
+                    <p>{this.props.nickName}</p>
+                </li>
+            }
+        }
+
+        //循环列表
+        class List extends React.Component{
+            constructor(...args){
+                super(...args);
+
+                this.state = {
+                    data : []
+                }
+            }
+
+            componentWillMount(){
+                $("#list").html("组件创建中.......");
+                debugger;
+            }
+
+            componentDidMount(){
+                var that = this;
+                $.ajax({
+                    url : "list.json",
+                    type : "Get",
+                    success : function(data){
+                        that.setState({
+                            data : data.data
+                        })
+                    }
+                });
+            }
+
+            render(){
+                var result = [];
+                var arr = this.state.data;
+                for(var i = 0 ; i < arr.length;i++){
+                    result.push(<Item key= {i} userId={arr[i].userId} nickName = {arr[i].nickName} />)
+                }
+
+                return <ul>
+                    {result}
+                </ul>
+            }
+        }
+
+        $(function(){
+
+            ReactDOM.render(
+                    <List />,
+                    $("#list")[0]
+            )
+        })
+    </script>
+</head>
+<body>
+<div id="list"></div>
+</body>
+</html>

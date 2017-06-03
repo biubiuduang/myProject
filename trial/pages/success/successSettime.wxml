@@ -1,0 +1,52 @@
+<view class="settime-success-container">
+    <view class="online-chat-body">
+        <view class="online-chat-body-other-chat fixlll9">
+            <view class="online-chat-body-other-chat-img">
+                <image  class="toImg" src="{{markerHead}}"></image>
+            </view>
+            <view class="online-chat-body-other-chat-name">小管家</view>
+            <view class="online-chat-body-other-chat-content">
+                <view class="text-consultant-name" wx:if="{{$result.invite_count != 1}}"> 恭喜您成功选择了{{result.consultant_name}}顾问进行试用，顾问一般会在24小时内与学生取得联系~为了感谢您的耐心等待，小管家先送您两张留学服务优惠券吧！如果您对顾问的服务满意，签约时记得用起来哦~<p class="coupon-icon">¥500</p><p class="coupon-icon">¥200</p><a href="/application/#myCoupon" style="display:block">点击查看优惠券 ></a>
+                </view>
+                <view  wx:else>
+                 恭喜您成功选择了{{result.consultant_name}}顾问进行试用，顾问一般会在24小时内与学生取得联系~
+                </view>
+                <view class="online-chat-body-other-chat-content-arrow"></view>
+            </view>
+        </view>
+        <view class="online-chat-body-other-chat fix">
+            <view class="online-chat-body-other-chat-img">
+                <image  class="toImg" src="{{markerHead}}"></image>            
+            </view>
+            <view class="online-chat-body-other-chat-name">小管家</view>
+            <view class="online-chat-body-other-chat-content">
+                <view>
+                    <span style="font-weight: 600;">温馨提醒：</span>适逢节假日期间以及特殊时段，顾问可能不在线无法及时回复。如果您有紧急疑问需要咨询，<span style="font-weight: 600;">可以通过电话和微信与平台顾问取得联系哦~<span></span></span>
+                </view>
+                <view class="consultant-contact-way">
+                    <view wx:if="{{result.consultant_mobile}}">
+                        顾问电话：<span class="tel-number">{{result.consultant_mobile}}</span>
+                    </view>
+                    <view wx:if="{{result.consultant_weixin}}">
+                        顾问微信：<span class="wx-number">{{result.consultant_weixin}}</span>
+                    </view>
+                </view>
+                <div class="online-chat-body-other-chat-content-arrow"></div>
+            </view>
+        </view>
+        <view class="demosit-important-text">
+            <view wx:if = "{{result.demosit_status > 0}}">
+            【重要提示】该顾问在平台的保证金余额为￥{{result.demosit_amount}}元，通过平台与该顾问签约后，如有纠纷，可享受最高不超过保证金余额的服务费冻结权利。<a bindtap="getMore">了解更多</a>
+            </view>
+            <view wx:else>
+            【重要提示】该顾问暂未缴纳保证金，与该顾问签约，如有纠纷，暂无法享受冻结服务费的权利。<a bindtap="getMore">了解更多</a>
+            </view>
+         </view>
+            <view class="lxkw-first-button select-consultant-again">
+                <button bindtap="onGoToSelecte">继续挑选顾问<span style="font-size:15px;">还可以挑选{{result.trial_remain_count}}个顾问</span></button>
+            </view>
+            <view class="lxkw-first-button find-house-keeper">
+                <button class="default" bindtap="onFindMarket">找小管家推荐更合适的顾问</button>
+            </view>
+    </view>
+</view>

@@ -1,0 +1,98 @@
+/* pages/consultant/consultantDetail.wxss */
+page {background: #f5f4f9;}
+.consultant {margin-bottom:20px;}
+.title {background: #fff;text-align: center;height: 34px;font-size: 15px;color: #373737;line-height: 34px;border-bottom: 1px solid #e3e3e3;}
+.no-case-tips {font-size: 15px;color: #6b6d6e;text-align: center;padding-top: 20px;}
+.new-consultant-body-title-img {position: relative;width: 100%;background: #fff;margin-top: 10px;padding: 10px 0px;padding-bottom:0px;}
+.bg-img {position: absolute;top: 0px;width: 100%;z-index: 1;height: 100%;}
+.new-consultant-body-title-header image {width: 56px;height: 56px;border-radius: 30px;border: 2px solid #03aaee;margin-top: 10px;margin-left: 12px;}
+.new-consultant-body-title-header {position: relative;width: 80px;z-index: 2;}
+.new-consultant-body-title-info {position: absolute;left: 78px;top: 10px;z-index: 2;}
+.consultant-name {font-size:13px;padding-left: 5px;}
+.new-consultant-body-title-info .consultant-info-li {margin-top: 5px;}
+.consultant-info-li .consultant-info-li-text {float: left;margin-left: 5px;line-height: 16px;}
+.consultant-info-li .consultant-info-li-text image {width: 10px;height: 12px;margin-top: 3px;float: left;}
+.consultant-info-li .consultant-info-li-text image.is-new {width: 12px;height: 12px;}
+.consultant-info-li .consultant-info-li-text image.is-accreditation {width: 18px;height: 13px;}
+.consultant-info-li .consultant-info-li-text image.is-deposite {width: 11px;height: 13px;}
+.consultant-info-li .consultant-info-li-text span {font-size: 12px;color: #6b6d6e;}
+.new-consultant-id {font-size: 12px;color: #555;padding-left: 10px;position: relative;z-index: 2;}
+.new-consultant-intro-container {position: relative;z-index: 2;margin-top: 10px;background-color: rgba(255,179,89,0.3);padding: 15px 0px;}
+.container-li {float: left;width: 20%;text-align: center;}
+.container-li .container-li-title {font-size: 12px;color: #6b6d6e;}
+.container-li .container-li-content {font-size:14px;color: #373737;margin-top:10px;}
+.nav-adviser-new {background: #fff;line-height: 42px;color: #03aaee;font-size: 15px;border-top:1px solid #e3e3e3;border-bottom:1px solid #e3e3e3;margin-top:10px;}
+.nav-adviser-new .tab-li {float: left;width: 33%;text-align: center;border-left: 1px solid #e3e3e3;}
+.nav-adviser-new .tab-li:first-child {border: none;}
+.nav-adviser-new .tab-li.active {background: #03aaee;color: #fff;}
+.nav-adviser-new .tab-li span {}
+.consultant-detail {background: #fff;margin-top: 10px;}
+.consultant-detail .consultant-detail-title {position: relative;z-index: 1;line-height: 35px;padding-left: 10px;border-bottom: 1px solid #e3e3e3;background: #fff;}
+.consultant-detail-title .title-logo {width: 2px;height: 17px;float: left;background: #03aaee;margin-top: 9px;}
+.consultant-detail-title .title-text {padding-left: 5px;font-size: 15px;}
+.consultant-detail-content {padding: 10px;}
+.consultant-detail-content .consultant-tag {float: left;width: 33.3%;font-size: 12px;min-width: 105px;line-height: 12px;color: #6b6d6e;margin-top: 10px;}
+.consultant-tag .point-style {width: 4px;height: 4px;float: left;background: #6b6d6e;border-radius: 2px;margin-top: 4px;}
+.consultant-tag  span {padding-left: 5px;}
+.consultant-good-at-list {position: relative;padding-right: 20px;margin-top: 0px;padding-left: 10px;color: rgb(107, 109, 110);font-size: 12px;}
+.consultant-good-at-list-content {overflow:hidden;height: 20px;position: relative;display: inline-block;width: 100%;line-height:19px;}
+.consultant-good-at-list .country-logo {display: inline-block;padding-left: 16px;background: transparent url("http://static.liuxuekw.com/theme/default/images/country-logo.png") no-repeat scroll 0% 0% / 13px 13px;background-position: 0px 2px;}
+.consultant-good-at-list .degree-logo {display: inline-block;padding-left: 16px;background: transparent url("http://static.liuxuekw.com/theme/default/images/degree-logo.png") no-repeat scroll 0% 0% / 13px 13px;background-position: 0px 2px;}
+.consultant-good-at-list .major-logo {display: inline-block;padding-left: 16px;background: transparent url("http://static.liuxuekw.com/theme/default/images/major-logo.png") no-repeat scroll 0% 0% / 13px 13px;background-position: 0px 2px;}
+.new-consultant-info-feature {color: #707070;font-size: 12px;margin-bottom: 10px;padding: 10px;line-height: 20px;}
+.consultant-record-list {margin-top: 10px;}
+.consultant-record-list .list-time {color: #aaa;font-size: 12px;}
+.consultant-record-list .list-time span {padding-left:5px;}
+.consultant-record-list .time-logo {float: left;width: 6px;height: 6px;background: #03aaee;transform: rotate(45deg);}
+.consultant-record-list .list-text {padding-left: 10px;font-size: 12px;color: #707070;margin-top: 10px;line-height: 18px;}
+.consultant-record-img .img-list {float: left;width: 21%;margin-left:4%;
+}
+.consultant-record-img image {width: 100%;float: left;height: 100px;border: 1px solid #b8b8b8;}
+.title-tab {border-bottom: 1px solid #e3e3e3;}
+.title-tab-li {float: left;width: 33%;line-height: 35px;font-size: 12px;text-align: center;color: #6b6d6e;}
+.title-tab-li.select {border-bottom: 2px solid #FFB359;color: #FFB359;}
+.case-list-body {background: #f5f4f9;}
+.case-list-body .case-list-body-li {background: #fff;margin-top: 10px;padding: 10px;position: relative;}
+.case-list-body-li .case-list-body-li-top {position: relative;}
+.case-list-body-li-top image {width: 100%;}
+.case-list-body-li .identified-icon {background: url("http://static.liuxuekw.com/theme/default/images/new-consultant/identified-icon.png") no-repeat;width: 60px;height: 60px;background-size: contain;position: absolute;top: 0;right: 0;z-index: 100;}
+.case-list-body-li-top .video {text-align: center}
+.case-list-body-li-bottom {color: #6b6d6e;font-size: 12px; margin-top: 10px;line-height: 18px;}
+.case-list-body-li-bottom span {color: #373737;}
+.to-detail {border-top: 1px solid #e3e3e3;margin-top: 5px;color: #03aaee;font-size: 12px;line-height: 26px;text-align: right;}
+.case-list-body-li-top .name {font-size: 12px;}
+.consultant-comment-top-star {margin: 20px auto 0;width: 119px;}
+.consultant-comment-top-star .consultantStarShow {position: relative;height: 21px;width: 119px;}
+.conslatnt-grade-top {background: #fff;overflow: hidden;padding-bottom: 10px;margin-top: 10px;}
+.consultantStarShow .starFrame {position: absolute;left: 0;top: 0;height: 21px;width: 119px;background: url("http://static.liuxuekw.com/theme/default/images/trial/star2.png") no-repeat;}
+.consultantStarShow .topStarFrame {position: absolute;overflow: hidden;left: 0;top: 0;height: 21px;}
+.topStarFrame .topStarColor {position: absolute;left: 0;top: 1px;height: 21px;width: 119px;background: url("http://static.liuxuekw.com/theme/default/images/trial/star2.png") no-repeat 0 -40px;overflow: hidden;z-index: 1;}
+.conslatnt-grade-top .grade-type {text-align: center;color: #373737;font-size: 15px;margin-top: 10px;}
+.conslatnt-grade-top .grade-count {text-align: center;color: #6b6d6e;font-size: 12px;margin-top: 10px;}
+.conslatnt-grade-top .no-grade {text-align: center;margin-top: 15px;font-size: 15px;}
+.grade-list {border-bottom: 1px solid #e3e3e3;width: calc(100% - 30px);margin-left: 10px;padding-right: 10px;}
+.grade-list .student-img {}
+.grade-list .student-img image {height: 44px;width: 44px;border-radius: 22px;}
+.grade-list .list-right {padding-left: 0;padding-bottom: 15px;width: calc(100% - 44px);margin-left: 44px;}
+.grade-list .list-right .list-right-top {padding-left: 12px;margin-top: 15px;height: 19px;font-size:15px;}
+.grade-list .list-right .list-right-top span {float: right;font-size: 12px;background: #03aaee;color: #fff;padding: 1px 2px;}
+.list-right .list-right-middle {padding-left:12px;}
+.select-tr-td-2-star {display: inline-block;position: relative;height: 10px;width: 60px;}
+.select-tr-td-2-star .select-tr-td-2-span-star {display: inline-block;position: absolute;height: 100%;width: 100%;background: url("http://static.liuxuekw.com/theme/default/images/trial/star2.png") no-repeat;background-size: 60px;}
+.select-tr-td-2-star .select-tr-td-2-span-star-top {position:absolute;overflow:hidden;left:0px;top:0px;height:11px;}
+.select-tr-td-2-star .select-tr-td-2-span-star-2 {display: inline-block;position: absolute;height: 10px;top: 1px;width: 60px;background: url("http://static.liuxuekw.com/theme/default/images/trial/star2.png") no-repeat bottom;background-size: 60px;overflow: hidden;z-index: 1;}
+.list-right-middle .gradeDetail {display: inline-block;font-size: 12px;color: #6b6d6e;}
+.comment-time {float: right;color: rgb(170, 170, 170);font-size: 12px;}
+.list-right-bottom {border-top: 1px solid #e3e3e3;margin-top: 6px;font-size: 12px;color: #aaa;padding-top: 10px;}
+.list-right-bottom .grade-label-list {overflow: auto;max-height: 123px;}
+.list-right-bottom .grade-label-list .grade-label-list-li {height:20px;margin-left:15px;color: #ffb359;border: 1px solid #ffb359;padding: 0px 10px;border-radius: 5px;margin-top: 10px;float:left;}
+.grade-label-list-li .good-logo {margin-top: 2px;height:14px;line-height: 15px;background: url(http://static.liuxuekw.com/theme/default/images/trialDetail/trial-grade-sign-good.png)no-repeat;background-size: 13px 29px;display: block;padding-right: 16px;background-position:bottom right;}
+.grade-label-list-li .ungood-logo {line-height: 15px; background: url(http://static.liuxuekw.com/theme/default/images/trialDetail/trial-grade-sign-good.png)no-repeat;background-size: 13px 29px;display: block; padding-right: 16px; background-position: top right; height: 15px; margin-top: 6px;background-position: bottom right;}
+.liuxuekw-serve {position: relative;z-index: 2;background: #fff;}
+.liuxuekw-serve-li {float: left;width: 31%;font-size:12px; text-align:center; height:37px;position: relative;}
+.liuxuekw-serve-li .serve-logo {display: inline-block;border-radius:3px;color: #fff;padding: 2px;}
+.liuxuekw-serve-li .serve-logo-1 {background: #03aaee;}
+.liuxuekw-serve-li .serve-logo-2 {background: #708de9;}
+.liuxuekw-serve-li .serve-logo-3 {background: #48c03b;}
+.liuxuekw-serve-li .serve-text {display: inline-block;padding-left: 5px;line-height: 37px;}
+

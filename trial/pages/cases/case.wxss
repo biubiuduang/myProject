@@ -1,0 +1,7 @@
+/* pages/cases/case.wxss */
+.p-rel{position:relative}
+.case-intro-name{line-height: 20px;width: 30%;margin-bottom: 10px;font-size: 14px;}
+.case-container{padding: 20px 18px;}
+.case-container>view {margin-bottom: 15px;}
+.case-container .case-intro-details{line-height: 20px;width: 70%;font-size: 14px;}
+.case-container .pass-icon{border: 1px solid #ff0000;border-radius: 5px;color:#ff0000;width: 80px;text-align: center;padding:5px;font-size: 14px;}

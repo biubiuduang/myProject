@@ -1,0 +1,27 @@
+<!--pages/filter/filterList.wxml-->
+<view class="select-top">
+    <view class="select-name" data-type="{{type}}">{{title}}</view>
+    <view class="button-finish" bindtap="onBack">完成</view>
+</view>
+
+<view class="basefilte-info">
+      <view class="basefilte-info-left {{leftListStatus}}">
+        <view class="basefilte-info-left-body">
+         <view class="item-ul">
+            <view wx:for="{{result}}" class="item-li">
+                <view style="{{styleLeft[index]}}" bindtap="onLeftTap" data-id="{{index}}" data-value="{{item.acskey}}" data-text="{{item.areaname}}">{{item.areaname}}</view>
+            </view> 
+         </view>
+        </view>
+      </view>
+
+      <view class="basefilte-info-right {{rightStyle}}">
+        <view class="basefilte-info-right-body"> 
+            <view class="item-ul">
+                <view>
+                    <view wx:for="{{result[index].infoList}}" class="item-li" data-id="{{index}}"  bindtap="onRightTap" data-text="{{item.areaname}}" style="{{styleRight[index]}}" data-value="{{item.acskey}}">{{item.areaname}}</view> 
+               </view>
+            </view>  
+        </view>
+      </view>
+ </view>

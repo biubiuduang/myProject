@@ -1,0 +1,18 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+page {background: #f5f4f9;}
+.hide {display: none}
+.block {display: block}
+.left {float:left}
+.clear-both {clear: both;display: block;}
+.arror-right {float: right;width: 13px;height: 17px;background-size: 12px 17px;position: absolute;right: 10px;top:2px;}
+.arror-right image {width: 100%;width: 13px;height: 17px;}
+.title {background: #fff;text-align: center;height: 34px;font-size: 15px;color: #373737;line-height: 34px;border-bottom: 1px solid #e3e3e3;}

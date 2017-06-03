@@ -1,0 +1,20 @@
+<!--pages/contact/contactInfo.wxml-->
+<view class="contact-body">
+    <view class="contact-title">请选择顾问和你沟通的联系方式?</view>
+    <view class="contact-content">
+        <checkbox-group bindchange="contactChange">
+            <label class="checkbox">
+                <checkbox value="1"/>电话
+            </label>
+            <input type="text" bindinput="mobileContact" placeholder="请输入手机号码，顾问通过手机号码和你沟通"  value="{{mobile}}"/>
+             <label class="checkbox">
+                <checkbox value="2" />微信
+            </label>
+             <input type="text" bindinput="wxContact" placeholder="请输入微信号，顾问通过微信号和你沟通" value="{{weixin}}" />
+        </checkbox-group>
+    </view>
+
+    <view class="submit">
+        <button style="background: #03aaee;" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="primary">保存</button>
+    </view>
+</view>

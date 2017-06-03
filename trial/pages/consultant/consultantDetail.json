@@ -1,0 +1,9 @@
+{
+  "window":{
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "顾问详情",
+    "navigationBarTextStyle":"#fff"
+  }
+}

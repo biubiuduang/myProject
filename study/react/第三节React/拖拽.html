@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽</title>
+    <style type="text/css">
+        #div1{
+            position: relative;
+        }
+        .box{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js" charset="utf-8"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js" charset="utf-8"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js" charset="utf-8"></script>
+    <script type="text/jsx">
+        //通过修改状态实现 拖拽功能
+        class Drag extends React.Component{
+            constructor(...args){
+                super(...args);
+
+                this.state = {
+                    x : 0,
+                    y : 0
+                }
+            }
+
+            fn(ev){
+                var disX = ev.pageX - this.state.x;
+                var disY = ev.pageY - this.state.y;
+
+                console.log(disX + " : " + disY);
+
+                var that = this;
+                $(document).mousemove(function(e){
+                    that.setState({
+                        x : e.pageX - disX,
+                        y : e.pageY - disY
+                    })
+                });
+
+                $(document).mouseup(function(){
+                    $(this).unbind("mousemove mouseup");
+                })
+
+            }
+
+            render(){
+                return <div style={{left:this.state.x+"px" , top:this.state.y+"px"}} className="box" onMouseDown={this.fn.bind(this)}>111111</div>
+            }
+        }
+
+        $(function(){
+            ReactDOM.render(
+                    <Drag />,
+                    $("#div1")[0]
+            )
+        })
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

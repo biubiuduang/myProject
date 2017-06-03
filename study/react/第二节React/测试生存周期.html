@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试生存周期</title>
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+
+    <script type="text/jsx">
+        class Comp extends React.Component{
+            componentWillMount(){
+                console.log("即将创建完成");
+            }
+
+            componentDidMount(){
+                console.log("刚刚创建完成");
+            }
+
+            componentWillUnmount(){
+                console.log("即将销毁");
+            }
+
+            render(){
+                return <span>121212212212</span>
+            }
+        }
+
+        $(function(){
+            var i = 0;
+            document.onclick = function(){
+                i++;
+                if(i%2){
+                    ReactDOM.render(
+                            <Comp />,
+                            document.getElementById("div1")
+                    )
+                }else{
+
+                    ReactDOM.render(
+                            <div>222222222222</div>,
+                            document.getElementById("div1")
+                    )
+                }
+            }
+
+            ReactDOM.render(
+                    <Comp />,
+                    document.getElementById("div1")
+            )
+        })
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

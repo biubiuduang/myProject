@@ -1,0 +1,14 @@
+.fix::after {clear: both;content: "";display: table;}
+.online-chat-body { background: rgb(244, 245, 249) none repeat scroll 0 0;height: 100%;padding-top: 15px;overflow-y: auto;padding-bottom: 20px;}
+.online-chat-body .online-chat-body-other-chat {margin-top: 10px;}
+.online-chat-body .online-chat-body-other-chat .online-chat-body-other-chat-img {float: left;height: 40px; margin-left: 10px; width: 40px;}
+.online-chat-body .online-chat-body-other-chat .online-chat-body-other-chat-img image {height: 100%;width: 100%;}
+.online-chat-body .online-chat-body-other-chat .online-chat-body-other-chat-name {color: rgb(107, 109, 110);float: left;height: 20px;margin-left: 15px;width: calc(100% - 70px);font-size: 12px;line-height:20px;}
+.online-chat-body .online-chat-body-other-chat .online-chat-body-other-chat-content { background: #fff none repeat scroll 0 0; border: 1px solid #e3e3e3; border-radius: 5px; color: #373737;float: left; font-size: 15px;margin-left: 15px; max-width: calc(100% - 122px);padding: 12px 10px; position: relative;  word-break: break-all;line-height: 20px;}
+.online-chat-body .online-chat-body-other-chat .online-chat-body-other-chat-content .online-chat-body-other-chat-content-arrow { background: rgba(0, 0, 0, 0) url("../images/other-arrow.png") repeat scroll 0 0 / 11px 10px;height: 11px;left: -8px;position: absolute;top: 10px; width: 10px;}
+.demosit-important-text { color: #f96268;font-size: 12px;margin-top: 10px;padding: 0 10px;line-height: 20px;}
+.demosit-important-text a {color: #03aaee;  text-decoration: none;}
+.lxkw-first-button { padding: 0 10px;text-align: center;}
+.lxkw-first-button button {background-color: #03aaee;border: medium none;border-radius: 6px;color: #fff;font-size: 18px;height: 44px;width: 100%;margin-top: 10px;}
+.lxkw-first-button button.default {background: rgba(0, 0, 0, 0) none repeat scroll 0 0;border: 1px solid #03aaee;color: #03aaee;}
+.online-chat-body .online-chat-body-other-chat .coupon-icon { background: rgba(0, 0, 0, 0) url("../images/coupon-icon.jpg") no-repeat scroll 0 0 / contain ; color: #fff; display: inline-block; font-size: 10px; height: 19px; line-height: 19px; margin-left: 8px; text-align: center; width: 30px; }

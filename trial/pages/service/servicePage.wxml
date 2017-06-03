@@ -1,0 +1,99 @@
+<!--pages/service/servicePage.wxml-->
+<view class="service">
+     <view class="title-tab">
+                <view class="title-tab-li {{titleSelect[0]}}" data-id="0" bindtap="onTitleClick">服务类型</view>
+                <view class="title-tab-li {{titleSelect[1]}}" data-id="1" bindtap="onTitleClick">服务标准</view>
+                <!--<view class="title-tab-li {{titleSelect[2]}}" data-id="2" bindtap="onTitleClick">服务价格</view>-->
+                <view class="clear-both"></view>
+    </view>
+    <view class="service-type {{serviceShow[0]}}">
+        <view class="service-body">
+            <view class="service-body-title">
+                <view class="title-logo">独</view>
+                <view class="title-text">独立顾问</view>
+            </view>
+            <view class="service-body-text">
+                独立顾问指的是该入驻顾问在服务过程中，由其一人完成所有核心服务环节。
+            </view>
+            <view class="service-body-bottom">
+                <view class="bottom-logo" style="background:#03aaee">独</view>
+                <view class="bottom-text">经平台认证，拥有该标示的顾问为<span>独立</span>顾问</view>
+            </view>
+        </view>
+
+        <view class="service-body">
+            <view class="service-body-title">
+                <view class="title-logo" style="background:#fddc5e">工</view>
+                <view class="title-text">工作室顾问</view>
+            </view>
+            <view class="service-body-text">
+                工作室分为线上工作室与线下工作室两种。工作室顾问指的是该入驻顾问为工作室一员。工作室顾问分为前期服务顾问、后期服务顾问和全程服务顾问。
+            </view>
+            <view class="service-body-bottom">
+                <view class="bottom-logo" style="background:#fddc5e">工</view>
+                <view class="bottom-text">经平台认证，拥有该标示的顾问为<span>工作室</span>顾问</view>
+            </view>
+        </view>
+
+        <view class="service-body">
+            <view class="service-body-title">
+                <view class="title-logo" style="background:#708de9">全</view>
+                <view class="title-text">全程服务顾问</view>
+            </view>
+            <view class="service-body-text">
+                全程服务顾问指的是该入驻顾问为工作室一员，在服务过程中，由其一人为学生完成所有核心服务环节。
+            </view>
+            <view class="service-body-bottom">
+                <view class="bottom-logo" style="background:#708de9">全</view>
+                <view class="bottom-text">经平台认证，拥有该标示的顾问为<span>全程服务</span>顾问</view>
+            </view>
+        </view>
+
+        <view class="service-body">
+            <view class="service-body-title">
+                <view class="title-logo" style="background:#f96268">前</view>
+                <view class="title-text">前期服务顾问</view>
+            </view>
+            <view class="service-body-text">
+                前期服务顾问指的是该入驻顾问为工作室一员，在服务过程中，为学生提供前期咨询，背景及申请目标分析等服务。
+            </view>
+            <view class="service-body-bottom">
+                <view class="bottom-logo" style="background:#f96268">前</view>
+                <view class="bottom-text">经平台认证，拥有该标示的顾问为<span>前期服务</span>顾问</view>
+            </view>
+        </view>
+
+        <view class="service-body">
+            <view class="service-body-title">
+                <view class="title-logo" style="background:#ffb359">后</view>
+                <view class="title-text">后期服务顾问</view>
+            </view>
+            <view class="service-body-text">
+                后期服务顾问指的是该入驻顾问为工作室一员，在服务过程中，为学生提供文书撰写，申请递交，签证指导等后期服务。
+            </view>
+            <view class="service-body-bottom">
+                <view class="bottom-logo" style="background:#ffb359">后</view>
+                <view class="bottom-text">经平台认证，拥有该标示的顾问为<span>后期服务</span>顾问</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="service-stander {{serviceShow[1]}}">
+        <view class="service-body">
+            <view class="service-body-title">
+                <view class="title-logo" style="background:#48c03b">标</view>
+                <view class="title-text">服务标准</view>
+            </view>
+            <view class="service-body-text">
+                留学快问平台制定高于留学中介的服务标准，每一个环节都有对应的要求。
+            </view>
+            <view class="service-body-bottom">
+                <view class="bottom-logo" style="background:#48c03b">标</view>
+                <view class="bottom-text">拥有该标示的老师<span>愿意遵循平台服务标准</span></view>
+            </view>
+        </view>
+        <view class="service-img">
+            <image style="width: {{imgWidth}};height: {{imgHeight}}" src="../images/service-img.jpeg" mode="scaleToFill"></image>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时钟</title>
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+
+    <script type="text/jsx">
+        class Clock extends React.Component{
+            constructor(...args){
+                super(...args);
+
+                this.state={
+                    h:0,
+                    m:0,
+                    s:0
+                };
+
+                var that = this;
+                setInterval(function(){
+                    that.tick();
+                },1000)
+            }
+
+            componentDidMount(){
+                this.tick();
+            }
+
+            tick(){
+                var oDate = new Date();
+
+                this.setState({
+                    h : oDate.getHours(),
+                    m : oDate.getMinutes(),
+                    s : oDate.getSeconds()
+                })
+
+
+            }
+
+            render (){
+                return <div>
+                    <span>{this.state.h}:</span>
+                    <span>{this.state.m}:</span>
+                    <span>{this.state.s}</span>
+                </div>
+            }
+        }
+
+        $(function(){
+            ReactDOM.render(
+                    <Clock />,
+                    document.getElementById("div1")
+            )
+        })
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

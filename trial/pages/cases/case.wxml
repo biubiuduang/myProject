@@ -1,0 +1,20 @@
+<view class="case-container p-rel">
+<view class="case-intro-name left">录取信息：</view>
+<view class="case-intro-details left">
+     <text wx:if="{{student_info}}">{{student_info}}</text>
+    <text wx:else>暂无</text>                                          
+</view>
+<view class="case-intro-name left">学生信息：</view>
+<view class="case-intro-details left">
+     <text wx:if="{{other}}">{{other}}</text>
+     <text wx:else>暂无</text>
+</view> 
+<view class="case-intro-name left">软性背景：</view>
+<view class="case-intro-details left">
+    <text wx:if="{{background}}">{{background}}</text>
+    <text wx:else>暂无</text>
+</view>
+<div class="pass-icon">已认证</div>      
+</view>
+         
+            

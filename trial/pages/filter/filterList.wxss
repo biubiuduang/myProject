@@ -1,0 +1,23 @@
+/* pages/filter/filterList.wxss */
+.clear-both {clear: both;display: block;}
+page {height: 100%;background: #f5f4f9;}
+.select-top {background: #fff;height: 44px;text-align: center;position: relative;border-bottom: 1px solid #e3e3e3}
+.select-top .select-name {height: 45px;line-height: 45px;font-size: 18px;color: #373737;}
+.select-top .button-finish {position: absolute;right: 10px;width: 50px;height: 25px;line-height: 25px;top: 10px;background: #03aaee;color: #fff;border-radius: 3px;font-size: 15px;}
+
+.basefilte-info {width:100%;}
+.basefilte-info-left-body {height:480px;margin-top: -1px;}
+.basefilte-info-left-body-scroll {overflow: auto;}
+.basefilte-info-left { width:23%;}
+.basefilte-info-left .item-ul {border:none;width:100%;}
+.basefilte-info-left .item-ul .item-li view {white-space: nowrap;width:100%;line-height:40px;border:1px solid #b0b0b0;border-left:none;text-align:center;background:#fff;line-height:40px;font-size:15px;margin-bottom:-1px;color:#8e8e8e;font-weight:500px;cursor:pointer;float: left;border-left:2px solid #fff;}
+.basefilte-info-left .item-ul .item-li.basefilte-info-left-selected {border-right:1px solid #f6f6f6;border-left:2px solid #03aaee;color:#03aaee;background:#f6f6f6;}
+.basefilte-info-left .item-ul .item-li:last-child.basefilte-info-left-selected {border-right:1px solid #f6f6f6;border-bottom:none;border-left:2px solid #03aaee;color:#03aaee;background:#f6f6f6;}
+.basefilte-info-right {height: 480px;overflow:auto;width:77%;top:44px;position: absolute;right: 0px;}
+.basefilte-info-right-new {width:100%;}
+.basefilte-info-right .item-ul .item-li {overflow:hidden;width:28%;height:40px;margin-top:10px;text-align:center;font-size:13px;line-height:40px;color:#8e8e8e;margin-left:4%;float:left;border:1px solid #d5d5d5;background:#fff;}
+.basefilte-info-right .item-ul .item-li:after {content:' ';clear:both;display:block;}
+.basefilte-info-right .item-ul .item-li.basefilte-info-right-selected {color:#03aaee;border:1px solid #03aaee;}
+.basefilte-info-bottom {width:100%;padding:3%;margin-top:200px;font-size:13px;color:#8e8e8e;}
+.basefilte-info-find-consultant {color:#03aaee;}
+.new-right-style {width: 100%;}

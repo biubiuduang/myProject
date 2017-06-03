@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子父级的通信</title>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+    <script type="text/jsx">
+        class Child extends React.Component{
+            constructor(...args){
+                super(...args);
+
+                this.num = 55;
+            }
+            render(){
+                this.props.cb(this.num);
+                return <div>1212121212</div>
+            }
+        }
+        class Parent extends React.Component{
+            constructor(...args){
+                super(...args);
+            }
+
+            fn(num){
+                alert(num);
+            }
+
+            render(){
+                return <div>
+                    <p>aaaaaaaaa</p>
+                    <Child cb={this.fn.bind(this)} />
+                    <p>bbbbbbbbb</p>
+                </div>
+            }
+        }
+        $(function(){
+            ReactDOM.render(
+                    <Parent />,
+                    $("#div1")[0]
+            )
+        })
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

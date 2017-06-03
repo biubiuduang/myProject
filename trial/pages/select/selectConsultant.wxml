@@ -1,0 +1,229 @@
+<!--pages/select/selectConsultant.wxml-->
+<view class="select-body">
+<!--学生信息-->
+<view class="select-student-intro">
+    <view class="lxkw-public-list-item">
+        <view class="lxkw-public-list-item-details-img left">
+            <image src="{{data.info.avatar}}"></image>
+        </view>
+        <view class="lxkw-public-list-item-details-content">
+            <view class="student-trial-name"><span>{{data.result.name}}</span></view>
+            <view class="list-details-small-title">
+                <span>还可以选择<em class="remain-teacher">{{data.info.trial_remain_count}}位</em></span>免费咨询顾问
+            </view>
+            <view class="submit-buttun" bindtap="submitAgain">重新提交试用</view>
+        </view>
+    </view>
+</view>
+
+<!--筛选内容-->
+<view class="lxkw-controls-topnav-select">
+    <view class="topnav-left lxkw-controls-topnav-select-span {{selectTypeStyle[0]}}" bindtap="selectTypeClick" data-id="0">
+        <span class="select-arror"></span>
+        <span class="">全部顾问</span>
+    </view>
+    <view class="topnav-right lxkw-controls-topnav-select-span {{selectTypeStyle[1]}}" bindtap="selectTypeClick" data-id="1">
+         <span class="select-arror"></span>
+        <span class="">已选择</span>
+    </view>
+</view>
+
+
+
+<!--顾问列表-->
+<view class="container-consultant">
+<view class="lxkw-controls-tab-rank">
+    <view class="left lxkw-controls-tab-rank-tab select" bindtap="onToptab">
+        <span class="first-filter-type">{{initRankText}}</span>
+    </view>
+    <view class="lxkw-controls-tab-rank-tab">
+        <label class="checkbox" style="font-size:12px" bindtap="onIsDeposite">
+            <checkbox value="1"/>仅显示有保证金的顾问
+        </label>
+    </view>
+    <view class="lxkw-controls-tab-rank-down-list {{downListStatus}}">
+            <view class="list-item {{downListStyle[2]}}" data-id="2" bindtap="filterType">
+                <p>按吻合度排序</p>
+                <p style="font-size:12px;">根据顾问对您申请目标的擅长程度来排序</p>
+                <icon type="success_no_circle" size="20" color="#03aaee"/>
+            </view>
+            <view class="list-item {{downListStyle[3]}}" data-id="3" bindtap="filterType">
+                <p>按评价排序</p>
+                <p style="font-size:12px;">根据学生对顾问的评价进行排序</p>
+                <icon type="success_no_circle" size="20" color="#03aaee"/>
+            </view>
+             <view class="list-item {{downListStyle[1]}}" data-id="1" bindtap="filterType">
+                <p>按案例数排序</p>
+                <p style="font-size:12px;">根据案例的数量进行排序</p>
+                <icon type="success_no_circle" size="20" color="#03aaee"/>
+            </view>
+            <view class="list-item {{downListStyle[4]}}" data-id="4" bindtap="filterType">
+                <p>按响应速度排序</p>
+                <p style="font-size:12px;">在您选择顾问后，该顾问联系您的速度</p>
+                <icon type="success_no_circle" size="20" color="#03aaee"/>
+            </view>
+    </view>
+</view>
+
+<!--顾问列表-->
+<view class="lxkw-touming-background-part {{downListStatus}}" bindtap="onBgClick"></view>
+<view class="consultant" wx:for="{{consultantList}}" wx:for-index="idx" wx:for-item="item">
+
+    <view class="consultant-item" >
+        <view class="consultant-item-top" bindtap="onConsultantDetial" data-id="{{item.consultant_id}}">
+            <view class="consultant-name">
+                {{item.nickname}}<span class="studio-name">{{item.studio_name}}</span>
+            </view>
+            <view class="list-item-details">
+                <span class="consultant-location" wx:if="{{item.location}}">{{item.location}}</span>
+                <span class="consultant-year">资历{{item.qf_time}}</span>
+            </view>
+            <view class="list-item-details">
+                <span class="consultant-demosit" wx:if="{{item.studio == 0}}">
+                      <block wx:if="{{item.calc_deposit_amount_formated != '暂无'}}">顾问保证金{{item.calc_deposit_amount_formated}}</block>
+                      <block wx:if="{{item.calc_deposit_amount_formated == '暂无'}}">该顾问暂无保证金</block>
+                </span>
+                <span class="consultant-demosit" wx:if="{{item.studio > 0}}">
+                    <block wx:if="{{item.calc_deposit_amount_formated != '暂无'}}">顾问保证金{{item.studio_calc_deposit_amount_formated}}</block>
+                    <block wx:if="{{item.calc_deposit_amount_formated == '暂无'}}">该顾问暂无保证金</block>
+                </span>
+                <span class="consultant-three-money">近3月交易额{{item.sign_subtotal_formated}}</span>
+            </view>
+            <view class="arror-right" style="top:29px;">
+                <image src="../images/arror-right.png"></image>
+            </view>
+        </view>
+
+        <view class="match-details {{memberSortBottom[2]}}">
+            <view class="match-title">吻合度<span>{{item.total_match}}分</span></view>
+            <view class="match-alignment">
+                <view class="percentage-item">
+                    <view class="star-title left">国家吻合度</view>
+                    <view class="lxkw-controls-star left">
+                        <view class="lxkw-controls-star-content">
+                            <span class="star-top"></span>
+                            <view class="star-width" style="width:{{item.country_match}}%">
+                                <span class="star-bottom"></span>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="percentage-item">
+                    <view class="star-title left">学位吻合度</view>
+                    <view class="lxkw-controls-star left">
+                        <view class="lxkw-controls-star-content">
+                            <span class="star-top"></span>
+                            <view class="star-width" style="width:{{item.degree_match}}%">
+                                <span class="star-bottom"></span>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="percentage-item">
+                    <view class="star-title left">专业吻合度</view>
+                    <view class="lxkw-controls-star left">
+                        <view class="lxkw-controls-star-content">
+                            <span class="star-top"></span>
+                            <view class="star-width" style="width:{{item.major_match}}%">
+                                <span class="star-bottom"></span>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <!--<view class="match-arrow">吻合度详情></view>-->
+            </view>
+        </view>
+
+         <view class="match-details {{memberSortBottom[4]}}">
+            <view class="consultant-response-title">响应情况</view>
+            <view class="consultant-response-content">
+                <view class="top">24小时响应率：<span>{{item.response_percent_formated}}</span></view>
+                <view class="bottom">选择顾问后，顾问在24小时内联系学生的比率</view>
+            </view>
+            <view class="consultant-response-content">
+                <view class="top">响应时长：<span>{{item.response_timet_formated}}</span></view>
+                <view class="bottom">选择顾问后，顾问第一次联系学生的平均用时</view>
+            </view>
+         </view>
+
+         <view class="match-details {{memberSortBottom[1]}}" bindtap="onConsulatntCase" data-id="{{item.consultant_id}}">
+            <view class="new-select-case">
+                <span>代言案例：{{item.endorsement_count}}个</span>
+                <span style="color: #6b6d6e;">学生愿意公开代言的认证案例</span>
+            </view>
+            <view class="new-select-case">
+                <span>认证案例：{{item.verify_count}}个</span>
+                <span style="color: #6b6d6e;">经平台审核确认真实性的案例</span>
+            </view>
+            <view class="new-select-case">
+                <span>未认证案例：{{item.unverify_count}}个</span>
+                <span style="color: #6b6d6e;">未经平台审核确认真实性的案例</span>
+            </view> 
+            <view class="arror-right" style="top:35px;">
+                <image src="../images/arror-right.png"></image>
+            </view>
+         </view>
+
+         <view class="match-details {{memberSortBottom[3]}}">
+            <view class="new-select-grade">
+                <view class="content">共<span wx:if="{{item.grade_count == null}}">0</span><span wx:if="{{item.grade_count > 0}}">{{item.grade_count}}</span>位同学评价，平均得分：<span>{{item.current_grade}}</span>分</view>
+                <view class="content">其中有<span>{{item.similar_count}}</span><span wx:if="item.similar_count == ''">0</span> 位和你申请目标一致的同学 </view>
+            </view>
+         </view>
+
+        <view class="consultant-item-bottom" wx:if="{{item.status == 0}}">
+            <view class="select-button" bindtap="onSelectButton" data-id="{{item.consultant_id}}">选择该顾问</view>
+        </view>
+         <view class="consultant-item-bottom"  wx:if="{{item.status > 0}}">
+            <view class="select-button-select" data-id="{{item.consultant_id}}">已选该顾问</view>
+        </view>
+    </view>
+</view>
+</view>
+
+<!--小管家头像-->
+<view class="fixed-bottom-tips">如果没有满意的顾问，可以找小管家继续推荐哦</view>
+<view class="marker-logo-body marker-logo-icon" open-type="contact">
+    <view class="marker-logo">
+        <image src="{{data.market_info.headimg}}"></image>
+        <view class="left">小管家</view>
+    </view>
+    <button class="contact" bindtap="onMarkerHead"></button>
+</view>
+<!--弹窗-->
+    <view class="lxkw-touming-background {{bgStatus}}">
+        <view class="market-info {{marketStatus}}">
+            <view class="new-trial-marker-text-body">
+                <view class="new-trial-marker-text">
+                    哈喽，我是<label>{{data.market_info.name}}</label>，刚刚用了洪荒之力，帮您找到了<span style="red">{{data.info.praise}}</span>位顾问啦~，为了确保更好的服务体验，快问鼓励学生可以选择多位顾问进行交流哦~您先看看，有什么疑问随时来骚扰我哈~
+                </view>
+            </view>
+            <view class="marker-logo-body">
+                <view class="marker-logo">
+                    <image src="{{data.market_info.headimg}}"></image>
+                    <view class="market-name">小管家</view>
+                </view>
+                <view class="lxkw-secondary-button-1" bindtap="know">
+                    <image src="../images/img-item.png"></image>
+                </view>
+            </view>
+        </view>
+
+        <view class="select-alert {{selectStatus}}">
+            <view class="select-alert-top">帮您找到了多位顾问，请选择排序方式：</view>
+            <view class="select-alert-body">
+                 <radio-group class="radio-group" bindchange="radioChange">
+                    <label class="radio" wx:for="{{selectList}}">
+                         <radio value="{{item.name}}"/>{{item.value}}
+                         <view class="radio-group-text">{{item.text}}</view>
+                    </label>
+
+                </radio-group>
+            </view>
+            <view class="no-select-tip {{tips}}">*请选择排序方式</view>
+            <view class="select-alert-button" bindtap="save">
+                <image src="../images/new-select-button.png"></image>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,25 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/login/noLogin",
+    "pages/consultant/consultantDetail",
+    "pages/cases/case",   
+    "pages/case/representCase",
+    "pages/select/selectConsultant", 
+    "pages/service/servicePage",
+    "pages/choose/choosePage",
+    "pages/contact/contactInfo",
+    "pages/success/successSettime",
+    "pages/deposit/depositIntro" ,
+    "pages/logs/logs",
+    "pages/filter/filterList",
+    "pages/marker/contactMarker"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "留学快问免费试用",
+    "navigationBarTextStyle":"#fff"
+  },
+  "debug": true
+}

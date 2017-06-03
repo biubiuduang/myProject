@@ -1,0 +1,77 @@
+<view class="trial">
+  <view class="lxkw-warning-bar-yellow-1">温馨提示：提交的信息越准确，为你推荐的顾问越合适</view>
+</view>
+<view class="submit-c-container">
+    <view class="student-name">
+        <label for="studentName" class="left" style="padding-left:15px;">昵称</label>
+        <input bindinput="bindInputName" id="studentName" type="text" placeholder="请填写昵称" value="{{name}}"/>
+    </view>
+</view>
+<view class="try-information information">
+     <view data-type="1" class="student-name try-item">
+        <label for="studentName" class="left">意向国家</label>
+        <input id="studentName" type="text" placeholder="可多选" value="{{apply_country}}" disabled="true"/>
+        <!--<view class="">{{apply_country}}</view>-->
+         <view class="arror-right">
+          <image src="../images/arror-right.png"></image>
+        </view>
+        <view class="g-link" data-type="1" bindtap="onItemClick"></view>
+     </view>
+      <view class="student-name try-item">
+        <label for="studentName" class="left">申请学位</label>
+        <input id="studentName" type="text" placeholder="可多选" value="{{apply_degree}}" disabled="true"/>
+        <view class="arror-right">
+          <image src="../images/arror-right.png"></image>
+        </view>
+        <view class="g-link" data-type="2" bindtap="onItemClick"></view>
+     </view>
+      <view class="student-name try-item" bindtap="onItemClick" data-type="3">
+        <label for="studentName" class="left">申请专业</label>
+        <input id="studentName" type="text" placeholder="可多选" value="{{apply_major}}" disabled="true"/>
+         <view class="arror-right">
+          <image src="../images/arror-right.png"></image>
+         </view>
+        <view class="g-link" data-type="3" bindtap="onItemClick"></view>
+     </view>
+      <view class="student-name try-item"style="border:none">
+        <picker mode = "selector" bindchange="bindPickerChange" value="{{index}}" range="{{timeArray}}">
+          <view class="picker">
+            出国时间<span>{{timeArray[index]}}</span>
+          </view>
+        </picker>
+        <view class="arror-right">
+          <image src="../images/arror-right.png"></image>
+        </view>
+     </view>
+</view>
+
+<view class="try-information information">
+     <view class="student-name try-item">
+        <label for="studentName" class="left">学校地区</label>
+        <input id="studentName" type="text" placeholder="" value="{{location}}" disabled="true"/>
+         <view class="arror-right">
+          <image src="../images/arror-right.png"></image>
+        </view>
+        <view class="g-link" data-type="5" bindtap="onItemClick"></view>
+     </view>
+      <view class="student-name try-item">
+        <label for="studentName" class="left">就读学校</label>
+        <input  bindinput="bindInputSchool" id="studentName" type="text" placeholder="请填写就读学校" value="{{college}}"/>
+     </view>
+      <view class="student-name try-item">
+        <label for="studentName" class="left">就读专业</label>
+        <input bindinput="bindInputMajor" id="studentName" type="text" placeholder="请填写就读专业" value="{{major}}"/>
+     </view>
+      <view class="student-name try-item"style="border:none">
+        <label for="studentName" class="left">所在年级</label>
+        <input id="studentName" type="text" placeholder="" value="{{grade}}" disabled="true"/>
+        <view class="arror-right">
+          <image src="../images/arror-right.png"></image>
+        </view>
+        <view class="g-link" data-type="6" bindtap="onItemClick"></view>
+     </view>
+</view>
+
+<view class="submit">
+    <button style="background: #03aaee;" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="primary">提交试用</button>
+</view>

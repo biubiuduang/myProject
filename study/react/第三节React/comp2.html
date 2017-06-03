@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件内的节点</title>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js" charset="utf-8"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js" charset="utf-8"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js" charset="utf-8"></script>
+
+    <script type="text/jsx">
+
+        class  Comp extends React.Component{
+            constructor(...args){
+                super(...args);
+            }
+
+            fn(){
+                console.log(this);
+                var s1 = this.refs["sp1"];
+                $(s1).css({
+                    color :"red"
+                });
+
+                var box = this.refs["box"];
+                $(box).hide();
+            }
+            render(){
+                return <div ref="box" className="box">
+                    <input type="button" value="button" onClick = {this.fn.bind(this)} />
+                    <span ref="sp1">11111111</span>
+                </div>
+            }
+        }
+
+        $(function(){
+            $(".login").click(function(){
+                $(".box").show();
+                ReactDOM.render(
+                        <Comp />,
+                        $("#div1")[0]
+                );
+            })
+
+        })
+    </script>
+</head>
+<body>
+<input type="button" class="login" value="登录" />
+<div id="div1"></div>
+</body>
+</html>

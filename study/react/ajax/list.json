@@ -1,0 +1,267 @@
+{
+  "rtn": 0,
+  "data": [
+    {
+      "userId": 310845,
+      "nickName": "昆仑之路职业搏击大赛",
+      "avatarUrl": "http://meidou-10028005.image.myqcloud.com/1494575963099",
+      "verifiedMode": 0,
+      "verifiedMessage": "",
+      "gender": "female",
+      "level": 3,
+      "signature": "",
+      "room": {
+        "roomId": "310845",
+        "roomType": 9,
+        "chatGroupId": "310845",
+        "videoUrls": [
+          "http://200027040.vod.myqcloud.com/200027040_64d1e58b50f841af8d5f17f420d323f9.f20.mp4",
+          "http://200027040.vod.myqcloud.com/200027040_51050651fb814a56876b7ec54d0203aa.f20.mp4"
+        ],
+        "title": "昆仑之路职业搏击大赛",
+        "coverUrl": "http://p.qpic.cn/videoyun/0/200027040_64d1e58b50f841af8d5f17f420d323f9_1/640",
+        "startAt": "2017-04-22T12:48:30.921Z",
+        "currentMembers": 18971,
+        "duration": 5200854,
+        "sceneId": 3,
+        "tags": [],
+        "layout": "0",
+        "albumId": "58fc5530b8966943307b2e41"
+      }
+    },
+    {
+      "userId": 306253,
+      "nickName": "美豆第一帅",
+      "avatarUrl": "http://meidou-10028005.image.myqcloud.com/1495800895837",
+      "verifiedMode": 0,
+      "verifiedMessage": "",
+      "gender": "male",
+      "level": 10,
+      "signature": "来看展展和小鱼吧",
+      "room": {
+        "roomId": "306253",
+        "roomType": 9,
+        "chatGroupId": "306253",
+        "videoUrls": [
+          "http://200027040.vod.myqcloud.com/200027040_d6c3b17164e74f5eaaddffbba3b291c9.f20.mp4",
+          "http://200027040.vod.myqcloud.com/200027040_013dfad33f4d48a191ec9e82a1bde397.f20.mp4",
+          "http://200027040.vod.myqcloud.com/200027040_0a91f94526ca45919656872ff5185121.f20.mp4"
+        ],
+        "title": "哪吒闹海",
+        "coverUrl": "http://meidou-10028005.image.myqcloud.com/1493893774689",
+        "startAt": "2017-04-19T11:13:23.782Z",
+        "currentMembers": 9581,
+        "duration": 6408675,
+        "sceneId": 218,
+        "tags": [],
+        "layout": "0",
+        "albumId": "590afa29e10656b50cae8297"
+      }
+    },
+    {
+      "userId": 399319,
+      "nickName": "(・ω・)~叶文飘了👽💤",
+      "avatarUrl": "http://meidou-10028005.image.myqcloud.com/1496312361498",
+      "verifiedMode": 0,
+      "verifiedMessage": "",
+      "gender": "female",
+      "level": 9,
+      "signature": "轻轻地，我来过",
+      "room": {
+        "roomId": "399319",
+        "roomType": 9,
+        "chatGroupId": "399319",
+        "videoUrls": [
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/b3b612719031868222923583885/f0.f20.mp4",
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/b3c899469031868222923594161/f0.f20.mp4"
+        ],
+        "title": "",
+        "coverUrl": "http://meidou-10028005.image.myqcloud.com/1493981514522",
+        "startAt": "2017-05-02T13:24:45.422Z",
+        "currentMembers": 9642,
+        "duration": 4219533,
+        "sceneId": 86,
+        "tags": [],
+        "layout": "0",
+        "albumId": "590c4c529bc6811d5800618c"
+      }
+    },
+    {
+      "userId": 413689,
+      "nickName": "🌟小怪妹妹",
+      "avatarUrl": "http://meidou-10028005.image.myqcloud.com/1495641126858",
+      "verifiedMode": 0,
+      "verifiedMessage": "",
+      "gender": "female",
+      "level": 9,
+      "signature": "我能做的一切就是做我自己 你管我是谁",
+      "room": {
+        "roomId": "413689",
+        "roomType": 9,
+        "chatGroupId": "413689",
+        "videoUrls": [
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/ac947f019031868222923267240/f0.f20.mp4"
+        ],
+        "title": "",
+        "coverUrl": "http://meidou-10028005.image.myqcloud.com/1493981400458",
+        "startAt": "2017-05-02T10:55:14.917Z",
+        "currentMembers": 5155,
+        "duration": 2939896,
+        "sceneId": 30,
+        "tags": [],
+        "layout": "0",
+        "albumId": "590c4ca9ca88c31258700b0c"
+      }
+    },
+    {
+      "userId": 242796,
+      "nickName": "葬爱家族、M二毛 讲不出再见",
+      "avatarUrl": "http://meidou-10028005.image.myqcloud.com/1495716496292",
+      "verifiedMode": 1,
+      "verifiedMessage": "萌逗医技工程师",
+      "gender": "male",
+      "level": 12,
+      "signature": "跑骚，我们是认真的～葬爱家族",
+      "room": {
+        "roomId": "242796",
+        "roomType": 9,
+        "chatGroupId": "242796",
+        "videoUrls": [
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/c7c39be19031868222920335544/f0.f20.mp4",
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/c7faeda29031868222920367180/f0.f20.mp4",
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/c81f2fc99031868222920387590/f0.f20.mp4",
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/c831d8ae9031868222920398674/f0.f20.mp4"
+        ],
+        "title": "周末喜相逢",
+        "coverUrl": "http://meidou-10028005.image.myqcloud.com/1493981344821",
+        "startAt": "2017-04-29T13:38:18.976Z",
+        "currentMembers": 9832,
+        "duration": 7516581,
+        "sceneId": 639,
+        "tags": [],
+        "layout": "0",
+        "albumId": "590c4cd155c832dd36a0d1f3"
+      }
+    },
+    {
+      "userId": 356413,
+      "nickName": "过气主播＆小菠萝仙",
+      "avatarUrl": "http://meidou-10028005.image.myqcloud.com/1495544378400",
+      "verifiedMode": 0,
+      "verifiedMessage": "",
+      "gender": "female",
+      "level": 14,
+      "signature": "",
+      "room": {
+        "roomId": "356413",
+        "roomType": 9,
+        "chatGroupId": "356413",
+        "videoUrls": [
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/66736ac89031868222922543656/f0.f20.mp4",
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/66aac44a9031868222922575437/f0.f20.mp4",
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/6881de639031868222922606804/f0.f20.mp4",
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/68b6ed7d9031868222922634032/f0.f20.mp4"
+        ],
+        "title": "",
+        "coverUrl": "http://meidou-10028005.image.myqcloud.com/1493981296603",
+        "startAt": "2017-05-01T12:34:43.007Z",
+        "currentMembers": 10522,
+        "duration": 7106311,
+        "sceneId": 151,
+        "tags": [],
+        "layout": "0",
+        "albumId": "590c4ced2af7193258bc0e3e"
+      }
+    },
+    {
+      "userId": 381762,
+      "nickName": "🌟小透明",
+      "avatarUrl": "http://meidou-10028005.image.myqcloud.com/1494947006221",
+      "verifiedMode": 0,
+      "verifiedMessage": "",
+      "gender": "female",
+      "level": 10,
+      "signature": "好好开始 好好告别",
+      "room": {
+        "roomId": "381762",
+        "roomType": 9,
+        "chatGroupId": "381762",
+        "videoUrls": [
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/1953db5a9031868222921521422/f0.f20.mp4"
+        ],
+        "title": "",
+        "coverUrl": "http://meidou-10028005.image.myqcloud.com/1493981237008",
+        "startAt": "2017-04-30T12:39:44.900Z",
+        "currentMembers": 11608,
+        "duration": 10909512,
+        "sceneId": 96,
+        "tags": [],
+        "layout": "0",
+        "albumId": "590c4d1ca6d709e8360ae258"
+      }
+    },
+    {
+      "userId": 301396,
+      "nickName": "葬爱家族、阿鹏",
+      "avatarUrl": "http://meidou-10028005.image.myqcloud.com/1495384980989",
+      "verifiedMode": 1,
+      "verifiedMessage": "另类麦手",
+      "gender": "male",
+      "level": 12,
+      "signature": "曾经往事风吹过，美豆二字在闪烁，感谢所有的游客激情四射我掌握",
+      "room": {
+        "roomId": "301396",
+        "roomType": 9,
+        "chatGroupId": "301396",
+        "videoUrls": [
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/048d19d29031868222917962972/f0.f20.mp4",
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/04c507d49031868222917995923/f0.f20.mp4",
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/3c4458ec9031868222918029845/f0.f20.mp4",
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/3e8391e29031868222918112806/f0.f20.mp4"
+        ],
+        "title": "疯狂猜歌名活动开始",
+        "coverUrl": "http://meidou-10028005.image.myqcloud.com/1493981144628",
+        "startAt": "2017-04-27T11:31:01.628Z",
+        "currentMembers": 13067,
+        "duration": 9164817,
+        "sceneId": 323,
+        "tags": [],
+        "layout": "0",
+        "albumId": "590c4d624eb8952458b37296"
+      }
+    },
+    {
+      "userId": 409980,
+      "nickName": "怎么肥四  过气畅啊",
+      "avatarUrl": "http://meidou-10028005.image.myqcloud.com/1494168251839",
+      "verifiedMode": 0,
+      "verifiedMessage": "",
+      "gender": "female",
+      "level": 9,
+      "signature": "",
+      "room": {
+        "roomId": "409980",
+        "roomType": 9,
+        "chatGroupId": "409980",
+        "videoUrls": [
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/51aaee999031868222918981689/f0.f20.mp4",
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/89292a839031868222919013653/f0.f20.mp4",
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/896221089031868222919048263/f0.f20.mp4",
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/89a85e4c9031868222919084564/f0.f20.mp4",
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/8b8ec7059031868222919120692/f0.f20.mp4",
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/8bc74e0d9031868222919154936/f0.f20.mp4",
+          "http://1252593504.vod2.myqcloud.com/97e2d78bvodtransgzp1252593504/8bfe8a4b9031868222919186056/f0.f20.mp4"
+        ],
+        "title": "",
+        "coverUrl": "http://meidou-10028005.image.myqcloud.com/1493980780974",
+        "startAt": "2017-04-28T11:32:07.594Z",
+        "currentMembers": 18274,
+        "duration": 12581639,
+        "sceneId": 46,
+        "tags": [],
+        "layout": "0",
+        "albumId": "590c4d7c6d51c7d436e22182"
+      }
+    }
+  ]
+}

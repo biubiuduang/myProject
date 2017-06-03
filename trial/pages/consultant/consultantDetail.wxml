@@ -1,0 +1,309 @@
+<view class="consultant">
+    <view class="new-consultant-body-title-img">
+        <image class="bg-img" src="../images/new-consultant-banner.png"></image>
+        <view class="new-consultant-body-title-header">
+            <image src="{{consultantInfo.headimg}}" bindtap="onHeadClick" data-id="{{consultantInfo.headimg}}"></image>
+            <view class="new-consultant-body-title-sex"></view>
+        </view>
+        <view class="new-consultant-body-title-info">
+             <view class="consultant-info-li"><span class="consultant-name">{{consultantInfo.nickname}}</span></view>
+             <view class="consultant-info-li">
+                <view class="consultant-info-li-text" wx:if="{{consultantInfo.cityname !=  ''}}">
+                    <image src="../images/location.png"></image>
+                    <span>{{consultantInfo.cityname}}</span>
+                </view>
+                <view class="consultant-info-li-text" wx:if="{{consultantInfo.is_new == 1}}">
+                    <image class="is-new" src="../images/consultant-isNew-logo.png"></image>
+                    <span>新入驻</span>
+                </view>
+               <view class="consultant-info-li-text" wx:if="{{consultantInfo.identify_verify == 3}}">
+                    <image class="is-accreditation" src="../images/advise-accreditation.png"></image>
+                    <span>个人信息已实名认证</span>
+                </view>
+             </view>
+             <view class="consultant-info-li">
+                <view class="consultant-info-li-text">
+                    <image class="is-deposite" src="../images/demosit-amount-logo.png"></image>
+                    <span>
+                        <block wx:if="{{consultantInfo.calc_deposit_amount_formated != '暂无'}}">该顾问已缴纳保证金{{consultantInfo.calc_deposit_amount_formated}}</block>
+                         <block wx:if="{{consultantInfo.calc_deposit_amount_formated == '暂无'}}">该顾问暂无缴纳保证金</block>
+                    </span>
+                </view>
+             </view>
+        </view>
+        <view class="new-consultant-id">ID:{{consultantInfo.usernum}}</view>
+        <view class="new-consultant-intro-container">
+            <view class="container-li">
+                <view class="container-li-title">口碑值</view>
+                <view class="container-li-content">{{consultantInfo.koubei_ranking.koubei}}</view>
+            </view>
+            <view class="container-li" style="width:15%">
+                <view class="container-li-title">评分</view>
+                <view class="container-li-content">{{consultantInfo.overall_grade}}</view>
+            </view>
+            <view class="container-li" style="width:15%">
+                <view class="container-li-title">资历</view>
+                <view class="container-li-content">{{consultantInfo.qftime_formated}}</view>
+            </view>
+            <view class="container-li" style="width:25%">
+                <view class="container-li-title">近三月签约额</view>
+                <view class="container-li-content">{{consultantInfo.sign_subtotal_formated}}</view>
+            </view>
+            <view class="container-li" style="width:25%">
+                <view class="container-li-title">认证案例数</view>
+                <view class="container-li-content">{{caseList.verify_count}}</view>
+            </view>
+            <view class="clear-both"></view>
+        </view>
+        <view class="liuxuekw-serve" bindtap="onServiceClick">
+            <view class="liuxuekw-serve-li" wx:if="{{consultantInfo.consultant_type == 1}}">
+                <view class="serve-logo serve-logo-1">独</view>
+                <view class="serve-text">独立顾问</view>
+            </view>
+             <view class="liuxuekw-serve-li" wx:if="{{consultantInfo.consultant_type == 2}}">
+                <view class="serve-logo serve-logo-1" style="background: #fddc5e">工</view>
+                <view class="serve-text">工作室</view>
+            </view>
+
+            <view class="liuxuekw-serve-li" wx:if="{{consultantInfo.consultant_service_type == 1}}">
+                <view class="serve-logo serve-logo-2" style="background: #f96268">前</view>
+                <view class="serve-text">前期服务顾问</view>
+            </view>
+            <view class="liuxuekw-serve-li" wx:if="{{consultantInfo.consultant_service_type == 2}}">
+                <view class="serve-logo serve-logo-2" style="background: #ffb359">后</view>
+                <view class="serve-text">后期服务顾问</view>
+            </view>
+            <view class="liuxuekw-serve-li" wx:if="{{consultantInfo.consultant_service_type == 3}}">
+                <view class="serve-logo serve-logo-2" style="background: #708de9">全</view>
+                <view class="serve-text">全程服务顾问</view>
+            </view>
+
+             <view class="liuxuekw-serve-li" wx:if="{{consultantInfo.service_standard == 1}}">
+                <view class="serve-logo serve-logo-3">标</view>
+                <view class="serve-text">遵循服务标准</view>
+            </view>
+            <view class="clear-both"></view>
+            <view class="arror-right" style="right:5px; top:10px;">
+                <image src="../images/arror-right.png"></image>
+            </view>
+        </view>
+    </view>
+
+    <!--顾问详情tab-->
+    <view class="nav-adviser-new">
+        <view class="tab-li {{consultantTab[0]}}" data-id="0" bindtap="onConsultantTab">
+            <span>介绍</span>
+        </view>
+        <view class="tab-li {{consultantTab[1]}}" data-id="1" bindtap="onConsultantTab">
+             <span>案例</span>
+        </view>
+        <view class="tab-li {{consultantTab[2]}}" data-id="2" bindtap="onConsultantTab">
+             <span>顾问评价</span>
+        </view>
+        <view class="clear-both"></view>
+    </view>
+
+    <!--顾问详情-->
+    <view class="consultant-info {{consultantShow[0]}}">
+        <view class="consultant-detail">
+            <view class="consultant-detail-title">
+                <view class="title-logo"></view>
+                <view class="title-text">顾问特点</view>
+            </view>
+            <view class="consultant-detail-content">
+                <view class="consultant-tag" wx:for="{{consultantInfo.consultant_tag}}">
+                    <view class="point-style"></view>
+                    <span>{{item.tag_name}}</span>
+                </view>
+                <view class="clear-both"></view>
+            </view>
+        </view>
+
+        <view class="consultant-detail">
+            <view class="consultant-detail-title">
+                <view class="title-logo"></view>
+                <view class="title-text">擅长</view>
+            </view>
+            <view class="consultant-detail-content">
+                <view class="consultant-good-at-list">
+                    <view class="consultant-good-at-list-content country-logo">
+                        {{gondAtContry}}
+                    </view>
+                </view>
+                <view class="consultant-good-at-list">
+                    <view class="consultant-good-at-list-content degree-logo">
+                        {{gondAtDegree}}
+                    </view>
+                </view>
+                <view class="consultant-good-at-list">
+                    <view class="consultant-good-at-list-content major-logo">
+                        {{gondAtMajor}}
+                    </view>
+                </view>
+            </view>
+        </view>
+
+        <view class="consultant-detail">
+            <view class="consultant-detail-title">
+                <view class="title-logo"></view>
+                <view class="title-text">个人介绍</view>
+            </view>
+            <view class="consultant-detail-content">
+                <view class="new-consultant-info-feature">{{consultantInfo.descr}}</view>
+            </view>
+        </view>
+
+        <view class="consultant-detail">
+            <view class="consultant-detail-title">
+                <view class="title-logo"></view>
+                <view class="title-text">履历</view>
+            </view>
+            <view class="consultant-detail-content">
+                <view class="consultant-record">
+                    <view class="consultant-record-list" wx:for="{{consultantInfo.recordList}}">
+                        <view class="list-time">
+                            <view class="time-logo"></view>
+                            <span>{{item.starttime}}--</span>
+                            <span>{{item.endtime}}</span>
+                        </view>
+                        <view class="list-text">{{item.record}}</view>
+                    </view>
+                </view>
+                <view class="consultant-record-img">
+                    <view class="img-list" wx:for="{{consultantInfo.record_images}}">
+                        <block wx:if="{{index < 5}}">
+                            　<image src="{{item.file_url}}" bindtap="onRecordClick" data-id="{{item.file_url}}"></image>
+                        </block>
+                    </view>
+                    <view class="clear-both"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!--顾问案例-->
+    <view class="consulatnt-case-list {{consultantShow[1]}}">
+         <view class="consultant-detail">
+            <view class="consultant-detail-title">
+                <view class="title-logo"></view>
+                <view class="title-text">录取案例</view>
+            </view>
+            <view class="title-tab">
+                <view class="title-tab-li {{caseSelect[0]}}" data-id="0" bindtap="onCaseClick">代言案例{{caseList.endorsement_count}}</view>
+                <view class="title-tab-li {{caseSelect[1]}}" data-id="1" bindtap="onCaseClick">已认证{{caseList.verify_count}}</view>
+                <view class="title-tab-li {{caseSelect[2]}}" data-id="2" bindtap="onCaseClick">未认证{{caseList.unverify_count}}</view>
+                <view class="clear-both"></view>
+            </view>
+            <view class="consultant-detail-content" style="padding:0px">
+                <!--代言案例-->
+                <view class="case-list-body {{caseShow[0]}}">
+                    <view class="no-case-tips" wx:if="{{caseList.endorsement_count==0}}">暂无代言案例</view>
+                    <view class="case-list-body-li" wx:for="{{caseList.endorsement_list}}" data-id="{{item.verify_attachment.entity_id}}" bindtap="onCaseDetail">
+                        <view class="case-list-body-li-top">
+                            <view class="video" wx:if="{{item.verify_attachment.filetype == 'MP4'}}">
+                                <video src="{{item.verify_attachment.file_url}}" ></video>
+                            </view>
+                            <view class="audio" wx:if="{{item.verify_attachment.filetype == 'MP3'}}">
+                                <image src="../images/admiss-case-mp3.png" mode="aspectFit"></image>
+                            </view>
+                            <view class="img" wx:if="{{item.verify_attachment.filetype == 'PNG'}}">
+                                <image src="{{item.verify_attachment.file_url}}" mode="aspectFit"></image>
+                            </view>
+                            <view class="img" wx:if="{{item.verify_attachment.filetype == 'JPG'}}">
+                                <image src="{{item.verify_attachment.file_url}}" mode="aspectFit"></image>
+                            </view>
+                            <view class="identified-icon" wx:if="{{item.verify_attachment.filetype != 'MP4'}}"></view>
+                        </view>
+                        <view class="case-list-body-li-bottom">
+                            <view class="info">背景：<span>{{item.remark_background}}</span></view>
+                            <view class="info">录取：<span>{{item.remark_admission}}</span></view>
+                        </view>
+                        <view class="to-detail">查看详情 》</view>
+                    </view>
+                </view>
+                <!--认证案例-->
+                <view class="case-list-body {{caseShow[1]}}">
+                    <view class="no-case-tips" wx:if="{{caseList.verify_count==0}}">暂无认证案例</view>
+                    <view class="case-list-body-li" wx:for="{{caseList.verify_list}}" data-id="{{item.id}}" bindtap="onCaseDetail2">
+                         <view class="case-list-body-li-top">
+                            <view class="name">{{item.student_name}}</view>
+                         </view>
+                        <view class="case-list-body-li-bottom">
+                            <view class="info">背景：<span>{{item.remark_background}}</span></view>
+                            <view class="info">录取：<span>{{item.remark_admission}}</span></view>
+                        </view>
+                         <view class="to-detail">查看详情 》</view>
+                          <view class="identified-icon"></view>
+                    </view>
+                </view>
+                <!--未认证案例-->
+                <view class="case-list-body {{caseShow[2]}}">
+                    <view class="no-case-tips" wx:if="{{caseList.unverify_count==0}}">暂无认证案例</view>
+                    <view class="case-list-body-li" wx:for="{{caseList.unverify_list}}">
+                         <view class="case-list-body-li-top">
+                            
+                         </view>
+                        <view class="case-list-body-li-bottom">
+                            <view class="info">背景：<span>{{item.other}}</span></view>
+                            <view class="info">录取：<span>{{item.college_name + '|'}}{{item.country_name + '|'}} {{item.degree}}</span></view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!--顾问评价-->
+    <view class="conslatnt-grade {{consultantShow[2]}}">
+        <view class="conslatnt-grade-top">
+            <view class="no-grade" wx:if="{{consulatntGrade.score.score == 0}}">评分数量不足，暂无评分</view>
+            <view class="consultant-comment-top-star" wx:if="{{consulatntGrade.score.score > 0}}">
+                <view class="consultantStarShow">
+                    <view class="starFrame"></view>
+                    <view class="topStarFrame" style="width:{{consulatntGrade.score.score/5*100 + '%'}}">
+                        <view class="topStarColor"></view>
+                    </view>
+                </view>
+            </view>
+            <view class="grade-type">综合评价</view>
+            <view class="grade-count">{{consulatntGrade.score.count}}名学生评分平均值</view>
+        </view>
+
+        <view class="consultant-detail">
+            <view class="consultant-detail-title">
+                <view class="title-logo"></view>
+                <view class="title-text">综合评分 <span style="font-size:12px;color:#6b6d6e">{{consulatntGrade.score.score}}分</span></view>
+            </view>
+             <view class="grade-list" wx:for="{{gradeList}}">
+                    <view class="student-img left"><image src="{{item.headimg}}"></image></view>
+                    <view class="list-right">
+                        <view class="list-right-top">{{item.nickname}}<span>{{item.name}}</span></view>
+                        <view class="list-right-middle">
+                            <view class="select-tr-td-2-star">
+                                <view class="select-tr-td-2-span-star"></view>
+                                <view class="select-tr-td-2-span-star-top" style="width:{{item.grade/5*100 + '%'}}">
+                                    <view class="select-tr-td-2-span-star-2"></view>
+                                </view>
+                            </view>
+                            <view class="gradeDetail">
+                               <span>专业:{{item.profession_grade}}</span>
+                               <span>态度:{{item.service_grade}}</span>
+                            </view>
+                            <span class="comment-time">{{item.created_at}}</span>
+                        </view>
+                        <view class="list-right-bottom" wx:if="{{item.grade_content || item.tag_list.length > 0}}">
+                            <view class="kw-grade-content-detail">{{item.grade_content}}</view>
+                            <view class="grade-label-list">
+                                <view class="grade-label-list-li"  wx:for="{{item.tag_list}}" wx:for-index="idx" wx:for-item="value">
+                                    <view class="good-logo" wx:if="{{value.tag_type == 1}}">{{value.tag_name}}</view>
+                                    <view class="ungood-logo" wx:if="{{value.tag_type != 1}}">{{value.tag_name}}</view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    
+            </view>
+            
+        </view>
+    </view>
+</view>

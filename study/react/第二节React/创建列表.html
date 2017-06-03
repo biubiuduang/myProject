@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建列表</title>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js" charset="utf-8"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js" charset="utf-8"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js" charset="utf-8"></script>
+
+    <script type="text/jsx">
+
+        class Item extends React.Component{
+            constructor(...args){
+                super(...args);
+            }
+
+            render(){
+                return <li>{this.props.value}</li>;
+            }
+        }
+
+        class List extends React.Component{
+            constructor(...args){
+                super(...args);
+
+                this.state = {arr : [1,23,44,55522]};
+
+
+            }
+
+            fn(){
+                this.setState({
+                    arr : this.state.arr.concat([11])
+                });
+
+            }
+
+            render(){
+                var result = [];
+
+                var arr = this.state.arr;
+
+
+                for(var i = 0;i<arr.length;i++){
+                    result.push(<Item key={i} value={arr[i]}/>)
+                }
+
+                console.log(this.state.arr);
+
+                return <ul>
+                    <input type="button" value="aaaaa" onClick={this.fn.bind(this)} />
+                    {result}
+                </ul>
+            }
+        }
+
+        $(function(){
+            ReactDOM.render(
+                    <List />,
+                    document.getElementById("div1")
+
+            )
+        })
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!--pages/choose/choosePage.wxml-->
+<view class="choose-reason {{hasConsultant}}" >
+    <view class="choose-reason-top">
+        <view class="online-chat-body-other-chat-img">
+            <image  class="toImg" src="{{recipient_avatar}}"></image>
+        </view>
+        <view class="online-chat-body-other-chat-name">小管家</view>
+        <view class="online-chat-body-other-chat-content">
+            <!--<view class="text-consultant-name">hi，我是你的留学小管家，我已经帮你找到了{{automatic_count}}位顾问，请先帮帮我做个小调查，然后就可以选择顾问啦。</view>-->
+            <view class="text-consultant-name">hi，我是你的留学小管家，我正在帮你寻找顾问，先做个小调查吧~</view>
+            <view class="online-chat-body-other-chat-content-arrow">
+                <image src="../images/other-arrow.png"></image>
+            </view>
+        </view>
+    </view>
+    <view class="clear-both"></view>
+
+    <view class="use-reason">
+        <view class="use-reason-title">
+            <em>*</em>【小调查】你使用留学快问的原因？           
+        </view>
+        <radio-group class="radio-group" bindchange="radioChange">
+            <label class="radio" wx:for="{{userReason}}">
+                <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+            </label>
+        </radio-group>
+
+    </view>
+
+    <view class="use-reason">
+        <view class="use-reason-title">
+            <em>*</em>【小调查】你知道留学快问的途径？           
+        </view>
+        <radio-group class="radio-group" bindchange="radioReason">
+            <label class="radio" wx:for="{{regsteReason}}">
+                <radio value="{{item.name}}" checked="{{userReason.checked}}"/>{{item.value}}
+            </label>
+        </radio-group>
+
+    </view>
+
+<view class="submit">
+    <button style="background: #03aaee;" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="primary">保存</button>
+</view>
+</view>
+
+<view class="choose-reason {{noConsultant}}" >
+    <view class="choose-reason-top">
+        <view class="online-chat-body-other-chat-img">
+            <image  class="toImg" src="{{recipient_avatar}}"></image>
+        </view>
+        <view class="online-chat-body-other-chat-name">小管家</view>
+        <view class="online-chat-body-other-chat-content">
+            <view class="text-consultant-name">hi，我是你的留学小管家，暂时没有找到合适你顾问，请修改申请目标重新提交试试</view>
+            <view class="online-chat-body-other-chat-content-arrow"></view>
+        </view>
+    </view>
+    <view class="clear-both"></view>
+<view class="submit">
+    <button style="background: #03aaee;" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="trialAgain">重新提交</button>
+</view>
+</view>

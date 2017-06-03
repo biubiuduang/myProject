@@ -1,0 +1,27 @@
+<view class="demosit-amount-body">
+    <view class="demosit-amount-body-title">什么是保证金？</view>
+    <view class="demosit-amount-body-content">
+        <text>保证金是平台为了保障学生的权益，确保在发生合同纠纷时能顺利退款，而要求顾问缴存的一笔资金。</text>
+        <text>保证金总额=托管在平台上的服务款+顾问缴存的保证金。</text>
+        <text>保证金余额=保证金总额-已冻结金额。</text>
+        <text>保证金余额还会随着托管服务款的结算或顾问对保证金的存取而变化。</text>
+    </view>
+</view>
+<view class="demosit-amount-body">
+    <view class="demosit-amount-body-title">与有保证金的顾问签约后，您将享受哪些权益？</view>
+    <view class="demosit-amount-body-content">
+        <text>与有保证金的顾问签约，在合同结束之前，如您和顾问发生纠纷，可申请冻结不超过保证金余额的服务费；冻结成功后，该顾问的保证金余额将同步扣减。</text>
+    </view>
+</view>
+<view class="demosit-amount-body">
+    <view class="demosit-amount-body-title">与缴纳保证金和未缴纳保证金的顾问签约有什么不同?</view>
+    <view class="demosit-amount-body-content">
+        <text>据统计，大多数的不愉快事件发生于退款环节，如该顾问未缴纳保证金，您很可能需耗费更多的时间和精力去协商退款。如该顾问有缴纳足够的保证金，平台可以通过冻结保证金来约束顾问，从而节省你的协商成本。</text>
+    </view>
+</view>
+<view class="demosit-amount-body">
+    <view class="demosit-amount-body-title">如果发生了纠纷，如何操作？</view>
+    <view class="demosit-amount-body-content">
+        <text>如果需要冻结服务费，请与小管家或通过微信公众号与工作人员联系。</text>
+    </view>
+</view>

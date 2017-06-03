@@ -2,14 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>点击显示隐藏</title>
-    <style type="text/css">
-        .box{
-            width: 500px;
-            height: 500px;
-            background-color: red;
-        }
-    </style>
+    <title>组件重用</title>
 
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
@@ -17,33 +10,42 @@
     <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
 
     <script type="text/jsx">
-        class ShowHide extends React.Component{
+        class ChildComp extends React.Component{
+            componentWillReceiveProps(){
+                console.log("组件参数更新");
+            }
+
+            render(){
+                return <span> {this.props.name} </span>;
+            }
+        }
+
+        class ParentComp extends React.Component{
             constructor(...args){
                 super(...args);
+
                 this.state = {
-                    display : "block"
+                    i : 0
                 }
             }
 
             fn(){
                 this.setState({
-                    display : this.state.display == "block" ? "none" : "block"
+                    i : this.state.i+1
                 })
             }
 
             render(){
-                return <div>
-                    <input type="button" value="显示隐藏" onClick={ this.fn.bind(this) } />
-                    <div className="box" style={{display : this.state.display}}></div>
-                </div>
+                return <div onClick={this.fn.bind(this)}><ChildComp name = {this.state.i}  /></div>
             }
         }
 
         $(function(){
+            var oDiv = document.getElementById("div1");
             ReactDOM.render(
-                    <ShowHide />,
-                    document.getElementById("div1")
-            );
+                    <ParentComp />,
+                    oDiv
+            )
         })
     </script>
 </head>

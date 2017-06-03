@@ -1,0 +1,4 @@
+.demosit-amount-body {margin-left: 10px;margin-top: 20px; width: calc(100% - 20px);}
+.demosit-amount-body .demosit-amount-body-title {border-left: 2px solid rgb(3, 170, 238);color: rgb(55, 55, 55);font-size: 15px;height: 16px;line-height: 17px;padding-left: 5px;display: inline-block}
+.demosit-amount-body .demosit-amount-body-content {color: rgb(107, 109, 110);margin-top: 18px;}
+.demosit-amount-body .demosit-amount-body-content text{color: #6b6d6e;font-size: 14px;display: block;line-height: 20px;}

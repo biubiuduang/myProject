@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>控制表单的value</title>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+    <script type="text/jsx">
+        class Form extends React.Component{
+            fn(){
+
+            }
+
+            componentDidMount(){
+                var that = this;
+                $(".txt").focus(function(){
+                    $(this).val("");
+                });
+                $(".txt").blur(function(){
+                    console.log($(this).val());
+                    if($(this).val() == ""){
+                        $(this).val("请输入你的信息");
+                    }
+                })
+            }
+
+            render(){
+                return <form action="http://www.baidu.com" method="get">
+                    用户名:<input className="txt" type="text" name="username" placeholder="1212121" defaultValue={this.props.value} />
+                    <input type="submit" name="page" value="提交" />
+
+                </form>
+            }
+        }
+
+        ReactDOM.render(
+                <Form value="请输入你的信息" />,
+                $("#form")[0]
+        )
+    </script>
+</head>
+<body>
+<div id="form"></div>
+</body>
+</html>

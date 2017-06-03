@@ -1,0 +1,71 @@
+/*代言案例详情*/
+.fix::after {clear: both;content: "";display: table;}
+.p-rel{position:relative}
+.left{float: left;}
+.right{float: right;}
+.hide{display:none!important;}
+.represent-case-container{width: 100%;background-color: #f4f5f9;padding-top: 5px;padding-bottom: 60px;}
+.represent-case-container .floor-1{background-color: #fff;padding-bottom:24PX; border-bottom: 1px solid #e5e5e5;padding-top: 10px;}
+.represent-case-container .floor-1 .case-title{padding: 0 18px;line-height: 44px;color: #808080;}
+.represent-case-container .floor-1 .video-List{ display: inline-block;width: 100%;}
+.represent-case-container .floor-1 .video-List video.video-play{width: 100%;max-height: 280px;background-color: #000;padding: 10px 0;}
+.represent-case-container .floor-1 .video-show .video-li{width: 128px;margin-right:3px; height: 74px; display: inline-block}
+.represent-case-container .floor-1 .video-show {white-space: nowrap; display: flex}
+.represent-case-container .floor-1 .video-show .video-li  image{width: 100%;height: 100%;}
+.represent-case-container .floor-1 .video-show .video-li .pause-mark{width: 100%;height: 100%;background-color: rgba(0,0,0,0.7);position: absolute;top:0;left:0;}
+.represent-case-container .floor-1 .video-show .video-li .pause-mark em{background: url("../../images/pause-icon.png") no-repeat;background-size: 26px 26px;width: 100%;height: 100%;display: inline-block;background-position: center;}
+.represent-case-container .floor-1 .video-show .video-li .play-mark{width: 100%;height: 24px;background-color: rgba(0,0,0,0.7);position: absolute;bottom:0;left:0;color: #fff;text-align: center;line-height: 24px;font-size: 14px;}
+.represent-case-container .floor-1 .audio-list{margin-bottom: 24px;}
+.represent-case-container .floor-1 .case-img-container{text-align: center;}
+.represent-case-container .floor-1 .case-img-container img{width: 100%;margin: 0 auto; max-width: 300px;height: 100%;}
+.represent-case-container .floor-1 .audio-list li{text-align: center;margin-bottom: 10px;}
+.represent-case-container .floor-1 .audio-list li audio{width: 100%; max-width: 220px;}
+.represent-case-container .floor-1 .audio-list li .audio-mark{width: 100%; height: 100%;position: absolute;top:0;left:0;}
+.represent-case-container .floor-1 .case-intro{padding: 20px 18px;}
+.represent-case-container .floor-1 .case-intro .case-intro-name{line-height: 20px;width: 30%;margin-bottom: 10px;font-size: 14px;}
+.represent-case-container .floor-1 .case-intro>view {margin-bottom: 15px;}
+.represent-case-container .floor-1 .case-intro .case-intro-details{line-height: 20px;width: 70%;font-size: 14px;}
+.represent-case-container .floor-1 .case-intro .case-intro-details audio{margin-bottom: 10px;}
+.represent-case-container .floor-1 .case-image-show {white-space:nowrap;display:flex;text-align: center;margin-top: 20px;}
+.represent-case-container .floor-1 .case-image-show .case-images{ display: inline-block;width: 90%;margin-right: 5%;height: 240px;background-color: rgb(238,238,238);margin-left: 2%;border-radius: 5px;}
+.represent-case-container .floor-1 .case-image-show .case-images image{max-width:90%;}
+.represent-case-container .floor-1 .img-container {width: 90%;margin-left: 5%;margin-top:20px;}
+.represent-case-container .floor-1 .img-container image{width: 100%;}
+.represent-case-container .floor-1 .case-intro .pass-icon{border: 1px solid #ff0000;border-radius: 5px;color:#ff0000;width: 80px;text-align: center;padding:5px;font-size: 14px;}
+.represent-case-container .floor {margin-top: 7px;padding: 0 0 20px 18px;background-color: #fff;font-size: 14px;}
+.represent-case-container .floor .floor-title{line-height: 44px;color: #808080;border-bottom: 1px solid #e5e5e5;background: url("http://static.liuxuekw.com/theme/default/images/new-consultant/grade-icon.png")no-repeat;background-size:20px 16px;background-position: left center;padding-left: 25px; display: block}
+.represent-case-container .floor-3 .floor-title{background-image: url("http://static.liuxuekw.com/theme/default/images/new-consultant/consultant-grade.png");}
+.represent-case-container .floor-4 .floor-title{background-image: url("http://static.liuxuekw.com/theme/default/images/new-consultant/offer-icon.png");}
+.represent-case-container .floor-2 .student-grade{margin-top: 15px;padding-right: 16px;line-height: 20px;font-size: 14px;}
+.represent-case-container .floor-2 .student-grade .student-expand{position: absolute;bottom: 2px;right: 16px;color: #03AAEE;padding: 0 5px 0 12px;background-color: #fff;}
+.represent-case-container .floor-2 .student-grade .student-expand i{margin-left: 3px;}
+.represent-case-container .floor-2 .student-grade .student-expand span{margin-right: 12px;}
+.represent-case-container .floor-3 .consultant-grade{margin-top: 15px;padding-right: 16px;line-height: 20px;}
+.represent-case-container .floor-3 .consultant-grade .consultant-expand{position: absolute;bottom: 2px;right: 16px;color: #03AAEE;padding: 0 5px;background-color: #fff;}
+.represent-case-container .floor-3 .consultant-grade .consultant-expand i{margin-left: 3px;}
+.represent-case-container .floor-3 .consultant-grade .consultant-expand span{margin-right: 12px;}
+.represent-case-container .floor-4 .offer-list {height: 141px; white-space: nowrap;display:inline-block;margin-top: 10px;}
+.represent-case-container .floor-4 .offer-list .offer-li{display: inline-block;height: 95%;vertical-align: middle;margin-right: 10px;background-color: #eee;}
+.represent-case-container .floor-4 .offer-list .offer-li .offer-container{width: 104px;height:100%;
+}
+.represent-case-container .floor-4 .offer-list .offer-li video{height: 100%;width: 100%;float: left;}
+.represent-case-container .floor-4 .offer-list .offer-li image{border-radius: 3px;height: 100%;width: 100%;}
+.represent-case-container .floor-4 .offer-list .offer-li .video-mark{height: 100%;width: 100%;background-color: rgba(0,0,0,0.7);position: absolute;top: 0;left: 0;z-index: 4}
+.represent-case-container .floor-4 .offer-list .offer-li .video-mark p{height: 100%;width: 100%;background:url("../../images/pause-icon.png") no-repeat;background-size: 26px 26px;background-position: center;display:inline-block;
+}
+.represent-case-container .share-icon{background: url("../images/new-consultant/share-icon.png") no-repeat;width: 51px;height: 51px;background-size: contain;position: fixed;right: 14px;bottom:77px;z-index: 5;}
+.represent-case-container .selected-consultant{position: fixed;bottom:0;left:0;width: 100%;height: 52px;background-color: #03AAEE;color: #fff;text-align: center;line-height: 52px;font-size: 18px;z-index: 6}
+.represent-case-container .share-mark{position: fixed;top:0;left:0;width: 100%;height: 100%;background-color: rgba(0,0,0,0.7);z-index: 6;}
+.represent-case-container .share-mark p{background: url("../images/huodong/share-logo.png") no-repeat;background-size: 230px 107px;height: 107px;  width: 230px;position: absolute;right: 10px;top:0;}
+.represent-case-container .video-mark-play{width: 100%;height: 100%;background-color: rgba(0,0,0,0.7);position: fixed;top:0;left:0;z-index: 10;text-align: center;}
+.represent-case-container .video-mark-play video{width:100%;max-width:500px;margin-top:3%;}
+.represent-case-container .video-mark-play .close-icon{width: 24px;height: 24px;background-color: #fff;border-radius: 12px;line-height: 24px;}
+
+.case-img-box {display: table; height: 100%; } 
+.case-img-box span {display: table-cell; vertical-align: middle; }
+
+.represent-case-container .video-mark-play{width: 100%;height: 100%;background-color: rgba(0,0,0,0.7);position: fixed;top:0;left:0;}
+.represent-case-container .video-mark-play video{width: 100%;}
+.full-sreen{width: 100%;height: 100%;position: fixed;left:0;top:0;z-index: 4;background: rgba(0,0,0,0.9)}
+.full-sreen video{width: 100%;margin-top:15%;}
+.full-sreen .cancel-icon{position: absolute;right:10px;top:1%;}

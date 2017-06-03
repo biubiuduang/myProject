@@ -1,0 +1,14 @@
+<view class="marker">
+    <view class="marker-image">
+      <image src="{{markerInfo.headimg}}"></image>
+    </view>
+    <view class="marker-content">
+        <view class="marker-name">我是留学快问小管家{{markerInfo.name}}</view>
+        <view class="marker-contact">
+        请留意，平台小管家稍后会通过以下方式与您联系，帮您对接老师，请保持联系方式的畅通。
+         <view class="">小管家微信是：<text selectable="true">{{markerInfo.weixin}}</text></view>
+         <view class="">小管家手机是：<text selectable="true">{{markerInfo.weixin}}</text></view>
+        </view>
+    </view>
+    <view class="button" bindtap="onBackClick"> 我知道了</view>
+</view>

@@ -2,41 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>组件有属性</title>
-
-    <style type="text/css">
-        .s1{
-            color:red;
-        }
-    </style>
-
+    <title>父子级的通信</title>
     <script src="js/jquery-1.7.2.min.js"></script>
     <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
     <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
     <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
 
     <script type="text/jsx">
-
-        var na = "lallaladsadsdf";
-
-        class Comp extends React.Component{
+        class Child extends React.Component{
             render(){
-                return <span className="s1">{ this.props.name },我今年{ this.props.age }岁</span>
+                return <div>{this.props.a}</div>
+            }
+        }
+
+        class Parent extends React.Component{
+            render(){
+                return <div>
+                    <p>aaaaaa</p>
+                    <Child a="1212121212121" />
+                    <p>bbbbbbb</p>
+                </div>
             }
         }
 
         $(function(){
             ReactDOM.render(
-                    <Comp name={na} age="18" />,
-                    document.getElementById("div1")
+                    <Parent />,
+                    $("#div1")[0]
             )
         })
-
     </script>
 </head>
 <body>
-<div id="div1">
-    <div>aaaaaaaaa</div>
-</div>
+<div id="div1"></div>
 </body>
 </html>

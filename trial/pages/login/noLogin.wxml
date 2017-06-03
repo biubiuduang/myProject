@@ -1,0 +1,21 @@
+<!--pages/login/noLogin.wxml-->
+<view class="login">
+   <view class="relogin-logo-1">
+        <image src="../images/show-relogin-logo-4.png"></image>
+        <view class="title">登陆失败</view>
+        <view class="content">允许微信授权登陆后，才能体验留学快问顾问的免费服务哦</view>
+   </view>
+   <view class="relogin-logo-2">
+        <view class="title">如何允许微信授权</view>
+        <view class="title-2">1.退出留学快问免费试用小程序，十分钟后重新进入；或在小程序列表中删除留学快问小程序，重新搜索“留学快问免费试用”进入</view>
+        <view class="image-ligin">
+          <image src="../images/show-relogin-logo-2.png"></image>
+        </view>
+   </view>
+    <view class="relogin-logo-2">
+        <view class="title-2">2.点击进入留学快问免费试用小程序后，将出现以下微信授权页面，点击“允许”。即可试用顾问的免费服务。</view>
+        <view class="image-ligin">
+          <image src="../images/show-relogin-logo-3.png"></image>
+        </view>
+   </view>
+</view>

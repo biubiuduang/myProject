@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽2</title>
+    <style type="text/css">
+        #div1{
+            position: relative;
+        }
+        .box{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js" charset="utf-8"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js" charset="utf-8"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js" charset="utf-8"></script>
+    <script type="text/jsx">
+        //原生的jquery 实现拖拽功能
+        class Drag extends React.Component{
+            constructor(...args){
+                super(...args);
+            }
+
+            componentDidMount(){
+                $(".box").mousedown(function(ev){
+                    var disX = ev.pageX - $(this).offset().left;
+                    var disY = ev.pageY - $(this).offset().top;
+                    $(document).mousemove(function(ev){
+                        $(".box").css({
+                            "left" : ev.pageX - disX +"px",
+                            "top" : ev.pageY - disY + "px"
+                         })
+                    });
+                    $(document).mouseup(function(){
+                        $(this).unbind("mousemove mouseup");
+                    })
+                })
+            }
+
+            render(){
+                return <div ref="box" className="box">111111</div>
+            }
+        }
+
+        $(function(){
+            ReactDOM.render(
+                    <Drag />,
+                    $("#div1")[0]
+            )
+        })
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

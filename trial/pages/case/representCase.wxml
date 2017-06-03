@@ -1,0 +1,100 @@
+<view class="represent-case-container">
+    <view class="floor-1">
+        <view class="video-List fix"  wx:if="{{endorsement.video.length > 0}}">
+            <video class="video-play left" src="{{videoSrc}}"  autoplay="true" wx:if="{{videoSrc}}" poster="{{cover_img}}"  controls>
+                您的浏览器不支持 video 标签。
+            </video>
+             <video class="video-play left" src="{{video[0].file_url}}" wx:else  poster="{{cover_img}}"  controls>
+                您的浏览器不支持 video 标签。
+            </video>
+        </view>
+       
+        <scroll-view scroll-x="true" class="video-show {{videoShow}}">
+            <view class="p-rel video-li"  wx:for="{{video}}">
+                <image src="{{cover_img}}" poster ></image>
+                <p class="pause-mark" wx:if="{{item.play == 0}}"><em class="go-play" data-i="{{index}}" data-src="{{item.file_url}}" bindtap="videoPlay"></em></p>
+                <p class="play-mark" wx:if="{{item.play == 1}}">当前播放</p>
+            </view>
+        </scroll-view>
+        <scroll-view scroll-x="true" class="case-image-show {{imagesShow}}">
+            <view class="case-images" wx:for="{{endorsement.img}}">
+              <image src="{{item.file_url}}" mode="aspectFit" data-src="{{item.file_url}}" bindtap="fullScreenImages"></image>
+            </view>
+        </scroll-view>
+        <view class="img-container {{imageShow}}" wx:if="{{endorsement.img.length>0}}">
+            <image src="{{endorsement.img[0].file_url}}"  bindtap="fullScreenImages" mode="aspectFit"></image>
+        </view>
+        <view class="case-intro fix">
+            <view wx:if="{{endorsement.audio.length > 0}}">
+                 <view class="case-intro-name">代言音频：</view>
+                 <view class="case-intro-details">
+                   <audio wx:for="{{endorsement.audio}}" action="{{action[index]}}" id="audio-list" src="{{item.file_url}}" name="代言音频" author="{{result.consultant_nickname}}" bindplay='bindplay' data-i="{{index}}" controls></audio>
+                 </view>
+             </view>                                                                                                                                                                                                                                                                                 <view class="fix">
+                 <view class="case-intro-name left">录取信息：</view>
+                 <view class="case-intro-details left">
+                     <text wx:if="{{result.student_info}}">{{result.student_info}}</text>
+                     <text wx:else>暂无</text>                                          
+                 </view>
+             </view>
+             <view class="fix">    
+                 <view class="case-intro-name left">学生信息：</view>
+                 <view class="case-intro-details left">
+                     <text wx:if="{{result.other}}">{{result.other}}</text>
+                     <text wx:else>暂无</text>
+                 </view>
+              </view>   
+              <view class="fix">     
+                 <view class="case-intro-name left">软性背景：</view>
+                 <view class="case-intro-details left">
+                     <text wx:if="{{result.background}}">{{result.background}}</text>
+                     <text wx:else>暂无</text>
+                 </view>
+             </view>
+             <div class="pass-icon">已认证</div>
+        </view>
+    </view>
+    <view class="floor-2 floor">
+     <div class="floor-title">学生评价</div>
+        <div class="student-grade p-rel">
+                <text wx:if="{{result.student_remark}}">
+                    {{result.student_remark}}
+                </text>
+                <text wx:else>                
+                    暂无
+                </text>
+            <!--<p class="student-expand student-expand-2 hide">收起<i class="fa fa-caret-up"></i></p>
+            <p class="student-expand student-expand-1 hide"><span>......</span> 展开<i class="fa  fa-caret-down"></i></p>-->
+        </div>
+    </view>
+    <view class="floor-3 floor">
+    <div class="floor-title">顾问点评</div>
+        <div class="consultant-grade p-rel">
+            <text wx:if="{{result.consultant_remark}}">
+            {{result.consultant_remark}}
+            </text>
+            <text wx:else>                
+                暂无
+            </text>
+            <!--s-->
+        </div>
+    </view>
+    <view class="floor-4 floor">
+        <div class="floor-title">录取信</div>
+         <scroll-view scroll-x="true" class="offer-list"  >
+                <view  wx:for="{{result.admission}}" class="offer-li">
+                     <view class="p-rel offer-container" wx:if="{{item.filetype == 'MP4'}}">
+                            <image src="{{cover_img}}" class="offer-img"></image>
+                            <div class="video-mark"  data-src="{{item.file_url}}" bindtap="offerVideo"><p></p></div>
+                    </view>
+                     <view class="p-rel offer-container" wx:else >
+                            <image src="{{item.file_url}}" class="offer-img" data-src="{{item.file_url}}" mode="aspectFit" bindtap="offerImg"></image>
+                    </view>
+                </view>
+        </scroll-view>    
+    </view>   
+    <view class="full-sreen" wx:if="{{fullVideo}}">
+        <video src="{{fullVideo}}" autoplay="true" controls="controls"  bindended='bindend'></video>
+        <icon type="cancel" class="cancel-icon" bindtap="cancelVideo" size="40"/>
+    </view>
+</view>

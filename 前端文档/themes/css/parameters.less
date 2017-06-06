@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+/********************************************/
+/*********** 公共参数与方法的集合  **********/
+/********************************************/
+
+//整体颜色和配色
+@color-primary:#000000;  //主要颜色
+@color-muted:#999999;    //弱化颜色
+@color-showy:#ff8a00;    //醒目颜色
+@color-danger:#ff0000;   //警告颜色
+@color-link:#3288e9;     //链接颜色
+
+//字体大小
+@h1:48px;
+@h2:30px;
+@h3:20px;
+@h4:16px;
+
+
+//清除浮动
+.clear(@a){
+  content:".";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: @a;
+}
+
+//透明元素
+.opacity(@value){
+  opacity: @value/100;
+  -moz-opacity:@value/100;
+  -khtml-opacity: @value/100;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=@value);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=@value);
+}
+
+//文字超出部分用省略号显示
+.text-overflow(){
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+//CSS3 动画
+.transition(@property,@duration,@timing-function,@delay){
+  transition:@property @duration @timing-function @delay;
+  -moz-transition:@property @duration @timing-function @delay;
+  -webkit-transition:@property @duration @timing-function @delay;
+  -o-transition:@property @duration @timing-function @delay;
+}

@@ -1,0 +1,128 @@
+@charset "utf-8";
+/********************************************/
+/*********** 公共参数与方法的集合  **********/
+/********************************************/
+body {
+  background-color: #efefef;
+}
+section > h1 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 60px;
+  border-bottom: 1px solid #999999;
+}
+nav {
+  width: 100%;
+  padding: 0 10px;
+  background-color: #ffffff;
+  border: 1px solid #999999;
+}
+nav a {
+  height: 50px;
+  line-height: 50px;
+  color: #333333;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 0 20px;
+  white-space: nowrap;
+}
+.ctrl-main-container {
+  margin-top: 20px;
+  border-radius: 10px;
+}
+section {
+  padding: 0 20px 20px;
+  background-color: #ffffff;
+  border: 1px solid #999999;
+}
+.container {
+  margin-bottom: 20px;
+}
+.container:after {
+  content: ".";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+}
+section table td {
+  height: 40px;
+  line-height: 1.5;
+}
+section code {
+  background-color: #f9f2f4;
+  border-radius: 4px;
+  color: #c7254e;
+  padding: 5px 10px;
+  margin: 20px auto;
+}
+section code.html {
+  display: block;
+  background-color: #000000;
+  border-radius: 6px;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+section code .hljs-tag {
+  color: #ffffff;
+}
+section code .hljs-string {
+  color: #e6db74;
+}
+section code .hljs-name {
+  color: #66d9ef;
+}
+section code .hljs-note {
+  color: #999999;
+}
+.iconfont.iconfont-menu:before {
+  content: "\e645";
+}
+.iconfont.iconfont-user:before {
+  content: "\e642";
+}
+.iconfont.iconfont-wifi:before {
+  content: "\e640";
+}
+.iconfont.iconfont-refresh:before {
+  content: "\e63f";
+}
+.iconfont.iconfont-uncheck-circle:before {
+  content: "\e611";
+}
+.iconfont.iconfont-check-circle:before {
+  content: "\e613";
+}
+.iconfont.iconfont-uncheck-rect:before {
+  content: "\e602";
+}
+.iconfont.iconfont-check-rect:before {
+  content: "\e604";
+}
+.iconfont.iconfont-radio:before {
+  content: "\e601";
+}
+.iconfont.iconfont-close:before {
+  content: "\e605";
+}
+.iconfont.iconfont-top:before {
+  content: "\e631";
+}
+.iconfont.iconfont-bottom:before {
+  content: "\e635";
+}
+.iconfont.iconfont-left:before {
+  content: "\e63c";
+}
+.iconfont.iconfont-right:before {
+  content: "\e638";
+}
+.iconfont.iconfont-home:before {
+  content: "\e626";
+}
+.iconfont.iconfont-false-fill:before {
+  content: "\e606";
+}
+.iconfont.iconfont-true-fill:before {
+  content: "\e612";
+}

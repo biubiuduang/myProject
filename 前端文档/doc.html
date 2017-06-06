@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>前端文档</title>
+    <!-- 双内核浏览器打开 使用webkit内核 -->
+    <meta name='renderer' content='webkit'>
+    <!-- 移动端设置 -->
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <!--ie 9 以下对html5标签 和 css3属性的 降级处理-->
+    <!--[if lt IE 9]>
+    <script src="themes/js/libs/css3-mediaqueries.js" type="text/javascript"></script>
+    <script src="themes/js/libs/html5shiv.min.js"></script>
+    <script src="themes/js/libs/respond.min.js"></script>
+
+    <link rel="stylesheet" href="themes/css/lteie8.css">
+    <![endif]-->
+    <!-- build:css themes/css/main.css -->
+    <link rel="stylesheet" href="themes/css/base.css" />
+    <!-- /build-->
+
+    <link rel="stylesheet" href="themes/css/doc.css" />
+</head>
+<body>
+<nav>
+    <a href="#cssReset">CSS reset</a>
+    <a href="#text">文本</a>
+    <a href="#icon">图标</a>
+    <a href="#form">表单项</a>
+    <a href="#modal">模态框</a>
+    <a href="#media">响应式布局</a>
+    <a href="#imgLoad">图片懒加载</a>
+    <a href="#js">js部分</a>
+    <a href="#grunt">图片md5处理</a>
+</nav>
+<!-- 各个产品需求的内容区域展示 -->
+<div class="ctrl-main-container">
+    <!---------------------------------------->
+    <!---------       css部分      ----------->
+    <!---------------------------------------->
+    <!-- CSS reset  -->
+    <section id="cssReset" class="container">
+        <h1>CSS 重置</h1>
+        <p>为了增强跨浏览器表现的一致性，首先要CSS reset 在base.less内的 .cssReset() 方法</p>
+
+    </section>
+    <!-- 字体相关 -->
+    <section id="text" class="container">
+        <h1>文本</h1>
+        <p>字体大小</p>
+
+            <table class="table">
+                <tbody>
+                <tr>
+                    <td><h1>h1.  heading</h1></td>
+                    <td>半加粗 18px</td>
+                </tr>
+                <tr>
+                    <td><h2>h2.  heading</h2></td>
+                    <td>半加粗 16px</td>
+                </tr>
+                <tr>
+                    <td><h3>h3.  heading</h3></td>
+                    <td>半加粗 14px</td>
+                </tr>
+                <tr>
+                    <td><h4>h4.  heading</h4></td>
+                    <td>半加粗 12px</td>
+                </tr>
+                </tbody>
+            </table>
+            <code class="html">
+                <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>h1.  heading<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span><br/>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>h2.  heading<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span><br/>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>h3.  heading<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span><br/>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>h4.  heading<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+            </code>
+
+        <p>正文</p>
+            <p>全局 <code>font-size</code> 设置为12px ,<code>line-height</code>设置为:1.4。这些属性直接赋予<code>&lt;body&gt;</code>元素和所有段落元素。另外 <code>&lt;p&gt;</code>(段落)元素设置为: <code>margin: 0 0 10px;</code></p>
+            <p>段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示段落展示</p>
+        <p>情境文本</p>
+            <p>全局文本颜色 <code>color</code> 设置 , <code>css/common parameters.less</code> 文件内定义全局颜色参数;</p>
+            <code class="html">
+                <span class="hljs-tag"><span class="hljs-name">@color-primary:</span>#000000;<span class="hljs-note"> //主要颜色</span></span><br/>
+                <span class="hljs-tag"><span class="hljs-name">@color-muted:</span>#999999;<span class="hljs-note"> //弱化颜色</span></span><br/>
+                <span class="hljs-tag"><span class="hljs-name">@color-showy:</span>#ff8a00;<span class="hljs-note"> //醒目颜色</span></span><br/>
+                <span class="hljs-tag"><span class="hljs-name">@color-danger:</span>#ff0000;<span class="hljs-note"> //警告颜色</span></span><br/>
+                <span class="hljs-tag"><span class="hljs-name">@color-link:</span>#3288e9;<span class="hljs-note"> //链接颜色</span></span><br/>
+            </code>
+            <p class="text-primary">主要内容颜色</p>
+            <p class="text-muted">弱化内容颜色</p>
+            <p class="text-showy">醒目内容颜色</p>
+            <p class="text-danger">警告内容颜色</p>
+            <p class="text-link">链接颜色</p>
+
+            <code class="html">
+                <span class="hljs-tag">&lt;<span class="hljs-name">p </span>class=<span class="hljs-string">"text-primary" </span>&gt;</span>主要内容颜色<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br/>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p </span>class=<span class="hljs-string">"text-muted" </span>&gt;</span>弱化内容颜色<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br/>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p </span>class=<span class="hljs-string">"text-showy" </span>&gt;</span>醒目内容颜色<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br/>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p </span>class=<span class="hljs-string">"text-danger" </span>&gt;</span>警告内容颜色<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br/>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p </span>class=<span class="hljs-string">"text-link" </span>&gt;</span>链接颜色<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            </code>
+
+    </section>
+
+    <!-- 图标 -->
+    <section id="icon" class="container">
+        <h1>图标</h1>
+        <p>用到 <a class="text-link" href="http://iconfont.cn" target="_blank"> iconfont.cn </a> icon在线管理</p>
+        <span class="iconfont">&#xe64c;</span>
+        <span class="iconfont iconfont-menu"></span>
+        <span class="iconfont iconfont-user"></span>
+        <span class="iconfont iconfont-wifi"></span>
+        <span class="iconfont iconfont-refresh"></span>
+        <span class="iconfont iconfont-uncheck-circle"></span>
+        <span class="iconfont iconfont-check-circle"></span>
+        <span class="iconfont iconfont-uncheck-rect"></span>
+        <span class="iconfont iconfont-check-rect"></span>
+        <span class="iconfont iconfont-radio"></span>
+        <span class="iconfont iconfont-close"></span>
+        <span class="iconfont iconfont-top"></span>
+        <span class="iconfont iconfont-bottom"></span>
+        <span class="iconfont iconfont-left"></span>
+        <span class="iconfont iconfont-right"></span>
+        <span class="iconfont iconfont-home"></span>
+        <span class="iconfont iconfont-false-fill"></span>
+        <span class="iconfont iconfont-true-fill"></span>
+        <span>...</span>
+        <a href="themes/font/demo.html" class="iconfont text-link"> 点击查看本地所有iconfont </a>
+    </section>
+
+    <!-- 按钮 -->
+    <section id="form" class="container">
+        <h1>按钮</h1>
+        <input type="button" class="btn btn-default" value="默认" />
+        <input type="button" class="btn btn-primary" value="主要" />
+        <input type="button" class="btn btn-warning" value="警告" />
+        <input type="button" class="btn btn-default-disabled" value="默认禁用" disabled="disabled" />
+
+        <code class="html">
+            <span class="hljs-tag">&lt;<span class="hljs-name">input </span> type=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-default"</span></span> value="默 认"<span class="hljs-tag"> /&gt;</span><br/>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input </span> type=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span></span> value="主 要"<span class="hljs-tag"> /&gt;</span><br/>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input </span> type=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-warning"</span></span> value="警 告"<span class="hljs-tag"> /&gt;</span><br/>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input </span> type=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-default-disabled"</span></span> value="默认禁用"<span class="hljs-tag"> /&gt;</span>
+        </code>
+
+        <h1>输入框</h1>
+        <input type="text" class="txt txt-default" value="" placeholder="默认输入框"><br/>
+        <input type="text" class="txt txt-check" value="" placeholder="被选中输入框"><br/>
+        <input type="text" class="txt txt-warning" value="" placeholder="报错输入框"><br/>
+        <input type="text" class="txt txt-disable" value="" placeholder="禁用的输入框" disabled="disabled">
+
+        <code class="html">
+            <span class="hljs-tag">&lt;<span class="hljs-name">input </span> type=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"txt txt-default"</span></span> value="默认输入框"<span class="hljs-tag"> /&gt;</span><br/>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input </span> type=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"txt txt-check"</span></span> value="选中输入框"<span class="hljs-tag"> /&gt;</span><br/>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input </span> type=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"txt txt-warning"</span></span> value="报错输入框"<span class="hljs-tag"> /&gt;</span><br/>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input </span> type=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"txt txt-disable"</span></span> value="禁用的输入框"<span class="hljs-tag"> /&gt;</span><br/>
+        </code>
+
+        <h1>单选按钮</h1>
+        <input type="radio" name="radio" class="radio" id="r_a" checked="checked" /><label for="r_a" class="radio">单选1</label><br/>
+        <input type="radio" name="radio" class="radio" id="r_b"  /><label for="r_b" class="radio">单选2</label><br/>
+        <input type="radio" name="radio" class="radio" id="r_c"  /><label for="r_c" class="radio">单选3</label><br/>
+        <input type="radio" name="radio" class="radio" id="r_d"  /><label for="r_d" class="radio">单选4</label><br/>
+
+        <code class="html">
+            <span class="hljs-tag">&lt;<span class="hljs-name">input </span> <span class="hljs-attr">type=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"radio"</span> class=<span class="hljs-string">"radio"</span> id=<span class="hljs-string">"r_a"</span> checked=<span class="hljs-string">"checked"</span> /&gt;</span> </span> <span class="hljs-tag">&lt;<span class="hljs-name">label</span><span class="hljs-attr"> for=<span class="hljs-string">"r_a"</span> class=<span class="hljs-string">"radio"</span></span> &gt; 单选1 <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></span><br/>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input </span> <span class="hljs-attr">type=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"radio"</span> class=<span class="hljs-string">"radio"</span> id=<span class="hljs-string">"r_b"</span> checked=<span class="hljs-string">"checked"</span> /&gt;</span> </span> <span class="hljs-tag">&lt;<span class="hljs-name">label</span><span class="hljs-attr"> for=<span class="hljs-string">"r_b"</span> class=<span class="hljs-string">"radio"</span></span> &gt; 单选2 <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></span><br/>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input </span> <span class="hljs-attr">type=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"radio"</span> class=<span class="hljs-string">"radio"</span> id=<span class="hljs-string">"r_c"</span> checked=<span class="hljs-string">"checked"</span> /&gt;</span> </span> <span class="hljs-tag">&lt;<span class="hljs-name">label</span><span class="hljs-attr"> for=<span class="hljs-string">"r_c"</span> class=<span class="hljs-string">"radio"</span></span> &gt; 单选3 <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></span><br/>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input </span> <span class="hljs-attr">type=<span class="hljs-string">"radio"</span> name=<span class="hljs-string">"radio"</span> class=<span class="hljs-string">"radio"</span> id=<span class="hljs-string">"r_d"</span> checked=<span class="hljs-string">"checked"</span> /&gt;</span> </span> <span class="hljs-tag">&lt;<span class="hljs-name">label</span><span class="hljs-attr"> for=<span class="hljs-string">"r_d"</span> class=<span class="hljs-string">"radio"</span></span> &gt; 单选4 <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></span>
+        </code>
+
+        <h1>复选按钮</h1>
+        <input type="checkbox" class="checkbox" id="c_a" checked="checked" /><label for="c_a" class="checkbox">复选一</label><br/>
+        <input type="checkbox" class="checkbox" id="c_b" /><label for="c_b" class="checkbox">复选二</label><br/>
+        <input type="checkbox" class="checkbox" id="c_c" /><label for="c_c" class="checkbox">复选三</label><br/>
+        <input type="checkbox" class="checkbox" id="c_d" /><label for="c_d" class="checkbox">复选四</label>
+
+        <code class="html">
+            <span class="hljs-tag">&lt;<span class="hljs-name">input </span> <span class="hljs-attr">type=<span class="hljs-string">"checkbox"</span> class=<span class="hljs-string">"checkbox"</span> id=<span class="hljs-string">"c_a"</span> checked=<span class="hljs-string">"checked"</span> /&gt;</span> </span> <span class="hljs-tag">&lt;<span class="hljs-name">label</span><span class="hljs-attr"> for=<span class="hljs-string">"c_a"</span> class=<span class="hljs-string">"checkbox"</span></span> &gt; 复选一 <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></span><br/>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input </span> <span class="hljs-attr">type=<span class="hljs-string">"checkbox"</span> class=<span class="hljs-string">"checkbox"</span> id=<span class="hljs-string">"c_b"</span> /&gt;</span> </span> <span class="hljs-tag">&lt;<span class="hljs-name">label</span><span class="hljs-attr"> for=<span class="hljs-string">"c_b"</span> class=<span class="hljs-string">"checkbox"</span></span> &gt; 复选二 <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></span><br/>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input </span> <span class="hljs-attr">type=<span class="hljs-string">"checkbox"</span> class=<span class="hljs-string">"checkbox"</span> id=<span class="hljs-string">"c_c"</span> /&gt;</span> </span> <span class="hljs-tag">&lt;<span class="hljs-name">label</span><span class="hljs-attr"> for=<span class="hljs-string">"c_c"</span> class=<span class="hljs-string">"checkbox"</span></span> &gt; 复选三 <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></span><br/>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input </span> <span class="hljs-attr">type=<span class="hljs-string">"checkbox"</span> class=<span class="hljs-string">"checkbox"</span> id=<span class="hljs-string">"c_d"</span> /&gt;</span> </span> <span class="hljs-tag">&lt;<span class="hljs-name">label</span><span class="hljs-attr"> for=<span class="hljs-string">"c_d"</span> class=<span class="hljs-string">"checkbox"</span></span> &gt; 复选四 <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></span>
+        </code>
+        <h1>下拉菜单</h1>
+        <select name="" id="">
+            <option value="">菜单1</option>
+            <option value="">菜单2</option>
+            <option value="">菜单3</option>
+            <option value="">菜单4</option>
+            <option value="">菜单5</option>
+            <option value="">菜单6asdfasdfsadfasdfsfd</option>
+            <option value="">菜单7</option>
+            <option value="">菜单8</option>
+        </select>
+        <span class="iconfont iconfont-bottom"></span>
+
+        <code class="html">
+            <span class="hljs-tag">&lt;<span class="hljs-name">select</span>&gt;  ..省去&lt;option&gt;.. &lt;/<span class="hljs-name">select</span>&gt;</span><br/>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span </span>class=<span class="hljs-string">"iconfont iconfont-bottom"</span>&gt; &lt;/<span class="hljs-name">span</span>&gt;</span>
+        </code>
+
+    </section>
+
+    <!-- 模态框 -->
+    <section id="modal" class="container">
+        <h1>模态框</h1>
+        <div class="xx-modal-section">
+            <div class="xx-modal">
+                <div class="xx-modal-content">
+                    <div class="xx-modal-header">
+                        <a class="xx-modal-close" href="javascript:void(0);">
+                            <span class="iconfont iconfont-close"></span>
+                        </a>
+                        <h2 class="xx-modal-title">对话框标题</h2>
+                    </div>
+                    <div class="xx-modal-body h3">
+                        <p>对话框内容</p>
+                    </div>
+                    <div class="xx-modal-footer">
+                        <input type="button" class="btn btn-primary" value="确 定">
+                        <input type="button" class="btn btn-default xx-modal-close" value="取 消">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <code class="html">
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> class=<span class="hljs-string">"xx-modal"</span> &gt;</span><br/>
+            &nbsp;&nbsp;<span class="hljs-tag">&lt;<span class="hljs-name">div</span> class=<span class="hljs-string">"xx-modal-content"</span>&gt;</span><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag">&lt;<span class="hljs-name">div</span> class=<span class="hljs-string">"xx-modal-header"</span>&gt;</span><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag">&lt;<span class="hljs-name">a</span> class=<span class="hljs-string">"xx-modal-close"</span> href=<span class="hljs-string">"javascript:void(0);"</span>&gt;</span><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag">&lt;<span class="hljs-name">span</span> class=<span class="hljs-string">"iconfont iconfont-close"</span> &gt;&lt;/<span class="hljs-string">span</span>&gt;</span><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag">&lt;<span class="hljs-name">h2</span> class=<span class="hljs-string">"xx-modal-title"</span>&gt;对话框标题<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span></span><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span> <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag">&lt;<span class="hljs-name">div</span> class=<span class="hljs-string">"xx-modal-body h3"</span>&gt;</span><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;对话框内容<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span> <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag">&lt;<span class="hljs-name">div</span> class=<span class="hljs-string">"xx-modal-footer"</span>&gt;</span><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag">&lt;<span class="hljs-name">input </span> type=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span> value="确 定"<span class="hljs-tag"> /&gt;</span></span><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag">&lt;<span class="hljs-name">input </span> type=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-default xx-modal-close"</span> value="取 消"<span class="hljs-tag"> /&gt;</span></span><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span> <br/>
+            &nbsp;&nbsp;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span> <br/>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt; </span>
+        </code>
+    </section>
+
+    <!-- 响应式布局 -->
+    <section id="media" class="container">
+        <h1>响应式布局</h1>
+        <p>容器响应式设置(不随浏览器拖拉而改变 只根据屏幕尺寸显示不同的布局)</p>
+        <div class="col-sm-2 col-md-3 col-lg-5" style="background-color: red;">
+            1
+        </div>
+        <div class="col-sm-2 col-md-3 col-lg-7" style="background-color: blue;">
+            2
+        </div>
+        <div class="col-sm-2 col-md-3 col-lg-5" style="background-color: red;">
+            3
+        </div>
+        <div class="col-sm-2 col-md-3 col-lg-7" style="background-color: blue;">
+            4
+        </div>
+        <div class="col-sm-2 col-md-3 col-lg-5" style="background-color: red;">
+            5
+        </div>
+        <div class="col-sm-2 col-md-3 col-lg-7" style="background-color: blue;">
+            6
+        </div>
+        <div class="col-sm-2 col-md-3 col-lg-5" style="background-color: red;">
+            7
+        </div>
+        <div class="col-sm-2 col-md-3 col-lg-7" style="background-color: blue;">
+            8
+        </div>
+        <div class="col-sm-2 col-md-3 col-lg-5" style="background-color: red;">
+            9
+        </div>
+        <div class="col-sm-2 col-md-3 col-lg-7" style="background-color: blue;">
+            10
+        </div>
+        <div class="col-sm-2 col-md-3 col-lg-5" style="background-color: red;">
+            11
+        </div>
+        <div class="col-sm-2 col-md-3 col-lg-7" style="background-color: blue;">
+            12
+        </div>
+    </section>
+
+    <div id="js" class="container">
+        <h1>JS部分</h1>
+    </div>
+    <!---------------------------------------->
+    <!---------        js部分      ----------->
+    <!---------------------------------------->
+    <section id="imgLoad" class="container">
+        <h1>图片的懒加载</h1>
+        <p>base.js <code>base.imgLoad()</code>方法实现 用法
+            <code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> src=<span class="hljs-string">""</span> data-src=<span class="hljs-string">"当前img的路径"</span> /&gt;</span></code> </p>
+        <p>图片的懒加载(页面优化 减少页面加载的线程 加快页面加载速度)</p>
+        <img src="" data-src="themes/img/c4.png" alt="">
+    </section>
+
+    <div id="grunt" class="container">
+        <h1>grunt打包测试部分</h1>
+    </div>
+    <!---------------------------------------->
+    <!---------      grunt部分     ----------->
+    <!---------------------------------------->
+    <!-- 测试grunt图片md5编码 -->
+    <section id="imgMd5" class="container">
+        <h1>grunt实现图片md5编码处理</h1>
+        <div class="img" style="width: 100px;height: 100px; border: 1px solid red;background: url('themes/img/c4.png') center no-repeat;"></div>
+        <img src="themes/img/c4.png" alt="">
+        <img src="themes/img/img.png" alt="" style="width: 100px;height: 100px;background-color: rgba(0,0,0,0.5)">
+    </section>
+</div>
+<script type="text/javascript" src="themes/js/libs/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="themes/js/base.js"></script>
+</body>
+</html>

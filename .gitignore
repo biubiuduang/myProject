@@ -1,3 +1,5 @@
 .idea
 前端文档/dest/
 前端文档/node_modules/
+study/react_webpack_test/dist
+study/react_webpack_test/node_modules
